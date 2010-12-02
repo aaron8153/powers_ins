@@ -1,0 +1,19 @@
+= form_for @ticker do |f|
+  -if @ticker.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@ticker.errors.count, "error")} prohibited this ticker from being saved:"
+      %ul
+        - @ticker.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :headline
+    = f.text_field :headline
+  .field
+    = f.label :url
+    = f.text_field :url
+  .field
+    = f.label :target
+    = f.check_box :target
+  .actions
+    = f.submit 'Save'

@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Heading:
+  = @about_heading.heading
+%p
+  %b Description:
+  = @about_heading.description
+%p
+  %b Page:
+  = @about_heading.page
+
+= link_to 'Edit', edit_about_heading_path(@about_heading)
+\|
+= link_to 'Back', about_headings_path

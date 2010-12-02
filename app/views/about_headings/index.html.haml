@@ -1,0 +1,23 @@
+%h1 Listing about_headings
+
+%table
+  %tr
+    %th Heading
+    %th Description
+    %th Page
+    %th
+    %th
+    %th
+
+  - @about_headings.each do |about_heading|
+    %tr
+      %td= about_heading.heading
+      %td= about_heading.description
+      %td= about_heading.page
+      %td= link_to 'Show', about_heading
+      %td= link_to 'Edit', edit_about_heading_path(about_heading)
+      %td= link_to 'Destroy', about_heading, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New About heading', new_about_heading_path

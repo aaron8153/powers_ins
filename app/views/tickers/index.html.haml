@@ -1,0 +1,23 @@
+%h1 Listing tickers
+
+%table
+  %tr
+    %th Headline
+    %th Url
+    %th Target
+    %th
+    %th
+    %th
+
+  - @tickers.each do |ticker|
+    %tr
+      %td= ticker.headline
+      %td= ticker.url
+      %td= ticker.target
+      %td= link_to 'Show', ticker
+      %td= link_to 'Edit', edit_ticker_path(ticker)
+      %td= link_to 'Destroy', ticker, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Ticker', new_ticker_path

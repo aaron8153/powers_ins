@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Headline:
+  = @ticker.headline
+%p
+  %b Url:
+  = @ticker.url
+%p
+  %b Target:
+  = @ticker.target
+
+= link_to 'Edit', edit_ticker_path(@ticker)
+\|
+= link_to 'Back', tickers_path

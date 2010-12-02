@@ -1,0 +1,7 @@
+- @tickers.each do |ticker|
+	- if(ticker.target == true)
+		%a{:href => ticker.url, :alt => ticker.headline, :target => "_blank"}
+			%span= ticker.headline
+	- if(ticker.target == false)
+		%a{:href => ticker.url, :alt => ticker.headline}
+			%span= ticker.headline

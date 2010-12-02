@@ -1,4 +1,85 @@
 Powers::Application.routes.draw do
+  resources :about_headings
+
+  resources :tickers
+
+  get "financial/planning"
+
+  get "financial/advisors"
+
+  get "homeauto/quote"
+
+  get "homeauto/claim"
+
+  get "homeauto/autoid"
+
+  get "homeauto/policy"
+
+  get "homeauto/billing"
+
+  get "benefits/group"
+
+  get "benefits/individual"
+
+  get "business/consultation"
+
+  get "business/claim"
+
+  get "business/policy"
+
+  get "business/certificate"
+
+  get "business/autoid"
+
+  get "business/billing"
+
+  get "home/index"
+
+  get "home/about"
+
+  get "home/associates"
+
+  get "home/affiliations"
+
+  get "home/hub"
+
+  get "home/contact"
+
+  get "home/privacy"
+
+  get "home/terms"
+
+	root :to => 'home#index'
+	match '/about', :to => 'home#about'
+	match '/associates', :to => 'home#associates'
+	match '/affiliations', :to => 'home#affiliations'
+	match '/hub', :to => 'home#hub'
+	match '/contact', :to => 'home#contact'
+	match '/privacy', :to => 'home#privacy'
+	match '/terms', :to => 'home#terms'
+	
+	match '/business/consultation', :to => 'business#consultation'
+	match '/business/claim', :to => 'business#claim'
+	match '/business/policy', :to => 'business#policy'
+	match '/business/certificate', :to => 'business#certificate'
+	match '/business/autoid', :to => 'business#autoid'
+	match '/business/billing', :to => 'business#billing'
+	
+	match '/benefits/group', :to => 'benefits#group'
+	match '/benefits/individual', :to => 'benefits#individual'
+	
+	match '/homeauto/quote', :to => 'homeauto#quote'
+	match '/homeauto/claim', :to => 'homeauto#claim'
+	match '/homeauto/autoid', :to => 'homeauto#autoid'
+	match '/homeauto/policy', :to => 'homeauto#policy'
+	match '/homeauto/billing', :to => 'homeauto#billing'
+	
+	match '/financial/planning', :to => 'financial#planning'
+	match '/financial/advisors', :to => 'financial#advisors'
+  
+  
+  
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

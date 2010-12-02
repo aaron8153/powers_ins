@@ -1,0 +1,2 @@
+module AboutHeadingsHelper
+end

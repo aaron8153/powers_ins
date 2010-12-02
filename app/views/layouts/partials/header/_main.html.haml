@@ -1,0 +1,11 @@
+.nav
+	%a.logo{:alt => "Click here to navigate to the POWERS home page", :href => "/"}
+	.nav-tabs
+		- $tabs.each do |tab,url|
+			
+			- cl = tab
+			- cl += (@current_page==tab ? " current" : "")
+			- cl += ($tabs.first==[tab,url] ? " first" : "")
+			- cl += ($tabs.last==[tab,url] ? " last" : "")
+			%a.tab{:class => "#{cl}", :id => "#{tab}", :alt => "Click here navigate to " + "#{tab.capitalize}", :href => "#{url}"}
+				%span{:class => "#{tab}"} #{tab.capitalize}
