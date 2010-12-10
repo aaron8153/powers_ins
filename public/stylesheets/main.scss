@@ -1,0 +1,126 @@
+$content-width: 1024px;
+$logo-width: 269px;
+$logo-height: 113px;
+
+body {
+	margin: 0px;
+}
+
+.header {
+	$header-height: 124px;
+	width: 100%;
+	height: $header-height;
+	float: left;
+	clear: both;
+	background: url(/images/header-repeat.jpg) repeat-x;
+	.nav {
+		$nav-margin: 58px;
+		width: $content-width;
+		height: $header-height;
+		margin: auto;
+		a.logo {
+			display: block;
+			width: $logo-width;
+			height: $logo-height;
+			float: left;
+			clear: left;
+			margin: {
+				top: 10px;
+				left: $nav-margin;
+			}
+			background: url(/images/logo.png) no-repeat;
+		}
+		.nav-right {
+			$nav-right-width: $content-width - $logo-width - (2 * $nav-margin);
+			width: $nav-right-width;
+			height: $header-height;
+			float: left;
+			clear: right;
+			$nav-top-height: 32px;
+			$nav-bottom-height: $header-height - $nav-top-height;
+			.nav-top {
+				width: $nav-right-width;
+				height: $nav-top-height;
+				float: left;
+				clear: both;
+				a.live-chat {
+					display: block;
+					width: 112px;
+					height: $nav-top-height;
+					float: right;
+					clear: right;
+				}
+				a.contact {
+					display: block;
+					width: 112px;
+					height: $nav-top-height;
+					float: right;
+				}
+				.toll-free {
+					$toll-free-width: 337px;
+					height: $nav-top-height;
+					width: $toll-free-width;					
+					float: right;
+					clear: left;
+					img.phone {
+						$phone-width: 10px;
+						$phone-height: 16px;
+						float: left;
+						clear: left;
+						margin: {
+							top: ($nav-top-height - $phone-height) / 2;
+						}
+					}
+					h4 {
+						float: left;
+						clear: none;
+						margin: {
+							top: 2px;
+						}
+					}
+				}							
+			}
+			.nav-bottom {
+				width: $nav-right-width;
+				height: $nav-bottom-height;
+				float: left;
+				clear: both;
+				.nav-tabs {
+					$nav-tabs-width: 561px;
+					$nav-tabs-height: 79px;
+					width: $nav-tabs-width;
+					height: $nav-tabs-height;
+					float: right;
+					clear: both;
+					margin: {
+						top: ($nav-bottom-height - $nav-tabs-height) / 2;
+					}
+					background: url(/images/header-nav-tabs-bg.png) no-repeat;
+				}
+			}
+		}
+	}
+}
+
+.home {
+	$home-height: 409px;
+	width: 100%;
+	height: $home-height;
+	float: left;
+	clear: both;
+	background: url(/images/home-bg-repeat.jpg) repeat-x;
+	.home-content {
+		width: 1200px;
+		height: $home-height;
+		background: url(/images/home-bg.jpg) no-repeat;
+		margin: auto;
+	}
+}
+
+
+
+
+
+
+
+

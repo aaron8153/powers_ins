@@ -1,7 +1,8 @@
-- @tickers.each do |ticker|
+- $tickers.each do |ticker|
 	- if(ticker.target == true)
 		%a{:href => ticker.url, :alt => ticker.headline, :target => "_blank"}
-			%span= ticker.headline
+			%span= ticker.created_at.strftime("(%m/%d)") + ticker.headline + "... Read More"
 	- if(ticker.target == false)
 		%a{:href => ticker.url, :alt => ticker.headline}
-			%span= ticker.headline
+			%span= ticker.created_at.strftime("(%m/%d)") + ticker.headline + "... Read More"
+	

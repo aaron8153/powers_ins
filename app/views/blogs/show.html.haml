@@ -1,0 +1,26 @@
+%p#notice= notice
+
+%p
+	%b Headline:
+	= @blog.headline
+%p
+	%b Description:
+	= @blog.description
+%p
+	%b Poster name:
+	= @blog.poster_name
+%h2
+	Add a comment:
+- form_for([@blog, @blog.comments.build]) do |f|
+	.field
+		= f.label :poster
+		= f.text_field :poster
+	.field
+		= f.label :description
+		= f.text_area :description
+	.actions
+		= f.submit
+
+= link_to 'Edit', edit_blog_path(@blog)
+\|
+= link_to 'Back', blogs_path

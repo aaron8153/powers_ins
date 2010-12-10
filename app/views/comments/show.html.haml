@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Poster:
+  = @comment.poster
+%p
+  %b Description:
+  = @comment.description
+%p
+  %b Blog:
+  = @comment.blog
+
+= link_to 'Edit', edit_comment_path(@comment)
+\|
+= link_to 'Back', comments_path

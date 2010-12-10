@@ -5,10 +5,10 @@
   = @about_heading.heading
 %p
   %b Description:
-  = @about_heading.description
+  != @about_heading.description
 %p
   %b Page:
-  = @about_heading.page
+  %p= @about_heading.page
 
 = link_to 'Edit', edit_about_heading_path(@about_heading)
 \|

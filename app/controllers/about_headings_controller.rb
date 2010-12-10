@@ -1,4 +1,5 @@
 class AboutHeadingsController < ApplicationController
+	uses_tiny_mce
   # GET /about_headings
   # GET /about_headings.xml
   def index

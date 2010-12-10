@@ -1,0 +1,23 @@
+%h1 Listing blogs
+
+%table
+  %tr
+    %th Headline
+    %th Description
+    %th Poster name
+    %th
+    %th
+    %th
+
+  - @blogs.each do |blog|
+    %tr
+      %td= blog.headline
+      %td= blog.description
+      %td= blog.poster_name
+      %td= link_to 'Show', blog
+      %td= link_to 'Edit', edit_blog_path(blog)
+      %td= link_to 'Destroy', blog, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Blog', new_blog_path

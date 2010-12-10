@@ -1,4 +1,8 @@
 Powers::Application.routes.draw do
+  resources :blogs do
+  	resources :comments
+  end
+
   resources :about_headings
 
   resources :tickers

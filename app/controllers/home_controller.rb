@@ -1,7 +1,6 @@
 class HomeController < ApplicationController
   def index
   	@current_page = "home"
-  	@tickers = Ticker.all
   	render :layout => "home"  	
   end
 

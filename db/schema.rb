@@ -10,12 +10,28 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101202224141) do
+ActiveRecord::Schema.define(:version => 20101203005821) do
 
   create_table "about_headings", :force => true do |t|
     t.string   "heading"
     t.text     "description"
     t.string   "page"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "blogs", :force => true do |t|
+    t.string   "headline"
+    t.text     "description"
+    t.string   "poster_name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "comments", :force => true do |t|
+    t.string   "poster"
+    t.text     "description"
+    t.integer  "blog_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

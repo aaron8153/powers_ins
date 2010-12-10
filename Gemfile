@@ -6,6 +6,7 @@ gem 'mysql2'
 gem 'haml'
 gem 'haml-rails'
 gem 'ruby-debug19', :require => 'ruby-debug'
+gem 'tiny_mce'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
