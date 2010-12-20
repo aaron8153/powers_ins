@@ -1,14 +1,8 @@
 Powers::Application.routes.draw do
   
 
-  resources :blogs do
-  	resources :comments
-  end
+  get "homeauto/index"
 
-  resources :about_headings
-
-  resources :tickers
-	
   get "homeauto/quote"
 
   get "homeauto/claim"
@@ -19,9 +13,19 @@ Powers::Application.routes.draw do
 
   get "homeauto/billing"
 
-	root :to => 'home#index'
-  match "/homeauto" => 'homeauto#index'
+  resources :blogs do
+  	resources :comments
+  end
+
+  resources :about_headings
+
+  resources :tickers
   
+  get "home/index"
+
+	root :to => 'home#index'
+
+	match "/homeauto" => 'homeauto#index'  
   
   
   # The priority is based upon order of creation:

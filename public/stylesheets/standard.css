@@ -34,7 +34,8 @@
         display: none; }
 
 .middle {
-  padding-top: 10px;
+  padding-top: 20px;
+  padding-bottom: 40px;
   min-height: 411px;
   position: relative;
   background-color: #ecebeb; }
@@ -44,13 +45,15 @@
   height: 323px;
   position: absolute;
   background: url(/images/floater-bg.png) no-repeat;
-  margin-left: 515px; }
+  margin-left: 515px;
+  margin-top: -10px; }
 
 .about-box {
   position: relative;
   width: 598px;
   min-height: 323px;
-  margin-left: 808px; }
+  margin-left: 808px;
+  margin-top: -10px; }
   .about-box .about-box-top {
     width: 598px;
     height: 12px;
@@ -62,7 +65,6 @@
     min-height: 258px;
     position: relative;
     padding-top: 5px;
-    padding-bottom: 35px;
     padding-left: 27px;
     padding-right: 10px;
     background: url(/images/about-box-content.png) repeat-y; }
@@ -76,10 +78,18 @@
     width: 561px;
     position: relative;
     padding-top: 5px;
-    padding-bottom: 5px;
+    padding-bottom: 30px;
     padding-left: 27px;
     padding-right: 10px;
     background: url(/images/about-box-content.png) repeat-y; }
+    .about-box .comments .viewcomments {
+      color: #438bc3;
+      text-decoration: none;
+      margin-bottom: 5px; }
+      .about-box .comments .viewcomments:hover {
+        cursor: pointer; }
+    .about-box .comments .fb_iframe_widget {
+      display: none; }
   .about-box h1 {
     font-size: 18px;
     padding-top: 3px;
@@ -113,9 +123,10 @@
       float: left;
       clear: both;
       width: 548px;
-      height: 75px;
-      margin-top: -28px;
-      margin-left: 25px; }
+      height: 25px;
+      margin-top: 13px;
+      margin-left: 25px;
+      overflow: hidden; }
       .about-box .about-box-bottom .like .fb_iframe_widget {
         float: left;
         clear: both;

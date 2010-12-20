@@ -1,4 +1,4 @@
-class HomeautoController < ApplicationController
+class HomeautoController < ApplicationController	
   def index
   	@current_page = "homeauto"
   	@about = AboutHeading.find_by_page(@current_page)

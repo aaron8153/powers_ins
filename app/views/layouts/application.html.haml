@@ -7,8 +7,8 @@
 		= stylesheet_link_tag 'standard'
 		= javascript_include_tag :defaults
 		= javascript_include_tag 'jquery.min'
-		= javascript_include_tag 'columnizer/autocolumn.js'
-		= javascript_include_tag 'about-two-column.js'
+		%script{:src=>"http://connect.facebook.net/en_US/all.js#appId=187326117947432&amp;xfbml=1"}
+		= javascript_include_tag 'fb-event'
 		%script
 			jQuery.noConflict();
 		= javascript_include_tag 'pngfix'
@@ -31,12 +31,15 @@
 			.middle
 				= render :partial => 'layouts/partials/floater'
 				= render :partial => 'layouts/partials/aboutbox'
+				= javascript_include_tag 'columnizer/autocolumn'
+				= javascript_include_tag 'about-two-column'
 				= yield
+				= javascript_include_tag 'floatbox'
+				= javascript_include_tag 'fb-comments'
 			.bottom
 				.bottom-glow
 					.ticker
 						= render :partial => 'layouts/partials/ticker'
 					.footer
 						= render :partial => 'layouts/partials/footer/main'
-		= javascript_include_tag 'floatbox'
 		= javascript_include_tag 'olark'

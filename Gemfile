@@ -7,6 +7,9 @@ gem 'haml'
 gem 'haml-rails'
 gem 'ruby-debug19', :require => 'ruby-debug'
 gem 'tiny_mce'
+gem 'faraday'
+gem 'multi_json'
+
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

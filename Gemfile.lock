@@ -101,8 +101,10 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  faraday
   haml
   haml-rails
+  multi_json
   mysql2
   oauth2
   rails (= 3.0.1)

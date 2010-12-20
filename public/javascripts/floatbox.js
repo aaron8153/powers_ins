@@ -16,7 +16,6 @@ jQuery.fn.stickyfloat = function(options, lockBottom) {
 	var obj 				= this;
 	var parentPaddingTop 	= parseInt(obj.parent().css('padding-top'));
 	var startOffset 		= obj.parent().offset().top;
-	console.log(parentPaddingTop);
 	var opts 				= jQuery.extend({ startOffset: startOffset, offsetY: parentPaddingTop, duration: 200, lockBottom:true }, options);
 	
 	obj.css({ position: 'absolute' });
@@ -49,5 +48,5 @@ jQuery.fn.stickyfloat = function(options, lockBottom) {
 };
 
 jQuery('.floater').stickyfloat({
-	duration: 400
+	duration: 200
 });

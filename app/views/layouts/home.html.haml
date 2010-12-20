@@ -10,6 +10,7 @@
 		%script
 			jQuery.noConflict();
 		= javascript_include_tag 'pngfix'
+		= include_tiny_mce_if_needed
 		= csrf_meta_tag
 		%script{:type => "text/javascript", :src => "http://use.typekit.com/mzi2lag.js"}
 		%script{:type => "text/javascript"}
