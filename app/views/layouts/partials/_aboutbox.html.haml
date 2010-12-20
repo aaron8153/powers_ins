@@ -1,7 +1,17 @@
 .about-box
 	.about-box-top
 	.about-box-content
+		%h1
+			!= @about.heading
+		%h2
+			!= @about.subheading
+		!= @about.description
+	.comments
+		#fb-root
+			%script{:src=>"http://connect.facebook.net/en_US/all.js#appId=187326117947432&amp;xfbml=1"}
+			%fb:comments{:xid=>"homeauto", :numposts=>"5", :width=>"524", :publish_feed=>"true"}
 	.about-box-bottom
-		%a.like{:href => "#"}
-			%span
-				Like
+		%script{:src => "http://connect.facebook.net/en_US/all.js#xfbml=1"}
+		= javascript_include_tag 'fb-event'
+		.like
+			%fb:like{:href => request.url, :layout => "standard", :show_faces => "true", :width => "548"}

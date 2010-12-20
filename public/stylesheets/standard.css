@@ -1,40 +1,126 @@
+.top-nav {
+  height: 118px;
+  background-color: #ecebeb; }
+  .top-nav .three-button {
+    width: 1200px;
+    height: 77px;
+    margin: auto;
+    background: url(/images/top-nav-bg.png) no-repeat; }
+    .top-nav .three-button a {
+      display: block;
+      position: relative;
+      float: left;
+      padding-top: 20px; }
+      .top-nav .three-button a.business {
+        clear: left;
+        width: 288px;
+        height: 80px;
+        margin-left: 158px;
+        background: url(/images/top-nav-business.png) no-repeat; }
+      .top-nav .three-button a.homeauto {
+        width: 288px;
+        height: 80px;
+        margin-left: 20px;
+        background: url(/images/top-nav-homeauto.png) no-repeat; }
+      .top-nav .three-button a.benefits {
+        clear: right;
+        width: 288px;
+        height: 80px;
+        margin-left: 20px;
+        background: url(/images/top-nav-benefits.png) no-repeat; }
+      .top-nav .three-button a:hover {
+        background-position: 0px -80px; }
+      .top-nav .three-button a span {
+        display: none; }
+
 .middle {
-  width: 100%;
+  padding-top: 10px;
   min-height: 411px;
-  float: left;
-  clear: both;
+  position: relative;
   background-color: #ecebeb; }
 
 .floater {
   width: 238px;
   height: 323px;
-  position: fixed;
+  position: absolute;
   background: url(/images/floater-bg.png) no-repeat;
   margin-left: 515px; }
 
 .about-box {
+  position: relative;
   width: 598px;
   min-height: 323px;
   margin-left: 808px; }
   .about-box .about-box-top {
     width: 598px;
     height: 12px;
-    float: left;
-    clear: both;
+    position: relative;
     background: url(/images/about-box-top.png) no-repeat; }
   .about-box .about-box-content {
     background-color: #FFF;
-    width: 598px;
+    width: 561px;
     min-height: 258px;
-    float: left;
+    position: relative;
+    padding-top: 5px;
+    padding-bottom: 35px;
+    padding-left: 27px;
+    padding-right: 10px;
     background: url(/images/about-box-content.png) repeat-y; }
+    .about-box .about-box-content .column {
+      width: 255px;
+      padding-bottom: 10px; }
+      .about-box .about-box-content .column.first {
+        padding-right: 35px; }
+  .about-box .comments {
+    background-color: #FFF;
+    width: 561px;
+    position: relative;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 27px;
+    padding-right: 10px;
+    background: url(/images/about-box-content.png) repeat-y; }
+  .about-box h1 {
+    font-size: 18px;
+    padding-top: 3px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: #438bc3; }
+  .about-box h2 {
+    font-size: 16px;
+    padding-bottom: 5px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: #346d8d; }
+  .about-box p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 12px;
+    color: #013662;
+    font-size: 14px; }
+    .about-box p > em:first-child {
+      color: #a2a1a1;
+      font-size: 17px;
+      display: block;
+      padding-bottom: 10px; }
   .about-box .about-box-bottom {
     width: 598px;
     height: 53px;
-    float: left;
-    clear: both;
-    background-color: #FFF;
-    background: url(/images/about-box-bottom.png) no-repeat; }
+    position: relative;
+    background: url(/images/about-box-bottom.png) no-repeat;
+    background-color: #FFF; }
+    .about-box .about-box-bottom .like {
+      float: left;
+      clear: both;
+      width: 548px;
+      height: 75px;
+      margin-top: -28px;
+      margin-left: 25px; }
+      .about-box .about-box-bottom .like .fb_iframe_widget {
+        float: left;
+        clear: both;
+        width: 548px;
+        height: 75px; }
 
 .ticker {
   float: left;

@@ -185,7 +185,7 @@
 			$inBox.data("columnizing", true);
 			
 			$inBox.empty();
-			$inBox.append($("<div class='first last column' style='width:98%; padding: 3px; float: " + options.float + ";'></div>")); //"
+			$inBox.append($("<div class='first last column' style='float: " + options.float + ";'></div>")); //"
 			$col = $inBox.children().eq($inBox.children().length-1);
 			$destroyable = $cache.clone(true);
 			if(options.overflow){
@@ -253,7 +253,7 @@
 			$inBox.data("columnizing", true);
 			
 			$inBox.empty();
-			$inBox.append($("<div style='width:" + (Math.round(100 / numCols) - 2)+ "%; padding: 3px; float: " + options.float + ";'></div>")); //"
+			$inBox.append($("<div style='float: " + options.float + ";'></div>")); //"
 			$col = $inBox.children(":last");
 			$col.append($cache.clone());
 			maxHeight = $col.height();
@@ -287,7 +287,7 @@
 					/* create column */
 					var className = (i == 0) ? "first column" : "column";
 					var className = (i == numCols - 1) ? ("last " + className) : className;
-					$inBox.append($("<div class='" + className + "' style='width:" + (Math.round(100 / numCols) - 2)+ "%; float: " + options.float + ";'></div>")); //"
+					$inBox.append($("<div class='" + className + "' style='float: " + options.float + ";'></div>")); //"
 				}
 				
 				// fill all but the last column (unless overflowing)
@@ -295,7 +295,7 @@
 				while(i < numCols - (options.overflow ? 0 : 1) || scrollHorizontally && $destroyable.children().length){
 					if($inBox.children().length <= i){
 						// we ran out of columns, make another
-						$inBox.append($("<div class='" + className + "' style='width:" + (Math.round(100 / numCols) - 2)+ "%; float: " + options.float + ";'></div>")); //"
+						$inBox.append($("<div class='" + className + "' style='float: " + options.float + ";'></div>")); //"
 					}
 					var $col = $inBox.children().eq(i);
 					columnize($col, $destroyable, $col, targetHeight);

@@ -2,9 +2,12 @@ class AboutHeadingsController < ApplicationController
 	uses_tiny_mce
   # GET /about_headings
   # GET /about_headings.xml
+   
+   layout "admin"
+  
   def index
     @about_headings = AboutHeading.all
-
+	
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @about_headings }
@@ -15,7 +18,7 @@ class AboutHeadingsController < ApplicationController
   # GET /about_headings/1.xml
   def show
     @about_heading = AboutHeading.find(params[:id])
-
+	@about = @about_heading
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @about_heading }
@@ -26,7 +29,7 @@ class AboutHeadingsController < ApplicationController
   # GET /about_headings/new.xml
   def new
     @about_heading = AboutHeading.new
-
+	@about = @about_heading
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @about_heading }
@@ -36,12 +39,14 @@ class AboutHeadingsController < ApplicationController
   # GET /about_headings/1/edit
   def edit
     @about_heading = AboutHeading.find(params[:id])
+    @about = @about_heading
   end
 
   # POST /about_headings
   # POST /about_headings.xml
   def create
     @about_heading = AboutHeading.new(params[:about_heading])
+    @about = @about_heading
 
     respond_to do |format|
       if @about_heading.save
@@ -58,7 +63,7 @@ class AboutHeadingsController < ApplicationController
   # PUT /about_headings/1.xml
   def update
     @about_heading = AboutHeading.find(params[:id])
-
+	@about = @about_heading
     respond_to do |format|
       if @about_heading.update_attributes(params[:about_heading])
         format.html { redirect_to(@about_heading, :notice => 'About heading was successfully updated.') }

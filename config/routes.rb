@@ -8,12 +8,6 @@ Powers::Application.routes.draw do
   resources :about_headings
 
   resources :tickers
-
-  get "financial/planning"
-
-  get "financial/advisors"
-
-	get "homeauto/index"
 	
   get "homeauto/quote"
 
@@ -25,40 +19,8 @@ Powers::Application.routes.draw do
 
   get "homeauto/billing"
 
-  get "benefits/group"
-
-  get "benefits/individual"
-
-  get "business/consultation"
-
-  get "business/claim"
-
-  get "business/policy"
-
-  get "business/certificate"
-
-  get "business/autoid"
-
-  get "business/billing"
-
-  get "home/index"
-
-  get "home/about"
-
-  get "home/associates"
-
-  get "home/affiliations"
-
-  get "home/hub"
-
-  get "home/contact"
-
-  get "home/privacy"
-
-  get "home/terms"
-
 	root :to => 'home#index'
-  match 'homeauto/' => 'homeauto#index'
+  match "/homeauto" => 'homeauto#index'
   
   
   
