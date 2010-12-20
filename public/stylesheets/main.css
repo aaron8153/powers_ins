@@ -136,6 +136,7 @@ body {
 
 .bottom {
   height: 365px;
+  position: relative;
   background-color: #022336; }
   .bottom .bottom-glow {
     width: 1219px;
