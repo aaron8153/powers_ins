@@ -91,23 +91,54 @@ $powers-light-blue: #95e4fc;
 			}
 		}
 	}
+	
+	.about-box-separator {
+		height: 2px;
+		position: relative;
+		background: url(/images/about-box-content.png) repeat-y;
+		display: none;
+		img {
+			display: block;
+			position: relative;
+			height: 2px;
+			width: 590px;
+			margin: auto;
+		}
+	}
+
+	.viewcomments {
+		background-color: #FFF;
+		position: relative;
+		background: url(/images/about-box-content.png) repeat-y;
+		color: #438bc3;
+		text-decoration: none;
+		text-align: right;
+		padding-right: 20px;
+		font-family: "museo-1","museo-2",serif;
+		span {
+			&.showcomments {
+				display: inline;
+			}
+			&.hidecomments {
+				display: none;
+			}
+		}
+		&:hover {
+			cursor: pointer;
+		}
+	}
+	
+	
 	.comments {
 		background-color: #FFF;
 		width: 561px;
 		position: relative;
 		padding-top: 5px;
-		padding-bottom: 30px;
+		padding-bottom: 5px;
 		padding-left: 27px;
 		padding-right: 10px;
 		background: url(/images/about-box-content.png) repeat-y;
-		.viewcomments {
-			color: #438bc3;
-			text-decoration: none;
-			margin-bottom: 5px;
-			&:hover {
-				cursor: pointer;
-			}
-		}
+		
 		.fb_iframe_widget {
 			display: none;
 		}

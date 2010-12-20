@@ -73,21 +73,41 @@
       padding-bottom: 10px; }
       .about-box .about-box-content .column.first {
         padding-right: 35px; }
+  .about-box .about-box-separator {
+    height: 2px;
+    position: relative;
+    background: url(/images/about-box-content.png) repeat-y;
+    display: none; }
+    .about-box .about-box-separator img {
+      display: block;
+      position: relative;
+      height: 2px;
+      width: 590px;
+      margin: auto; }
+  .about-box .viewcomments {
+    background-color: #FFF;
+    position: relative;
+    background: url(/images/about-box-content.png) repeat-y;
+    color: #438bc3;
+    text-decoration: none;
+    text-align: right;
+    padding-right: 20px;
+    font-family: "museo-1","museo-2",serif; }
+    .about-box .viewcomments span.showcomments {
+      display: inline; }
+    .about-box .viewcomments span.hidecomments {
+      display: none; }
+    .about-box .viewcomments:hover {
+      cursor: pointer; }
   .about-box .comments {
     background-color: #FFF;
     width: 561px;
     position: relative;
     padding-top: 5px;
-    padding-bottom: 30px;
+    padding-bottom: 5px;
     padding-left: 27px;
     padding-right: 10px;
     background: url(/images/about-box-content.png) repeat-y; }
-    .about-box .comments .viewcomments {
-      color: #438bc3;
-      text-decoration: none;
-      margin-bottom: 5px; }
-      .about-box .comments .viewcomments:hover {
-        cursor: pointer; }
     .about-box .comments .fb_iframe_widget {
       display: none; }
   .about-box h1 {
