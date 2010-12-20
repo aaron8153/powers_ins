@@ -4,20 +4,32 @@
 		%link{:rel => "shortcut icon", :href => "/favicon.ico", :type => "image/x-icon"}
 		%title!= "POWERS&reg; Insurance and Benefits"	
 		= stylesheet_link_tag 'main'
+		= stylesheet_link_tag 'standard'
 		= javascript_include_tag :defaults
 		= javascript_include_tag 'jquery.min'
-		= include_tiny_mce_if_needed
 		%script
 			jQuery.noConflict();
 		= javascript_include_tag 'pngfix'
 		= csrf_meta_tag
-		
+		%script{:type => "text/javascript", :src => "http://use.typekit.com/mzi2lag.js"}
+		%script{:type => "text/javascript"}
+			try{Typekit.load();}catch(e){}
 		= yield :local_javascript
 		
 		= yield :head
+		
 	%body
 		.main
 			.header
 				= render :partial => 'layouts/partials/header/main'
-			%div{:class => @current_page}
+			.middle
+				= render :partial => 'layouts/partials/floater'
+				= render :partial => 'layouts/partials/aboutbox'
 				= yield
+			.bottom
+				.bottom-glow
+					.ticker
+						= render :partial => 'layouts/partials/ticker'
+					.footer
+						= render :partial => 'layouts/partials/footer/main'
+		= javascript_include_tag 'olark'

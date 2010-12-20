@@ -1,4 +1,6 @@
 Powers::Application.routes.draw do
+  
+
   resources :blogs do
   	resources :comments
   end
@@ -11,6 +13,8 @@ Powers::Application.routes.draw do
 
   get "financial/advisors"
 
+	get "homeauto/index"
+	
   get "homeauto/quote"
 
   get "homeauto/claim"
@@ -54,33 +58,7 @@ Powers::Application.routes.draw do
   get "home/terms"
 
 	root :to => 'home#index'
-	match '/about', :to => 'home#about'
-	match '/associates', :to => 'home#associates'
-	match '/affiliations', :to => 'home#affiliations'
-	match '/hub', :to => 'home#hub'
-	match '/contact', :to => 'home#contact'
-	match '/privacy', :to => 'home#privacy'
-	match '/terms', :to => 'home#terms'
-	
-	match '/business/consultation', :to => 'business#consultation'
-	match '/business/claim', :to => 'business#claim'
-	match '/business/policy', :to => 'business#policy'
-	match '/business/certificate', :to => 'business#certificate'
-	match '/business/autoid', :to => 'business#autoid'
-	match '/business/billing', :to => 'business#billing'
-	
-	match '/benefits/group', :to => 'benefits#group'
-	match '/benefits/individual', :to => 'benefits#individual'
-	
-	match '/homeauto/quote', :to => 'homeauto#quote'
-	match '/homeauto/claim', :to => 'homeauto#claim'
-	match '/homeauto/autoid', :to => 'homeauto#autoid'
-	match '/homeauto/policy', :to => 'homeauto#policy'
-	match '/homeauto/billing', :to => 'homeauto#billing'
-	
-	match '/financial/planning', :to => 'financial#planning'
-	match '/financial/advisors', :to => 'financial#advisors'
-  
+  match 'homeauto/' => 'homeauto#index'
   
   
   

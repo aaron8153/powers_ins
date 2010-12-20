@@ -3,6 +3,7 @@
 %table
   %tr
     %th Heading
+    %th SubHeading
     %th Description
     %th Page
     %th
@@ -12,6 +13,7 @@
   - @about_headings.each do |about_heading|
     %tr
       %td= about_heading.heading
+      %td= about_heading.subheading
       %td= about_heading.description
       %td= about_heading.page
       %td= link_to 'Show', about_heading

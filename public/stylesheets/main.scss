@@ -1,127 +1,159 @@
-$content-width: 1024px;
-$logo-width: 269px;
-$logo-height: 113px;
-
 body {
-	margin: 0px;
-}
+  margin: 0px; }
+
+.main {
+  width: 100%;
+  height: 100%; }
 
 .header {
-	$header-height: 124px;
-	width: 100%;
-	height: $header-height;
-	float: left;
-	clear: both;
-	background: url(/images/header-repeat.jpg) repeat-x;
-	.nav {
-		$nav-margin: 58px;
-		width: $content-width;
-		height: $header-height;
-		margin: auto;
-		a.logo {
-			display: block;
-			width: $logo-width;
-			height: $logo-height;
-			float: left;
-			clear: left;
-			margin: {
-				top: 10px;
-				left: $nav-margin;
-			}
-			background: url(/images/logo.png) no-repeat;
-		}
-		.nav-right {
-			$nav-right-width: $content-width - $logo-width - (2 * $nav-margin);
-			width: $nav-right-width;
-			height: $header-height;
-			float: left;
-			clear: right;
-			$nav-top-height: 32px;
-			$nav-bottom-height: $header-height - $nav-top-height;
-			.nav-top {
-				width: $nav-right-width;
-				height: $nav-top-height;
-				float: left;
-				clear: both;
-				a.live-chat {
-					display: block;
-					width: 112px;
-					height: $nav-top-height;
-					float: right;
-					clear: right;
-				}
-				a.contact {
-					display: block;
-					width: 112px;
-					height: $nav-top-height;
-					float: right;
-				}
-				.toll-free {
-					$toll-free-width: 337px;
-					height: $nav-top-height;
-					width: $toll-free-width;					
-					float: right;
-					clear: left;
-					img.phone {
-						$phone-width: 10px;
-						$phone-height: 16px;
-						float: left;
-						clear: left;
-						margin: {
-							top: ($nav-top-height - $phone-height) / 2;
-						}
-					}
-					h4 {
-						float: left;
-						clear: none;
-						margin: {
-							top: 2px;
-						}
-					}
-				}							
-			}
-			.nav-bottom {
-				width: $nav-right-width;
-				height: $nav-bottom-height;
-				float: left;
-				clear: both;
-				.nav-tabs {
-					$nav-tabs-width: 561px;
-					$nav-tabs-height: 79px;
-					width: $nav-tabs-width;
-					height: $nav-tabs-height;
-					float: right;
-					clear: both;
-					margin: {
-						top: ($nav-bottom-height - $nav-tabs-height) / 2;
-					}
-					background: url(/images/header-nav-tabs-bg.png) no-repeat;
-				}
-			}
-		}
-	}
-}
+  width: 100%;
+  height: 122px;
+  float: left;
+  clear: both;
+  background: url(/images/header-repeat.jpg) repeat-x; }
+  .header .nav {
+    width: 1024px;
+    height: 122px;
+    margin: auto; }
+    .header .nav a.logo {
+      display: block;
+      width: 269px;
+      height: 113px;
+      float: left;
+      clear: left;
+      margin-top: 10px;
+      margin-left: 58px;
+      background: url(/images/logo.png) no-repeat; }
+    .header .nav .nav-right {
+      width: 639px;
+      height: 124px;
+      float: left;
+      clear: right; }
+      .header .nav .nav-right .nav-top {
+        width: 639px;
+        height: 32px;
+        float: left;
+        clear: both; }
+        .header .nav .nav-right .nav-top a.live-chat {
+          display: block;
+          background: url(/images/live-chat.png) no-repeat;
+          width: 112px;
+          margin-right: -2px;
+          height: 26px;
+          margin-top: 1px;
+          float: right;
+          clear: right; }
+          .header .nav .nav-right .nav-top a.live-chat:hover {
+            background-position: 0 -27px; }
+        .header .nav .nav-right .nav-top a.contact {
+          display: block;
+          background: url(/images/contact.png) no-repeat;
+          width: 112px;
+          height: 26px;
+          margin-top: 1px;
+          float: right; }
+          .header .nav .nav-right .nav-top a.contact:hover {
+            background-position: 0 -27px; }
+        .header .nav .nav-right .nav-top .toll-free {
+          height: 32px;
+          width: 270px;
+          margin-top: 4px;
+          float: right;
+          letter-spacing: 1px;
+          clear: left; }
+          .header .nav .nav-right .nav-top .toll-free img.phone {
+            clear: none;
+            float: left;
+            font-size: 15px;
+            font-weight: 500;
+            margin-top: 2px;
+            margin-right: 4px; }
+          .header .nav .nav-right .nav-top .toll-free h4 {
+            clear: none;
+            float: left;
+            font-size: 13px;
+            font-weight: 500;
+            color: #52bfdb;
+            margin-top: 3px; }
+          .header .nav .nav-right .nav-top .toll-free span {
+            clear: none;
+            float: left;
+            font-size: 13px;
+            font-weight: 500;
+            color: #ffffff;
+            margin-left: 5px;
+            letter-spacing: 1px;
+            margin-top: 3px; }
+      .header .nav .nav-right .nav-bottom {
+        width: 639px;
+        height: 92px;
+        float: left;
+        clear: both; }
+        .header .nav .nav-right .nav-bottom .nav-tabs {
+          width: 580px;
+          height: 79px;
+          float: right;
+          clear: both;
+          /*background: url(/images/header-nav-tabs-bg.png) no-repeat;*/ }
+          .header .nav .nav-right .nav-bottom .nav-tabs a.tab {
+            display: block;
+            height: 72px;
+            margin-top: 3.5px; }
+            .header .nav .nav-right .nav-bottom .nav-tabs a.tab.home {
+              width: 90px;
+              height: 82px;
+              float: left;
+              background: url(/images/nav-home.png) no-repeat;
+              margin-left: 12px; }
+              .header .nav .nav-right .nav-bottom .nav-tabs a.tab.home:hover {
+                background-position: 0px -82px; }
+            .header .nav .nav-right .nav-bottom .nav-tabs a.tab.associates {
+              width: 129px;
+              height: 82px;
+              float: left;
+              background: url(/images/nav-associates.png) no-repeat; }
+              .header .nav .nav-right .nav-bottom .nav-tabs a.tab.associates:hover {
+                background-position: 0px -82px; }
+            .header .nav .nav-right .nav-bottom .nav-tabs a.tab.affiliations {
+              width: 142px;
+              float: left;
+              height: 82px;
+              background: url(/images/nav-affiliations.png) no-repeat; }
+              .header .nav .nav-right .nav-bottom .nav-tabs a.tab.affiliations:hover {
+                background-position: 0px -82px; }
+            .header .nav .nav-right .nav-bottom .nav-tabs a.tab.aboutus {
+              width: 116px;
+              float: left;
+              height: 82px;
+              background: url(/images/nav-aboutus.png) no-repeat; }
+              .header .nav .nav-right .nav-bottom .nav-tabs a.tab.aboutus:hover {
+                background-position: 0px -82px; }
+            .header .nav .nav-right .nav-bottom .nav-tabs a.tab.blog {
+              width: 91px;
+              float: left;
+              height: 82px;
+              background: url(/images/nav-blog.png) no-repeat; }
+              .header .nav .nav-right .nav-bottom .nav-tabs a.tab.blog:hover {
+                background-position: 0px -82px; }
+            .header .nav .nav-right .nav-bottom .nav-tabs a.tab:hover {
+              background-position: 0px -72px; }
+            .header .nav .nav-right .nav-bottom .nav-tabs a.tab span {
+              display: none; }
 
-.home {
-	$home-height: 409px;
-	width: 100%;
-	height: $home-height;
-	float: left;
-	clear: both;
-	background: url(/images/home-bg-repeat.jpg) repeat-x;
-	.home-content {
-		width: 1200px;
-		height: $home-height;
-		background: url(/images/home-bg.jpg) no-repeat;
-		margin: auto;
-	}
-}
+.middle {
+  width: 100%;
+  height: 411px;
+  float: left;
+  clear: both;
+  background: #055189 url(/images/home-bg-repeat.jpg) repeat-x center; }
+  .middle .home-content {
+    width: 1200px;
+    height: 409px;
+    margin: auto; }
 
-
-
-
-
-
-
-
-
+.footer {
+  width: 100%;
+  height: 367px;
+  float: left;
+  clear: both;
+  background: url(/images/footer-repeat.jpg) repeat-x center; }

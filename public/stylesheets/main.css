@@ -1,15 +1,16 @@
 body {
-  margin: 0px; }
+  margin: 0px;
+  background-color: #022336; }
 
 .header {
   width: 100%;
-  height: 124px;
+  height: 122px;
   float: left;
   clear: both;
   background: url(/images/header-repeat.jpg) repeat-x; }
   .header .nav {
     width: 1024px;
-    height: 124px;
+    height: 122px;
     margin: auto; }
     .header .nav a.logo {
       display: block;
@@ -32,49 +33,150 @@ body {
         clear: both; }
         .header .nav .nav-right .nav-top a.live-chat {
           display: block;
+          background: url(/images/live-chat.png) no-repeat;
           width: 112px;
-          height: 32px;
+          margin-right: -2px;
+          height: 26px;
+          margin-top: 1px;
           float: right;
           clear: right; }
+          .header .nav .nav-right .nav-top a.live-chat:hover {
+            background-position: 0 -27px; }
         .header .nav .nav-right .nav-top a.contact {
           display: block;
+          background: url(/images/contact.png) no-repeat;
           width: 112px;
-          height: 32px;
+          height: 26px;
+          margin-top: 1px;
           float: right; }
+          .header .nav .nav-right .nav-top a.contact:hover {
+            background-position: 0 -27px; }
         .header .nav .nav-right .nav-top .toll-free {
           height: 32px;
-          width: 337px;
+          width: 270px;
+          margin-top: 4px;
           float: right;
+          letter-spacing: 1px;
           clear: left; }
           .header .nav .nav-right .nav-top .toll-free img.phone {
-            float: left;
-            clear: left;
-            margin-top: 8px; }
-          .header .nav .nav-right .nav-top .toll-free h4 {
-            float: left;
             clear: none;
-            margin-top: 2px; }
+            float: left;
+            font-size: 15px;
+            font-weight: 500;
+            margin-top: 2px;
+            margin-right: 4px; }
+          .header .nav .nav-right .nav-top .toll-free h4 {
+            clear: none;
+            float: left;
+            font-size: 13px;
+            font-weight: 500;
+            color: #52bfdb;
+            margin-top: 3px; }
+          .header .nav .nav-right .nav-top .toll-free span {
+            clear: none;
+            float: left;
+            font-size: 13px;
+            font-weight: 500;
+            color: #ffffff;
+            margin-left: 5px;
+            letter-spacing: 1px;
+            margin-top: 3px; }
       .header .nav .nav-right .nav-bottom {
         width: 639px;
         height: 92px;
         float: left;
         clear: both; }
         .header .nav .nav-right .nav-bottom .nav-tabs {
-          width: 561px;
+          width: 580px;
           height: 79px;
           float: right;
           clear: both;
-          margin-top: 6.5px;
-          background: url(/images/header-nav-tabs-bg.png) no-repeat; }
+          /*background: url(/images/header-nav-tabs-bg.png) no-repeat;*/ }
+          .header .nav .nav-right .nav-bottom .nav-tabs a.tab {
+            display: block;
+            height: 72px;
+            margin-top: 3.5px; }
+            .header .nav .nav-right .nav-bottom .nav-tabs a.tab.home {
+              width: 90px;
+              height: 82px;
+              float: left;
+              background: url(/images/nav-home.png) no-repeat;
+              margin-left: 12px; }
+              .header .nav .nav-right .nav-bottom .nav-tabs a.tab.home:hover {
+                background-position: 0px -82px; }
+            .header .nav .nav-right .nav-bottom .nav-tabs a.tab.associates {
+              width: 129px;
+              height: 82px;
+              float: left;
+              background: url(/images/nav-associates.png) no-repeat; }
+              .header .nav .nav-right .nav-bottom .nav-tabs a.tab.associates:hover {
+                background-position: 0px -82px; }
+            .header .nav .nav-right .nav-bottom .nav-tabs a.tab.affiliations {
+              width: 142px;
+              float: left;
+              height: 82px;
+              background: url(/images/nav-affiliations.png) no-repeat; }
+              .header .nav .nav-right .nav-bottom .nav-tabs a.tab.affiliations:hover {
+                background-position: 0px -82px; }
+            .header .nav .nav-right .nav-bottom .nav-tabs a.tab.aboutus {
+              width: 116px;
+              float: left;
+              height: 82px;
+              background: url(/images/nav-aboutus.png) no-repeat; }
+              .header .nav .nav-right .nav-bottom .nav-tabs a.tab.aboutus:hover {
+                background-position: 0px -82px; }
+            .header .nav .nav-right .nav-bottom .nav-tabs a.tab.blog {
+              width: 91px;
+              float: left;
+              height: 82px;
+              background: url(/images/nav-blog.png) no-repeat; }
+              .header .nav .nav-right .nav-bottom .nav-tabs a.tab.blog:hover {
+                background-position: 0px -82px; }
+            .header .nav .nav-right .nav-bottom .nav-tabs a.tab:hover {
+              background-position: 0px -72px; }
+            .header .nav .nav-right .nav-bottom .nav-tabs a.tab span {
+              display: none; }
 
-.home {
+.bottom {
   width: 100%;
-  height: 409px;
   float: left;
   clear: both;
-  background: url(/images/home-bg-repeat.jpg) repeat-x; }
-  .home .home-content {
-    width: 1200px;
-    height: 409px;
-    background: url(/images/home-bg.jpg) no-repeat;
-    margin: auto; }
+  background-color: #022336; }
+  .bottom .bottom-glow {
+    width: 1219px;
+    height: 365px;
+    margin: auto;
+    background: url(/images/bottom-glow.jpg) no-repeat; }
+
+.footer {
+  float: left;
+  clear: both;
+  margin-top: 15px; }
+  .footer .footer-links {
+    float: left;
+    clear: both;
+    width: 518px;
+    height: 21px;
+    margin-left: 355px;
+    background: url(/images/footer.png) no-repeat; }
+    .footer .footer-links a {
+      color: #FFF;
+      text-decoration: none; }
+      .footer .footer-links a:hover {
+        text-decoration: underline; }
+    .footer .footer-links span {
+      color: #FFF; }
+  .footer .footer-contact {
+    float: left;
+    clear: both;
+    width: 518px;
+    margin-top: 5px;
+    margin-left: 355px;
+    color: #3d9dbb; }
+  .footer .copy-right {
+    float: left;
+    clear: both;
+    width: 518px;
+    margin-left: 355px;
+    text-align: center;
+    color: #347499; }

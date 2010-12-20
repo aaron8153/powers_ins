@@ -1,4 +1,8 @@
 class HomeautoController < ApplicationController
+  def index
+  
+  end
+
   def quote
   end
 

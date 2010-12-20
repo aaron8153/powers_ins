@@ -1,6 +1,11 @@
 require 'test_helper'
 
 class HomeautoControllerTest < ActionController::TestCase
+  test "should get index" do
+    get :index
+    assert_response :success
+  end
+
   test "should get quote" do
     get :quote
     assert_response :success

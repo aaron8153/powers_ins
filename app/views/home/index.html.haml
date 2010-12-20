@@ -1,1 +1,46 @@
 .home-content
+	.home-image
+	.home-about
+		%h1
+			!= @about.heading
+		%h2
+			!= @about.subheading
+		.description
+			!= @about.description
+		%a.readmore
+			%span
+				Read More
+	.home-contact
+		%h3
+			Contact POWERS
+			%sup
+				&reg;
+		.address
+			%span
+				7745 Carondelet Ave, Suite 200
+			%span
+				Clayton, Missouri 63105-3315
+		.numbers
+			.numbers-left
+				%h4
+					PHONE
+				%h4
+					FAX
+				%h4
+					TEXT
+			.numbers-right
+				%span
+					314.725.1414
+				%span
+					314.725.2350
+				%span
+					xxx.xxx.xxxx
+		.hours
+			%h4
+				Hours
+			%span
+				Mon - Fri
+			%span
+				7:30am to
+			%span
+				5:00 pm

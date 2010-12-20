@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101203005821) do
+ActiveRecord::Schema.define(:version => 20101210191046) do
 
   create_table "about_headings", :force => true do |t|
     t.string   "heading"
@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(:version => 20101203005821) do
     t.string   "page"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "subheading"
   end
 
   create_table "blogs", :force => true do |t|
