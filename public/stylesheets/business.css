@@ -1,0 +1,24 @@
+.page-content .index {
+  position: relative;
+  width: 598px;
+  padding-bottom: 10px; }
+  .page-content .index a {
+    display: block;
+    position: relative;
+    float: left;
+    padding-top: 20px; }
+    .page-content .index a.instantquote {
+      clear: left;
+      width: 278px;
+      height: 62px;
+      background: url(/images/biz-instantquote.png) no-repeat; }
+    .page-content .index a.livechat {
+      width: 278px;
+      height: 62px;
+      margin-left: 42px;
+      clear: right;
+      background: url(/images/biz-livechat.png) no-repeat; }
+    .page-content .index a:hover {
+      background-position: 0px -82px; }
+    .page-content .index a span {
+      display: none; }

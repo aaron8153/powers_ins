@@ -1,0 +1,58 @@
+= form_for @auto_id do |f|
+  -if @auto_id.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@auto_id.errors.count, "error")} prohibited this auto_id from being saved:"
+      %ul
+        - @auto_id.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :email
+    = f.text_field :email
+  .field
+    = f.label :street_address
+    = f.text_field :street_address
+  .field
+    = f.label :street_address_cont
+    = f.text_field :street_address_cont
+  .field
+    = f.label :city
+    = f.text_field :city
+  .field
+    = f.label :state
+    = f.text_field :state
+  .field
+    = f.label :zip
+    = f.text_field :zip
+  .field
+    = f.label :phone_work
+    = f.text_field :phone_work
+  .field
+    = f.label :phone_home
+    = f.text_field :phone_home
+  .field
+    = f.label :policy_number
+    = f.text_field :policy_number
+  .field
+    = f.label :vehicle_year
+    = f.text_field :vehicle_year
+  .field
+    = f.label :vehicle_make
+    = f.text_field :vehicle_make
+  .field
+    = f.label :vehicle_model
+    = f.text_field :vehicle_model
+  .field
+    = f.label :vin
+    = f.text_field :vin
+  .field
+    = f.label :misc
+    = f.text_area :misc
+  .field
+    = f.label :division
+    = f.text_field :division
+  .actions
+    = f.submit 'Save'

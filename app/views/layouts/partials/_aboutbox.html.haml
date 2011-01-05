@@ -1,22 +1,23 @@
-.about-box
-	.about-box-top
-	.about-box-content
-		%h1
-			!= @about.heading
-		%h2
-			!= @about.subheading
-		!= @about.description
-	.viewcomments
-		%span.showcomments
-			Show 
-		%span.hidecomments
-			Hide 
-		Comments
-	.about-box-separator
-		%img{:src=>"/images/about-box-separator.png"}
-	.comments
-		#fb-root
-		%fb:comments{:xid=>"homeauto", :numposts=>"5", :width=>"534", :publish_feed=>"true"}
-	.about-box-bottom
-		.like
-			%fb:like{:href => request.url, :layout => "standard", :show_faces => "true", :width => "548"}
+- if !@about.nil? 
+	.about-box
+		.about-box-top
+		.about-box-content
+			%h1
+				!= @about.heading
+			%h2
+				!= @about.subheading
+			!= @about.description
+		.viewcomments
+			%span.showcomments
+				Show 
+			%span.hidecomments
+				Hide 
+			Comments
+		.about-box-separator
+			%img{:src=>"/images/about-box-separator.png"}
+		.comments
+			#fb-root
+			%fb:comments{:xid=>"#{@current_page}-#{@current_action}", :numposts=>"5", :width=>"534", :publish_feed=>"true"}
+		.about-box-bottom
+			.like
+				%fb:like{:href => request.url, :layout => "standard", :show_faces => "true", :width => "548"}

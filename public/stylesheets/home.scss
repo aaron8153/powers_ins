@@ -7,7 +7,7 @@ $powers-light-blue: #95e4fc;
   position: relative;
   background: #055189 url(/images/home-bg-repeat.jpg) repeat-x center;
   .home-content {
-    width: 1200px;
+    width: 1024px;
     height: 409px;
     margin: auto;
     position: relative;
@@ -20,7 +20,7 @@ $powers-light-blue: #95e4fc;
 		clear: left;
 		width: 312px;
 		height: 380px;
-		margin-left: 150px;
+		margin-left: 63px;
 		background: url(/images/home-image.png) no-repeat;
 	}
 	
@@ -160,19 +160,18 @@ $powers-light-blue: #95e4fc;
 }
 
 .bottom-nav {
-	width: 1200px;
 	margin: auto;
-	float: left;
-	clear: both;
+	width: 1024px;
+	height: 55px;
 	a {
-		display: block;
 		float: left;
+		display: block;
 		margin-top: -45px;
 		&.business {
 			clear: left;
 			width: 288px;
 			height: 109px;
-			margin-left: 158px;
+			margin-left: 63px;
 			background: url(/images/bottom-nav-business.png) no-repeat;
 		}
 		&.homeauto {
@@ -182,10 +181,10 @@ $powers-light-blue: #95e4fc;
 			background: url(/images/bottom-nav-homeauto.png) no-repeat;
 		}
 		&.benefits {
-			clear: right;
 			width: 288px;
 			height: 109px;
 			margin-left: 20px;
+			clear: right;
 			background: url(/images/bottom-nav-benefits.png) no-repeat;
 		}
 		&:hover {
@@ -198,17 +197,16 @@ $powers-light-blue: #95e4fc;
 }
 
 .ticker {
-	float: left;
-	clear: both;
+	position: relative;
+	height: 36px;
 	width: 594px;
-	height: 46px;
-	margin-left: 317px;
-	margin-top: -3px;
-	background: url(/images/ticker.png) no-repeat;
+	margin: auto;
+	margin-top: 10px;
+	background: url(/images/ticker.png) no-repeat center;
+	padding-top: 10px;
 	a {
 		text-decoration: none;
 		text-align: center;
-		margin-top: 10px;
 		width: 594px;
 		height: 46px;
 		display: block;
@@ -216,19 +214,31 @@ $powers-light-blue: #95e4fc;
 			display: none;
 		}
 		span.date {
-			color: #000;
+			color: #001d34;
+			font-size: 13px;
+    		font-weight: 700;
+    		letter-spacing: 0.06em;
+			
 			&:hover {
 				text-decoration: none;
 			}
 		}
 		span.headline {
 			color: #FFF;
+			font-size: 15px;
+			font-weight: 300;
+			letter-spacing: 0.06em;
 			&:hover {
 				text-decoration: underline;
 			}
 		}
 		span.readmore {
 			color: #52bfdb;
+    		font-family: helvetica;
+    		font-size: 11px;
+    		font-weight: bold;
+    		letter-spacing: 0.03em;
+   			text-transform: uppercase;
 			&:hover {
 				text-decoration: none;
 			}

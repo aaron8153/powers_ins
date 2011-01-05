@@ -1,0 +1,49 @@
+%h1 Listing auto_ids
+
+%table
+  %tr
+    %th Name
+    %th Email
+    %th Street address
+    %th Street address cont
+    %th City
+    %th State
+    %th Zip
+    %th Phone work
+    %th Phone home
+    %th Policy number
+    %th Vehicle year
+    %th Vehicle make
+    %th Vehicle model
+    %th Vin
+    %th Misc
+    %th Division
+    %th
+    %th
+    %th
+
+  - @auto_ids.each do |auto_id|
+    %tr
+      %td= auto_id.name
+      %td= auto_id.email
+      %td= auto_id.street_address
+      %td= auto_id.street_address_cont
+      %td= auto_id.city
+      %td= auto_id.state
+      %td= auto_id.zip
+      %td= auto_id.phone_work
+      %td= auto_id.phone_home
+      %td= auto_id.policy_number
+      %td= auto_id.vehicle_year
+      %td= auto_id.vehicle_make
+      %td= auto_id.vehicle_model
+      %td= auto_id.vin
+      %td= auto_id.misc
+      %td= auto_id.division
+      %td= link_to 'Show', auto_id
+      %td= link_to 'Edit', edit_auto_id_path(auto_id)
+      %td= link_to 'Destroy', auto_id, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Auto', new_auto_id_path

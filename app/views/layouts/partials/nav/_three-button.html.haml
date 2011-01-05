@@ -1,9 +1,10 @@
-%a.business{:href => "/business"}
-	%span
-		Business
-%a.homeauto{:href => "/homeauto"}
-	%span
-		Home/Auto
-%a.benefits{:href => "/benefits"}
-	%span
-		Benefits
+.three-button-center
+	%a.business{:href => "/business", :class => "#{@current_page=='business' ? ' current' : ''}"}
+		%span
+			Business
+	%a.homeauto{:href => "/homeauto", :class => "#{@current_page=='homeauto' ? ' current' : ''}"}
+		%span
+			Home/Auto
+	%a.benefits{:href => "/benefits", :class => "#{@current_page=='benefits' ? ' current' : ''}"}
+		%span
+			Benefits

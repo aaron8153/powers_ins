@@ -1,9 +1,17 @@
 Powers::Application.routes.draw do
   
 
-  get "homeauto/index"
+  resources :policy_changes
 
-  get "homeauto/quote"
+  resources :auto_ids
+
+  get "benefits/index"
+
+  get "benefits/individual"
+
+  get "benefits/group"
+
+  get "homeauto/index"
 
   get "homeauto/claim"
 
@@ -12,6 +20,20 @@ Powers::Application.routes.draw do
   get "homeauto/policy"
 
   get "homeauto/billing"
+  
+  get "businesss/index"
+
+  get "businesss/consultation"
+
+  get "businesss/claim"
+
+  get "businesss/policy"
+
+  get "businesss/certificate"
+
+  get "businesss/autoid"
+  
+  get "business/billing"
 
   resources :blogs do
   	resources :comments
@@ -24,8 +46,25 @@ Powers::Application.routes.draw do
   get "home/index"
 
 	root :to => 'home#index'
+	
+	match "/business" => 'business#index'
+		match "/business/consultation" => 'business#consultation'
+		match "/business/claim" => 'business#claim'
+		match "/business/policy" => 'business#policy'
+		match "/business/certificate" => 'business#certificate'
+		match "/business/autoid" => 'business#autoid'
+		match "/business/billing" => 'business#billing'
 
-	match "/homeauto" => 'homeauto#index'  
+	match "/homeauto" => 'homeauto#index'
+		match "/homeauto/claim" => 'homeauto#claim'
+		match "/homeauto/autoid" => 'homeauto#autoid'
+		match "/homeauto/policy" => 'homeauto#policy'
+		match "/homeauto/billing" => 'homeauto#billing'
+	
+	
+	match "/benefits" => 'benefits#index'
+		match "/benefits/individual" => 'benefits#individual'
+		match "/benefits/group" => 'benefits#group'
   
   
   # The priority is based upon order of creation:

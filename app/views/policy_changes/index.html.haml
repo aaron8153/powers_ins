@@ -1,0 +1,45 @@
+%h1 Listing policy_changes
+
+%table
+  %tr
+    %th Name
+    %th Email
+    %th Street address
+    %th Street address cont
+    %th City
+    %th State
+    %th Zip
+    %th Phone work
+    %th Phone home
+    %th Policy number
+    %th Change date
+    %th Description
+    %th Misc
+    %th Division
+    %th
+    %th
+    %th
+
+  - @policy_changes.each do |policy_change|
+    %tr
+      %td= policy_change.name
+      %td= policy_change.email
+      %td= policy_change.street_address
+      %td= policy_change.street_address_cont
+      %td= policy_change.city
+      %td= policy_change.state
+      %td= policy_change.zip
+      %td= policy_change.phone_work
+      %td= policy_change.phone_home
+      %td= policy_change.policy_number
+      %td= policy_change.change_date
+      %td= policy_change.description
+      %td= policy_change.misc
+      %td= policy_change.division
+      %td= link_to 'Show', policy_change
+      %td= link_to 'Edit', edit_policy_change_path(policy_change)
+      %td= link_to 'Destroy', policy_change, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Policy change', new_policy_change_path

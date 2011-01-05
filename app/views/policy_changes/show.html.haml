@@ -1,0 +1,48 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @policy_change.name
+%p
+  %b Email:
+  = @policy_change.email
+%p
+  %b Street address:
+  = @policy_change.street_address
+%p
+  %b Street address cont:
+  = @policy_change.street_address_cont
+%p
+  %b City:
+  = @policy_change.city
+%p
+  %b State:
+  = @policy_change.state
+%p
+  %b Zip:
+  = @policy_change.zip
+%p
+  %b Phone work:
+  = @policy_change.phone_work
+%p
+  %b Phone home:
+  = @policy_change.phone_home
+%p
+  %b Policy number:
+  = @policy_change.policy_number
+%p
+  %b Change date:
+  = @policy_change.change_date
+%p
+  %b Description:
+  = @policy_change.description
+%p
+  %b Misc:
+  = @policy_change.misc
+%p
+  %b Division:
+  = @policy_change.division
+
+= link_to 'Edit', edit_policy_change_path(@policy_change)
+\|
+= link_to 'Back', policy_changes_path

@@ -4,39 +4,150 @@ $powers-light-blue: #95e4fc;
 
 .top-nav {
 	height: 118px;
-	background-color: #ecebeb;
+	background: url(/images/top-nav-bg-repeat.png) #ecebeb repeat-x;
 	.three-button {
-		width: 1200px;
-		height: 77px;
+		width: 100%;
+		height: 88px;
 		margin: auto;
-		background: url(/images/top-nav-bg.png) no-repeat;
+		padding-top: 30px;
+		background: url(/images/top-nav-bg.jpg) no-repeat center;
+		.three-button-center{
+			width: 907px;
+			position: relative;
+			margin: auto;
+			a {
+				display: block;
+				position: relative;
+				float: left;
+				padding-top: 20px;
+				&.business {
+					clear: left;
+					width: 289px;
+					height: 58px;
+					margin-left: auto;
+					background: url(/images/top-nav-business.png) no-repeat;
+				}
+				&.homeauto {
+					width: 289px;
+					height: 58px;
+					margin-left: 20px;
+					background: url(/images/top-nav-homeauto.png) no-repeat;
+				}
+				&.benefits {
+					clear: right;
+					width: 289px;
+					height: 58px;
+					margin-left: 20px;
+					margin-right: auto;
+					background: url(/images/top-nav-benefits.png) no-repeat;
+				}
+				&:hover {
+					background-position: 0px -78px;
+				}
+				&.current {
+					background-position: 0px -78px;
+					&:hover {
+					}
+				}
+				span {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+.middle-wrapper {
+	background: #ecebeb;
+	position: relative;
+	width: 100%;
+	padding-bottom: 35px;
+	.middle {
+		padding-top: 20px;
+		padding-bottom: 40px;
+		min-height: 411px;
+		width: 907px;
+		margin: auto;		
+		position: relative;
+		background-color: #ecebeb;
+		.page-content {
+			position: relative;
+			width: 598px;
+			margin-left: 308px;
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+	}
+}
+
+.floater {
+	width: 238px;
+	height: 323px;
+	position: absolute;
+	background: url(/images/floater-bg.png) no-repeat;
+	margin-top: -10px;
+	margin-left: 24px;
+	h4 {
+		margin-bottom: 18px;
+		text-align: center;
+	}
+	.homeauto {
 		a {
 			display: block;
 			position: relative;
-			float: left;
-			padding-top: 20px;
-			&.business {
-				clear: left;
-				width: 288px;
-				height: 80px;
-				margin-left: 158px;
-				background: url(/images/top-nav-business.png) no-repeat;
+			width: 208px;
+			height: 42px;
+			margin-left: 14px;
+			&.quote {
+				background: url(/images/floatnav-ha-requestquote.png) no-repeat;
 			}
-			&.homeauto {
-				width: 288px;
-				height: 80px;
-				margin-left: 20px;
-				background: url(/images/top-nav-homeauto.png) no-repeat;
+			&.claim {
+				background: url(/images/floatnav-ha-reportclaim.png) no-repeat;
 			}
-			&.benefits {
-				clear: right;
-				width: 288px;
-				height: 80px;
-				margin-left: 20px;
-				background: url(/images/top-nav-benefits.png) no-repeat;
+			&.autoid {
+				background: url(/images/floatnav-ha-requestcards.png) no-repeat;
+			}
+			&.policy {
+				background: url(/images/floatnav-ha-requestpolicy.png) no-repeat;
+			}
+			&.billing {
+				background: url(/images/floatnav-ha-billing.png) no-repeat;
 			}
 			&:hover {
-				background-position: 0px -80px;
+				background-position: 0px -41px;
+			}
+			span {
+				display: none;
+			}
+		}
+	}
+	.business {
+		a {
+			display: block;
+			position: relative;
+			width: 208px;
+			height: 42px;
+			margin-left: 14px;
+			&.consultation {
+				background: url(/images/floatnav-biz-requestconsult.png) no-repeat;
+			}
+			&.claim {
+				background: url(/images/floatnav-biz-reportclaim.png) no-repeat;
+			}
+			&.policy {
+				background: url(/images/floatnav-biz-requestpolicy.png) no-repeat;
+			}
+			&.certificate {
+				background: url(/images/floatnav-biz-requestcert.png) no-repeat;
+			}
+			&.autoid {
+				background: url(/images/floatnav-biz-requestcards.png) no-repeat;
+			}
+			&.billing {
+				background: url(/images/floatnav-biz-billinginfo.png) no-repeat;
+			}
+			&:hover {
+				background-position: 0px -41px;
 			}
 			span {
 				display: none;
@@ -45,28 +156,11 @@ $powers-light-blue: #95e4fc;
 	}
 }
 
-.middle {
-	padding-top: 20px;
-	padding-bottom: 40px;
-	min-height: 411px;
-	position: relative;
-	background-color: #ecebeb;
-}
-
-.floater {
-	width: 238px;
-	height: 323px;
-	position: absolute;
-	background: url(/images/floater-bg.png) no-repeat;
-	margin-left: 515px;
-	margin-top: -10px;
-}
-
 .about-box {
 	position: relative;
 	width: 598px;
 	min-height: 323px;
-	margin-left: 808px;
+	margin-left: 308px;
 	margin-top: -10px;
 	.about-box-top {
 		width: 598px;
@@ -189,45 +283,6 @@ $powers-light-blue: #95e4fc;
 				clear: both;
 				width: 548px;
 				height: 75px;
-			}
-		}
-	}
-}
-
-.ticker {
-	float: left;
-	clear: both;
-	width: 594px;
-	height: 46px;
-	margin-left: 317px;
-	margin-top: 30px;
-	background: url(/images/ticker.png) no-repeat;
-	a {
-		text-decoration: none;
-		text-align: center;
-		margin-top: 10px;
-		width: 594px;
-		height: 36px;
-		display: block;
-		&.hide {
-			display: none;
-		}
-		span.date {
-			color: #000;
-			&:hover {
-				text-decoration: none;
-			}
-		}
-		span.headline {
-			color: #FFF;
-			&:hover {
-				text-decoration: underline;
-			}
-		}
-		span.readmore {
-			color: #52bfdb;
-			&:hover {
-				text-decoration: none;
 			}
 		}
 	}

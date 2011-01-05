@@ -28,14 +28,16 @@
 			.top-nav
 				.three-button
 					= render :partial => 'layouts/partials/nav/three-button'
-			.middle
-				= render :partial => 'layouts/partials/floater'
-				= render :partial => 'layouts/partials/aboutbox'
-				= javascript_include_tag 'columnizer/autocolumn'
-				= javascript_include_tag 'about-two-column'
-				= yield
-				= javascript_include_tag 'floatbox'
-				= javascript_include_tag 'fb-comments'
+			.middle-wrapper
+				.middle
+					= render :partial => 'layouts/partials/floater'
+					= render :partial => 'layouts/partials/aboutbox'
+					= javascript_include_tag 'columnizer/autocolumn'
+					= javascript_include_tag 'about-two-column'
+					.page-content
+						= yield
+					= javascript_include_tag 'floatbox'
+					= javascript_include_tag 'fb-comments'
 			.bottom
 				.bottom-glow
 					.ticker

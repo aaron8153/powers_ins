@@ -1,0 +1,54 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @auto_id.name
+%p
+  %b Email:
+  = @auto_id.email
+%p
+  %b Street address:
+  = @auto_id.street_address
+%p
+  %b Street address cont:
+  = @auto_id.street_address_cont
+%p
+  %b City:
+  = @auto_id.city
+%p
+  %b State:
+  = @auto_id.state
+%p
+  %b Zip:
+  = @auto_id.zip
+%p
+  %b Phone work:
+  = @auto_id.phone_work
+%p
+  %b Phone home:
+  = @auto_id.phone_home
+%p
+  %b Policy number:
+  = @auto_id.policy_number
+%p
+  %b Vehicle year:
+  = @auto_id.vehicle_year
+%p
+  %b Vehicle make:
+  = @auto_id.vehicle_make
+%p
+  %b Vehicle model:
+  = @auto_id.vehicle_model
+%p
+  %b Vin:
+  = @auto_id.vin
+%p
+  %b Misc:
+  = @auto_id.misc
+%p
+  %b Division:
+  = @auto_id.division
+
+= link_to 'Edit', edit_auto_id_path(@auto_id)
+\|
+= link_to 'Back', auto_ids_path

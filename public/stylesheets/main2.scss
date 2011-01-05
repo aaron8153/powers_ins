@@ -147,26 +147,69 @@ body {
   position: relative;
   background-color: #022336;
 	.bottom-glow {
-		width: 1219px;
-		height: 365px;
+		height: 335px;
 		margin: auto;
-		background: url(/images/bottom-glow.jpg) no-repeat;
+		padding-top: 30px;
+		background: url(/images/bottom-glow.jpg) no-repeat center;
+	}
+}
+
+.ticker {
+	position: relative;
+	width: 594px;
+	height: 36px;
+	margin: auto;
+	padding-top: 10px;
+	background: url(/images/ticker.png) no-repeat;
+	a {
+		text-decoration: none;
+		text-align: center;
+		width: 594px;
+		height: 36px;
+		display: block;
+		&.hide {
+			display: none;
+		}
+		span.date {
+			color: #000;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+		span.headline {
+			color: #FFF;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+		span.readmore {
+			color: #52bfdb;
+			&:hover {
+				text-decoration: none;
+			}
+		}
 	}
 }
 
 
-
 .footer {
-	float: left;
-	clear: both;	
+	position: relative;
+	margin: auto;
+	width: 594px;
+	height: 46px;	
 	margin-top: 15px;
 	.footer-links {
-		float: left;
-		clear: both;
+		position: relative;
+		margin: auto;
 		width: 518px;
 		height: 21px;
-		margin-left: 355px;
 		background: url(/images/footer.png) no-repeat;
+		color: #FFFFFF;
+    	font-family: helvetica;
+    	font-size: 10px;
+    	letter-spacing: 0.09em;
+    	text-align: center;
+    	padding-top: 5px;
 		a {
 			color: #FFF;
 			text-decoration: none;
@@ -180,19 +223,23 @@ body {
 		}
 	}
 	.footer-contact {
-		float: left;
-		clear: both;
+		position: relative;
+		margin: auto;
 		width: 518px;
 		margin-top: 5px;
-		margin-left: 355px;
 		color: #3d9dbb;
+    	font-size: 11px;
+    	letter-spacing: 0.09em;
+    	text-align: center;
 	}
 	.copy-right {
-		float: left;
-		clear: both;
+		position: relative;
+		margin: auto;
 		width: 518px;
-		margin-left: 355px;
 		text-align: center;
 		color: #347499;
+		font-family: helvetica;
+    	font-size: 8px;
+    	margin-top: 2px;
 	}
 }

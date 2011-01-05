@@ -1,58 +1,124 @@
 .top-nav {
   height: 118px;
-  background-color: #ecebeb; }
+  background: url(/images/top-nav-bg-repeat.png) #ecebeb repeat-x; }
   .top-nav .three-button {
-    width: 1200px;
-    height: 77px;
+    width: 100%;
+    height: 88px;
     margin: auto;
-    background: url(/images/top-nav-bg.png) no-repeat; }
-    .top-nav .three-button a {
-      display: block;
+    padding-top: 30px;
+    background: url(/images/top-nav-bg.jpg) no-repeat center; }
+    .top-nav .three-button .three-button-center {
+      width: 907px;
       position: relative;
-      float: left;
-      padding-top: 20px; }
-      .top-nav .three-button a.business {
-        clear: left;
-        width: 288px;
-        height: 80px;
-        margin-left: 158px;
-        background: url(/images/top-nav-business.png) no-repeat; }
-      .top-nav .three-button a.homeauto {
-        width: 288px;
-        height: 80px;
-        margin-left: 20px;
-        background: url(/images/top-nav-homeauto.png) no-repeat; }
-      .top-nav .three-button a.benefits {
-        clear: right;
-        width: 288px;
-        height: 80px;
-        margin-left: 20px;
-        background: url(/images/top-nav-benefits.png) no-repeat; }
-      .top-nav .three-button a:hover {
-        background-position: 0px -80px; }
-      .top-nav .three-button a span {
-        display: none; }
+      margin: auto; }
+      .top-nav .three-button .three-button-center a {
+        display: block;
+        position: relative;
+        float: left;
+        padding-top: 20px; }
+        .top-nav .three-button .three-button-center a.business {
+          clear: left;
+          width: 289px;
+          height: 58px;
+          margin-left: auto;
+          background: url(/images/top-nav-business.png) no-repeat; }
+        .top-nav .three-button .three-button-center a.homeauto {
+          width: 289px;
+          height: 58px;
+          margin-left: 20px;
+          background: url(/images/top-nav-homeauto.png) no-repeat; }
+        .top-nav .three-button .three-button-center a.benefits {
+          clear: right;
+          width: 289px;
+          height: 58px;
+          margin-left: 20px;
+          margin-right: auto;
+          background: url(/images/top-nav-benefits.png) no-repeat; }
+        .top-nav .three-button .three-button-center a:hover {
+          background-position: 0px -78px; }
+        .top-nav .three-button .three-button-center a.current {
+          background-position: 0px -78px; }
+        .top-nav .three-button .three-button-center a span {
+          display: none; }
 
-.middle {
-  padding-top: 20px;
-  padding-bottom: 40px;
-  min-height: 411px;
+.middle-wrapper {
+  background: #ecebeb;
   position: relative;
-  background-color: #ecebeb; }
+  width: 100%;
+  padding-bottom: 35px; }
+  .middle-wrapper .middle {
+    padding-top: 20px;
+    padding-bottom: 40px;
+    min-height: 411px;
+    width: 907px;
+    margin: auto;
+    position: relative;
+    background-color: #ecebeb; }
+    .middle-wrapper .middle .page-content {
+      position: relative;
+      width: 598px;
+      margin-left: 308px;
+      padding-top: 10px;
+      padding-bottom: 10px; }
 
 .floater {
   width: 238px;
   height: 323px;
   position: absolute;
   background: url(/images/floater-bg.png) no-repeat;
-  margin-left: 515px;
-  margin-top: -10px; }
+  margin-top: -10px;
+  margin-left: 24px; }
+  .floater h4 {
+    margin-bottom: 18px;
+    text-align: center; }
+  .floater .homeauto a {
+    display: block;
+    position: relative;
+    width: 208px;
+    height: 42px;
+    margin-left: 14px; }
+    .floater .homeauto a.quote {
+      background: url(/images/floatnav-ha-requestquote.png) no-repeat; }
+    .floater .homeauto a.claim {
+      background: url(/images/floatnav-ha-reportclaim.png) no-repeat; }
+    .floater .homeauto a.autoid {
+      background: url(/images/floatnav-ha-requestcards.png) no-repeat; }
+    .floater .homeauto a.policy {
+      background: url(/images/floatnav-ha-requestpolicy.png) no-repeat; }
+    .floater .homeauto a.billing {
+      background: url(/images/floatnav-ha-billing.png) no-repeat; }
+    .floater .homeauto a:hover {
+      background-position: 0px -41px; }
+    .floater .homeauto a span {
+      display: none; }
+  .floater .business a {
+    display: block;
+    position: relative;
+    width: 208px;
+    height: 42px;
+    margin-left: 14px; }
+    .floater .business a.consultation {
+      background: url(/images/floatnav-biz-requestconsult.png) no-repeat; }
+    .floater .business a.claim {
+      background: url(/images/floatnav-biz-reportclaim.png) no-repeat; }
+    .floater .business a.policy {
+      background: url(/images/floatnav-biz-requestpolicy.png) no-repeat; }
+    .floater .business a.certificate {
+      background: url(/images/floatnav-biz-requestcert.png) no-repeat; }
+    .floater .business a.autoid {
+      background: url(/images/floatnav-biz-requestcards.png) no-repeat; }
+    .floater .business a.billing {
+      background: url(/images/floatnav-biz-billinginfo.png) no-repeat; }
+    .floater .business a:hover {
+      background-position: 0px -41px; }
+    .floater .business a span {
+      display: none; }
 
 .about-box {
   position: relative;
   width: 598px;
   min-height: 323px;
-  margin-left: 808px;
+  margin-left: 308px;
   margin-top: -10px; }
   .about-box .about-box-top {
     width: 598px;
@@ -152,33 +218,3 @@
         clear: both;
         width: 548px;
         height: 75px; }
-
-.ticker {
-  float: left;
-  clear: both;
-  width: 594px;
-  height: 46px;
-  margin-left: 317px;
-  margin-top: 30px;
-  background: url(/images/ticker.png) no-repeat; }
-  .ticker a {
-    text-decoration: none;
-    text-align: center;
-    margin-top: 10px;
-    width: 594px;
-    height: 36px;
-    display: block; }
-    .ticker a.hide {
-      display: none; }
-    .ticker a span.date {
-      color: #000; }
-      .ticker a span.date:hover {
-        text-decoration: none; }
-    .ticker a span.headline {
-      color: #FFF; }
-      .ticker a span.headline:hover {
-        text-decoration: underline; }
-    .ticker a span.readmore {
-      color: #52bfdb; }
-      .ticker a span.readmore:hover {
-        text-decoration: none; }

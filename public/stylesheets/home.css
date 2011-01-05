@@ -3,7 +3,7 @@
   position: relative;
   background: #055189 url(/images/home-bg-repeat.jpg) repeat-x center; }
   .middle .home-content {
-    width: 1200px;
+    width: 1024px;
     height: 409px;
     margin: auto;
     position: relative; }
@@ -13,7 +13,7 @@
   clear: left;
   width: 312px;
   height: 380px;
-  margin-left: 150px;
+  margin-left: 63px;
   background: url(/images/home-image.png) no-repeat; }
 .home-content .home-about {
   float: left;
@@ -126,19 +126,18 @@
       font-size: 14px; }
 
 .bottom-nav {
-  width: 1200px;
   margin: auto;
-  float: left;
-  clear: both; }
+  width: 1024px;
+  height: 55px; }
   .bottom-nav a {
-    display: block;
     float: left;
+    display: block;
     margin-top: -45px; }
     .bottom-nav a.business {
       clear: left;
       width: 288px;
       height: 109px;
-      margin-left: 158px;
+      margin-left: 63px;
       background: url(/images/bottom-nav-business.png) no-repeat; }
     .bottom-nav a.homeauto {
       width: 288px;
@@ -146,10 +145,10 @@
       margin-left: 20px;
       background: url(/images/bottom-nav-homeauto.png) no-repeat; }
     .bottom-nav a.benefits {
-      clear: right;
       width: 288px;
       height: 109px;
       margin-left: 20px;
+      clear: right;
       background: url(/images/bottom-nav-benefits.png) no-repeat; }
     .bottom-nav a:hover {
       background-position: 0px -109px; }
@@ -157,31 +156,41 @@
       display: none; }
 
 .ticker {
-  float: left;
-  clear: both;
+  position: relative;
+  height: 36px;
   width: 594px;
-  height: 46px;
-  margin-left: 317px;
-  margin-top: -3px;
-  background: url(/images/ticker.png) no-repeat; }
+  margin: auto;
+  margin-top: 10px;
+  background: url(/images/ticker.png) no-repeat center;
+  padding-top: 10px; }
   .ticker a {
     text-decoration: none;
     text-align: center;
-    margin-top: 10px;
     width: 594px;
     height: 46px;
     display: block; }
     .ticker a.hide {
       display: none; }
     .ticker a span.date {
-      color: #000; }
+      color: #001d34;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.06em; }
       .ticker a span.date:hover {
         text-decoration: none; }
     .ticker a span.headline {
-      color: #FFF; }
+      color: #FFF;
+      font-size: 15px;
+      font-weight: 300;
+      letter-spacing: 0.06em; }
       .ticker a span.headline:hover {
         text-decoration: underline; }
     .ticker a span.readmore {
-      color: #52bfdb; }
+      color: #52bfdb;
+      font-family: helvetica;
+      font-size: 11px;
+      font-weight: bold;
+      letter-spacing: 0.03em;
+      text-transform: uppercase; }
       .ticker a span.readmore:hover {
         text-decoration: none; }

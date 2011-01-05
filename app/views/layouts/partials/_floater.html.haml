@@ -1,1 +1,15 @@
 .floater
+	%h4
+		= @floatheader
+	.currentpage{:class => "#{@current_page}"}
+		- @floater.each do |tab,url|
+			- cl = tab
+			- cl += (@current_action==tab ? " current" : "")
+			- cl += (@floater.first==[tab,url] ? " first" : "")
+			- cl += (@floater.last==[tab,url] ? " last" : "")
+			- if @current_page == "homeauto" && tab == "quote"
+				%a.tab{:class => "#{cl}", :id => "#{tab}", :alt => "Click here navigate to " + "#{tab.capitalize}", :href => "#{url}", :target => "_blank"}
+					%span{:class => "#{tab}"} #{tab.capitalize}
+			- else
+				%a.tab{:class => "#{cl}", :id => "#{tab}", :alt => "Click here navigate to " + "#{tab.capitalize}", :href => "#{url}"}
+					%span{:class => "#{tab}"} #{tab.capitalize}

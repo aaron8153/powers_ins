@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101210191046) do
+ActiveRecord::Schema.define(:version => 20110105150251) do
 
   create_table "about_headings", :force => true do |t|
     t.string   "heading"
@@ -19,6 +19,27 @@ ActiveRecord::Schema.define(:version => 20101210191046) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text     "subheading"
+  end
+
+  create_table "auto_ids", :force => true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "street_address"
+    t.string   "street_address_cont"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zip"
+    t.string   "phone_work"
+    t.string   "phone_home"
+    t.string   "policy_number"
+    t.integer  "vehicle_year"
+    t.string   "vehicle_make"
+    t.string   "vehicle_model"
+    t.string   "vin"
+    t.text     "misc"
+    t.string   "division"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "blogs", :force => true do |t|
@@ -33,6 +54,25 @@ ActiveRecord::Schema.define(:version => 20101210191046) do
     t.string   "poster"
     t.text     "description"
     t.integer  "blog_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "policy_changes", :force => true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "street_address"
+    t.string   "street_address_cont"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zip"
+    t.string   "phone_work"
+    t.string   "phone_home"
+    t.string   "policy_number"
+    t.date     "change_date"
+    t.text     "description"
+    t.text     "misc"
+    t.string   "division"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
