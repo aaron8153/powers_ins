@@ -1,2 +1,38 @@
-%h1 Benefits#group
-%p Find me in app/views/benefits/group.html.haml
+%form{:name=>"login", :method=>"post", :action=>"https://www.zywave.com/zywavepublic/PortalRedirector.aspx"}
+	%table{:width=>"490px", :cellspacing=>"0", :cellpadding=>"0", :border=>"0", :align=>"center"}
+		%tbody
+			%tr{:style=>"height: 40px; vertical-align: bottom;"}
+				%td{:rowspan=>"3", :style=>"width: 90px;"}
+					%img{:width=>"88", :height=>"53", :src=>"https://www.zywave.com/images/mw_loginsm1.gif"}
+				
+				%td{:style=>"width: 80px; text-align: right;"}
+					%font{:size=>"2", :face=>"Arial, Helvetica", :color=>"#000000"}
+						Username:&nbsp;
+				
+				%td{:style=>"width: 90px; text-align: right;"}
+					%font{:size=>"2", :face=>"Arial, Helvetica"}
+						%input{:type=>"input", :name=>"u", :size=>"10"}
+					
+				
+				%td{:style=>"width: 70px; text-align: right;"}
+					%font{:size=>"2", :face=>"Arial, Helvetica", :color=>"#000000"}
+						Password:&nbsp;
+				
+				%td{:style=>"width: 90px; text-align: right;"}
+					%font{:size=>"2", :face=>"Arial, Helvetica"}
+						%input{:type=>"password", :name=>"p", :size=>"10", :id=>"password1"}
+					
+				
+				%td{:style=>"width: 60px; text-align: right;"}
+					%input{:type=>"hidden", :value=>"default.asp", :name=>"urlRedirect"}
+						%font{:size=>"1", :face=>"Arial, Helvetica"}
+							%input{:type=>"submit", :name=>"submit1", :id=>"submit1", :value=>"Log in"}
+						
+				
+			
+			%tr
+				%td{:align=>"right", :colspan=>"5"}
+					%font{:size=>"1", :face=>"arial, helvetica"}
+						%a{:target=>"_'top", :href=>"https://www.zywave.com/zywavenet/RetrieveLoginCredential.aspx?id=>91523"}
+							%font{:size=>"1", :face=>"arial, helvetica"}
+								Retrieve your login information

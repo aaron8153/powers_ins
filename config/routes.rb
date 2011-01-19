@@ -1,6 +1,13 @@
 Powers::Application.routes.draw do
-  
 
+  resources :associates
+
+  resources :blogs do
+  	resources :comments
+  end
+  
+  resources :companies
+  
   resources :policy_changes
 
   resources :auto_ids
@@ -35,9 +42,7 @@ Powers::Application.routes.draw do
   
   get "business/billing"
 
-  resources :blogs do
-  	resources :comments
-  end
+  
 
   resources :about_headings
 

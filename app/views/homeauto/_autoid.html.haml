@@ -1,0 +1,131 @@
+= form_for @auto, :url => {:controller => :homeauto, :action => :autoid}, :html => {:method => :post} do |f|
+	= f.hidden_field :division, :value => "homeauto"
+	%h3
+		Request Auto ID Cards
+	.page-1{:class => 'show'}
+		%p
+			Please use the form below to request Auto ID Cards.  After we receive your request a POWERS&reg Agent will contact you to regarding your request.  This service is available to expedite requests. This request does not change coverages until you hear from a licensed POWERS&reg representative or confirmation is received in writing from us.
+		.next-prev-buttons
+			%button{:class => 'next'}
+				Continue
+	.page-2{:class => 'hide'}
+		%h4
+			Personal Information
+		.field
+			= f.label :name, 'Name Insured:'
+			= f.text_field :name
+		.field
+			= f.label :email, 'E-mail Address:'
+			= f.text_field :email
+		.field
+			= f.label :phone_work, 'Work Phone:'
+			= f.text_field :phone_work
+		.field
+			= f.label :phone_home, 'Home Phone:'
+			= f.text_field :phone_home
+		.field
+			= f.label :street_address, 'Street Address:'
+			= f.text_field :street_address
+		.field
+			= f.label :street_address_cont, 'Address (cont.):'
+			= f.text_field :street_address_cont
+		.field
+			= f.label :city, 'City:'
+			= f.text_field :city
+		.field
+			= f.label :state, 'State:'			
+			%select{:name => "state"}
+				%option{:value => 'AL'}Alabama
+				%option{:value => 'AK'}Alaska
+				%option{:value => 'AZ'}Arizona
+				%option{:value => 'AR'}Arkansas
+				%option{:value => 'CA'}California
+				%option{:value => 'CO'}Colorado
+				%option{:value => 'CT'}Connecticut
+				%option{:value => 'DE'}Delaware
+				%option{:value => 'DC'}District of Columbia
+				%option{:value => 'FL'}Florida
+				%option{:value => 'GA'}Georgia
+				%option{:value => 'HI'}Hawaii
+				%option{:value => 'ID'}Idaho
+				%option{:value => 'IL'}Illinois
+				%option{:value => 'IN'}Indiana
+				%option{:value => 'IA'}Iowa
+				%option{:value => 'KS'}Kansas
+				%option{:value => 'KY'}Kentucky
+				%option{:value => 'LA'}Louisiana
+				%option{:value => 'ME'}Maine
+				%option{:value => 'MD'}Maryland
+				%option{:value => 'MA'}Massachusetts
+				%option{:value => 'MI'}Michigan
+				%option{:value => 'MN'}Minnesota
+				%option{:value => 'MS'}Mississippi
+				%option{:value => 'MO'}Missouri
+				%option{:value => 'MT'}Montana
+				%option{:value => 'NE'}Nebraska
+				%option{:value => 'NV'}Nevada
+				%option{:value => 'NH'}New Hampshire
+				%option{:value => 'NJ'}New Jersey
+				%option{:value => 'NM'}New Mexico
+				%option{:value => 'NY'}New York
+				%option{:value => 'NC'}North Carolina
+				%option{:value => 'ND'}North Dakota
+				%option{:value => 'OH'}Ohio
+				%option{:value => 'OK'}Oklahoma
+				%option{:value => 'OR'}Oregon
+				%option{:value => 'PA'}Pennsylvania
+				%option{:value => 'RI'}Rhode Island
+				%option{:value => 'SC'}South Carolina
+				%option{:value => 'SD'}South Dakota
+				%option{:value => 'TN'}Tennessee
+				%option{:value => 'TX'}Texas
+				%option{:value => 'UT'}Utah
+				%option{:value => 'VT'}Vermont
+				%option{:value => 'VA'}Virginia
+				%option{:value => 'WA'}Washington
+				%option{:value => 'WV'}West Virginia
+				%option{:value => 'WI'}Wisconsin
+				%option{:value => 'WY'}Wyoming
+		.field
+			= f.label :zip, 'Zip Code:'
+			= f.text_field :zip
+		.next-prev-buttons
+			%button{:class => 'prev'}
+				Previous
+			%button{:class => 'next'}
+				Continue
+	.page-3{:class => 'hide'}
+		%h4
+			Policy Information
+		.field
+			= f.label :policy_number, 'Policy #:'
+			= f.text_field :policy_number
+		.field
+			= f.label :vehicle_year, 'Vehicle Year:'
+			= f.text_field :vehicle_year
+		.field
+			= f.label :vehicle_make, 'Vehicle Make:'
+			= f.text_field :vehicle_make
+		.field
+			= f.label :vehicle_model, 'Vehicle Model:'
+			= f.text_field :vehicle_model
+		.field
+			= f.label :vin, 'Vehicle ID Number:'
+			= f.text_field :vin
+		.next-prev-buttons
+			%button{:class => 'prev'}
+				Previous
+			%button{:class => 'next'}
+				Continue
+	.page-4{:class => 'hide'}
+		%h4
+			Questions/Comments?
+		%p
+			Please complete the form by pressing the 'Submit Request' button below.  If you would like to review your information press the 'Previous' button below.  A confirmation dialogue will appear when your request has been processed.  This service is available to expedite requests. This request does not change coverages until you hear from a licensed POWERS&reg representative or confirmation is received in writing from us.
+		.field
+			= f.label :misc, 'Comments/Questions?'
+			= f.text_area :misc, :class => "mceEditor"
+		.next-prev-buttons
+			%button{:class => 'prev'}
+				Previous
+			= f.submit 'Submit Request'

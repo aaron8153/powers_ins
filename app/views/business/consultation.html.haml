@@ -1,7 +1,17 @@
-%h1 Business#consultation
-%p Find me in app/views/business/consultation.html.haml
+.consult_form
+	- if @success
+		%h3{:class => "Success"}
+			Success!  Your request has been received and is being processed.  You will receive a confirmation email shortly.  A POWERS&reg Agent will be in touch with you shortly.  You will be redirected back to our Business page shortly.
+		%p.countdown
+			If your page does not redirect in 
+			%span
+				15 
+			seconds please click 
+			%a{:href => "/business"}
+				Here.
+	- else
+		- if request.post?
+			%h3{:class => "Fail"}
+				An error occured processing your request.  Please try again or contact us directly.
+		= render 'consult'
 
-%p
-	what is this...
-	%a{:href => "/something"}
-		Yo

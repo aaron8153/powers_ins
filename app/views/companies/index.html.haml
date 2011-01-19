@@ -1,0 +1,82 @@
+%h1 Listing Companies
+%h2.business
+	Showing Business
+%h2.homeauto
+	Showing Home & Auto
+= link_to 'New Company', new_company_path
+.toggle-showing
+	%span.business
+		Show Home & Auto
+	%span.homeauto
+		Show Business
+- @companies.each do |company|
+	.company-bg
+		.company-logo
+			= image_tag company.logo.url(:medium)
+		.company-right
+			.company-name
+				= company.name
+			.company-info
+				.company-billing.business
+					.phone-one
+						314.725.1414
+				.company-billing.homeauto
+					.phone-one
+						= company.homeauto_billing_number_one
+					.phone-two
+						= company.homeauto_billing_number_two
+				.company-claim.business
+					.phone-one
+						= company.claim_number_one
+					.phone-two
+						= company.claim_number_two
+				.company-claim.homeauto
+					.phone-one
+						= company.homeauto_claim_number_one
+					.phone-two
+						= company.homeauto_claim_number_two
+	.company-admin
+		.company-info
+			.company-urls
+				%h4
+					Company Urls:
+				.business
+					%p
+						Business
+					.claim
+						Report Claim: 
+						= company.claim_url
+				.homeauto
+					%p
+						Home & Auto
+					.claim
+						Report Claim:
+						= company.homeauto_claim_url
+					.billing
+						Billing Info:
+						= company.homeauto_billing_url
+			.showonpages
+				%h4
+					Show this Company on the following pages:
+				.company-business
+					%p
+						Business
+					.company-business-claim
+						Report Claim: 
+						= company.bus_claim
+				.company-homeauto
+					%p
+						Home & Auto
+					.company-homeauto-claim
+						Report Claim: 
+						= company.homeauto_claim
+					.company-homeauto-billing
+						Billing Info: 
+						= company.homeauto_billing				
+		.company-actions
+			.company-show
+				= link_to 'Show', company
+			.company-edit
+				= link_to 'Edit', edit_company_path(company)
+			.company-delete
+				= link_to 'Delete', company, :confirm => "Are you sure?", :method => :delete

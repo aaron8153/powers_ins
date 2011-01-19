@@ -218,3 +218,55 @@
         clear: both;
         width: 548px;
         height: 75px; }
+
+.company-bg {
+  background: url(/images/company-partial-bg.jpg) no-repeat;
+  height: 109px;
+  width: 586px; }
+  .company-bg .company-logo {
+    height: 85px;
+    width: 187px;
+    float: left;
+    clear: left;
+    padding-top: 24px;
+    padding-left: 28px; }
+    .company-bg .company-logo img {
+      width: 159px;
+      height: 61px; }
+  .company-bg .company-right {
+    height: 109px;
+    width: 371px;
+    float: left;
+    clear: right; }
+    .company-bg .company-right .company-name {
+      height: 25px;
+      width: 371px;
+      float: left;
+      clear: both;
+      padding-top: 10px;
+      text-align: center; }
+
+.company-admin {
+  height: 115px;
+  width: 586px; }
+  .company-admin .company-info {
+    float: left;
+    clear: left;
+    height: 115px;
+    width: 500px; }
+    .company-admin .company-info .company-homeauto {
+      height: 75px;
+      width: 250px;
+      float: left;
+      clear: left; }
+    .company-admin .company-info .company-business {
+      height: 75px;
+      width: 250px;
+      float: left; }
+  .company-admin .company-actions {
+    text-align: right;
+    height: 90px;
+    width: 86px;
+    padding-top: 10px;
+    float: left;
+    clear: right; }

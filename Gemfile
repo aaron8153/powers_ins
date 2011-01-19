@@ -10,6 +10,11 @@ gem 'tiny_mce'
 gem 'faraday'
 gem 'multi_json'
 
+# NEED apt-get install imagemagick librmagick-ruby libmagickwand-dev
+
+gem 'rmagick'
+gem 'paperclip', '~> 2.3'
+
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

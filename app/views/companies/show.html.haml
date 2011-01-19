@@ -1,0 +1,24 @@
+%p#notice= notice
+
+%p
+  %b Logo:
+  = image_tag @company.logo.url(:medium)
+%p
+  %b Name:
+  = @company.name
+%p
+  %b Claim url:
+  = @company.claim_url
+%p
+  %b Bus claim:
+  = @company.bus_claim
+%p
+  %b Homeauto claim:
+  = @company.homeauto_claim
+%p
+  %b Homeauto billing:
+  = @company.homeauto_billing
+
+= link_to 'Edit', edit_company_path(@company)
+\|
+= link_to 'Back', companies_path

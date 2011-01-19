@@ -1,0 +1,29 @@
+%h1 Listing associates
+
+%table
+  %tr
+    %th Avatar
+    %th Name
+    %th Email
+    %th Certifications
+    %th Title
+    %th Division
+    %th
+    %th
+    %th
+
+  - @associates.each do |associate|
+    %tr
+      %td= image_tag associate.avatar.url
+      %td= associate.name
+      %td= associate.email
+      %td= associate.certifications
+      %td= associate.title
+      %td= associate.division
+      %td= link_to 'Show', associate
+      %td= link_to 'Edit', edit_associate_path(associate)
+      %td= link_to 'Destroy', associate, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Associate', new_associate_path

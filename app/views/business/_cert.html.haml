@@ -1,0 +1,201 @@
+= form_for @cert, :url => {:controller => :business, :action => :certificate}, :html => {:method => :post} do |f|
+	%h3
+		Request Certificate
+	.page-1{:class => 'show'}		
+		%p
+			Please use the form below to request a certificate.  After we receive your request a POWERS&reg Agent will contact you to confirm your request.  This service is available in order to facilitate requests.  Confirmation of this request is only valid upon receipt of a certificate from our office.
+		.next-prev-buttons
+			%button{:class => 'next'}
+				Continue
+	.page-2{:class => 'hide'}
+		%h4
+			Personal Information
+		.field
+			= f.label :name, 'Name Insured:'
+			= f.text_field :name
+		.field
+			= f.label :email, 'E-mail Address:'
+			= f.text_field :email
+		.field
+			= f.label :phone_work, 'Work Phone:'
+			= f.text_field :phone_work
+		.field
+			= f.label :phone_home, 'Home Phone:'
+			= f.text_field :phone_home
+		.field
+			= f.label :street_address, 'Street Address:'
+			= f.text_field :street_address
+		.field
+			= f.label :street_address_cont, 'Address (cont.):'
+			= f.text_field :street_address_cont
+		.field
+			= f.label :city, 'City:'
+			= f.text_field :city
+		.field
+			= f.label :state, 'State:'			
+			%select{:name => "state"}
+				%option{:value => 'AL'}Alabama
+				%option{:value => 'AK'}Alaska
+				%option{:value => 'AZ'}Arizona
+				%option{:value => 'AR'}Arkansas
+				%option{:value => 'CA'}California
+				%option{:value => 'CO'}Colorado
+				%option{:value => 'CT'}Connecticut
+				%option{:value => 'DE'}Delaware
+				%option{:value => 'DC'}District of Columbia
+				%option{:value => 'FL'}Florida
+				%option{:value => 'GA'}Georgia
+				%option{:value => 'HI'}Hawaii
+				%option{:value => 'ID'}Idaho
+				%option{:value => 'IL'}Illinois
+				%option{:value => 'IN'}Indiana
+				%option{:value => 'IA'}Iowa
+				%option{:value => 'KS'}Kansas
+				%option{:value => 'KY'}Kentucky
+				%option{:value => 'LA'}Louisiana
+				%option{:value => 'ME'}Maine
+				%option{:value => 'MD'}Maryland
+				%option{:value => 'MA'}Massachusetts
+				%option{:value => 'MI'}Michigan
+				%option{:value => 'MN'}Minnesota
+				%option{:value => 'MS'}Mississippi
+				%option{:value => 'MO'}Missouri
+				%option{:value => 'MT'}Montana
+				%option{:value => 'NE'}Nebraska
+				%option{:value => 'NV'}Nevada
+				%option{:value => 'NH'}New Hampshire
+				%option{:value => 'NJ'}New Jersey
+				%option{:value => 'NM'}New Mexico
+				%option{:value => 'NY'}New York
+				%option{:value => 'NC'}North Carolina
+				%option{:value => 'ND'}North Dakota
+				%option{:value => 'OH'}Ohio
+				%option{:value => 'OK'}Oklahoma
+				%option{:value => 'OR'}Oregon
+				%option{:value => 'PA'}Pennsylvania
+				%option{:value => 'RI'}Rhode Island
+				%option{:value => 'SC'}South Carolina
+				%option{:value => 'SD'}South Dakota
+				%option{:value => 'TN'}Tennessee
+				%option{:value => 'TX'}Texas
+				%option{:value => 'UT'}Utah
+				%option{:value => 'VT'}Vermont
+				%option{:value => 'VA'}Virginia
+				%option{:value => 'WA'}Washington
+				%option{:value => 'WV'}West Virginia
+				%option{:value => 'WI'}Wisconsin
+				%option{:value => 'WY'}Wyoming
+		.field
+			= f.label :zip, 'Zip Code:'
+			= f.text_field :zip
+		.next-prev-buttons
+			%button{:class => 'prev'}
+				Previous
+			%button{:class => 'next'}
+				Continue
+	.page-3{:class => 'hide'}
+		%h4
+			Policy and Business Information
+		.field
+			= f.label :insurance_type, 'Type of Insurance:'			
+			%select{:name => "insurance_type"}
+				%option{:value => 'General Liability'}General Liability
+				%option{:value => 'Auto Liability'}Auto Liability
+				%option{:value => 'Workers Compensation'}Workers Compensation
+				%option{:value => 'Equipment'}Equipment
+				%option{:value => 'Builder Risk'}Builder's Risk
+				%option{:value => 'Umbrella'}Umbrella
+				%option{:value => 'Other'}Other
+		.field
+			= f.label :policy_number, 'Policy #:'
+			= f.text_field :policy_number
+			
+		.field
+			= f.label :certificate_holder, 'Certificate Holder:'
+			= f.text_field :certificate_holder
+		.field
+			= f.label :bus_fax, 'Fax:'
+			= f.text_field :bus_fax
+		.field
+			= f.label :bus_address, 'Business Address:'
+			= f.text_field :bus_address
+		.field
+			= f.label :bus_address_cont, 'Address (cont.):'
+			= f.text_field :bus_address_cont
+		.field
+			= f.label :bus_city, 'City:'
+			= f.text_field :bus_city
+		.field
+			= f.label :bus_state, 'State:'			
+			%select{:name => "bus_state"}
+				%option{:value => 'AL'}Alabama
+				%option{:value => 'AK'}Alaska
+				%option{:value => 'AZ'}Arizona
+				%option{:value => 'AR'}Arkansas
+				%option{:value => 'CA'}California
+				%option{:value => 'CO'}Colorado
+				%option{:value => 'CT'}Connecticut
+				%option{:value => 'DE'}Delaware
+				%option{:value => 'DC'}District of Columbia
+				%option{:value => 'FL'}Florida
+				%option{:value => 'GA'}Georgia
+				%option{:value => 'HI'}Hawaii
+				%option{:value => 'ID'}Idaho
+				%option{:value => 'IL'}Illinois
+				%option{:value => 'IN'}Indiana
+				%option{:value => 'IA'}Iowa
+				%option{:value => 'KS'}Kansas
+				%option{:value => 'KY'}Kentucky
+				%option{:value => 'LA'}Louisiana
+				%option{:value => 'ME'}Maine
+				%option{:value => 'MD'}Maryland
+				%option{:value => 'MA'}Massachusetts
+				%option{:value => 'MI'}Michigan
+				%option{:value => 'MN'}Minnesota
+				%option{:value => 'MS'}Mississippi
+				%option{:value => 'MO'}Missouri
+				%option{:value => 'MT'}Montana
+				%option{:value => 'NE'}Nebraska
+				%option{:value => 'NV'}Nevada
+				%option{:value => 'NH'}New Hampshire
+				%option{:value => 'NJ'}New Jersey
+				%option{:value => 'NM'}New Mexico
+				%option{:value => 'NY'}New York
+				%option{:value => 'NC'}North Carolina
+				%option{:value => 'ND'}North Dakota
+				%option{:value => 'OH'}Ohio
+				%option{:value => 'OK'}Oklahoma
+				%option{:value => 'OR'}Oregon
+				%option{:value => 'PA'}Pennsylvania
+				%option{:value => 'RI'}Rhode Island
+				%option{:value => 'SC'}South Carolina
+				%option{:value => 'SD'}South Dakota
+				%option{:value => 'TN'}Tennessee
+				%option{:value => 'TX'}Texas
+				%option{:value => 'UT'}Utah
+				%option{:value => 'VT'}Vermont
+				%option{:value => 'VA'}Virginia
+				%option{:value => 'WA'}Washington
+				%option{:value => 'WV'}West Virginia
+				%option{:value => 'WI'}Wisconsin
+				%option{:value => 'WY'}Wyoming
+		.field
+			= f.label :bus_zip, 'Zip Code:'
+			= f.text_field :bus_zip
+		.next-prev-buttons
+			%button{:class => 'prev'}
+				Previous
+			%button{:class => 'next'}
+				Continue
+	.page-4{:class => 'hide'}
+		%h4
+			Miscellaneous Info?
+		%p
+			Please complete the form by pressing the 'Submit Request' button below.  If you would like to review your information press the 'Previous' button below.  A confirmation dialogue will appear when your request has been processed.  This service is available in order to facilitate requests. Confirmation of this request is only valid upon receipt of a certificate from our office.
+		.field
+			= f.label :misc, 'Miscellaneous Info:'
+			= f.text_area :misc, :class => "mceEditor"
+		.next-prev-buttons
+			%button{:class => 'prev'}
+				Previous
+			= f.submit 'Submit Request'

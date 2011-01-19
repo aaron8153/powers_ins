@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  claim_url: MyString
+  billing_url: MyString
+  bus_claim: false
+  bus_billing: false
+  homeauto_claim: false
+  homeauto_billing: false
+
+two:
+  name: MyString
+  claim_url: MyString
+  billing_url: MyString
+  bus_claim: false
+  bus_billing: false
+  homeauto_claim: false
+  homeauto_billing: false

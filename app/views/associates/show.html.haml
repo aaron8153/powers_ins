@@ -1,0 +1,22 @@
+%p#notice= notice
+
+
+%p
+  %b Avatar:
+  = image_tag @associate.avatar.url
+%p
+  %b Name:
+  = @associate.name
+%p
+  %b Certifications:
+  = @associate.certifications
+%p
+  %b Title:
+  = @associate.title
+%p
+  %b Division:
+  = @associate.division
+
+= link_to 'Edit', edit_associate_path(@associate)
+\|
+= link_to 'Back', associates_path

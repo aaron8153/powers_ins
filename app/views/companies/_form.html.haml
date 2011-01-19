@@ -1,0 +1,67 @@
+= form_for @company do |f|
+  -if @company.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@company.errors.count, "error")} prohibited this company from being saved:"
+      %ul
+        - @company.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :name, 'Company Name:'
+    = f.text_field :name
+  .field
+    = f.label :logo, 'Company Logo:'
+    = f.file_field :logo
+  .business
+    %p
+      Business Information:
+    .field
+      = f.label :claim_url, 'Claim Url:'
+      = f.text_field :claim_url
+    .field
+      = f.label :claim_number_one, 'Claim Phone #1:'
+      = f.text_field :claim_number_one
+    .field
+      = f.label :claim_number_two, 'Claim Phone #2:'
+      = f.text_field :claim_number_two
+  .homeauto
+    %p
+      Home & Auto Information:
+    .field
+      = f.label :homeauto_claim_url, 'Claim Url:'
+      = f.text_field :homeauto_claim_url
+    .field
+      = f.label :homeauto_billing_url, 'Billing Url:'
+      = f.text_field :homeauto_billing_url  
+    .field
+      = f.label :homeauto_claim_number_one, 'Claim Phone #1:'
+      = f.text_field :homeauto_claim_number_one
+    .field
+      = f.label :homeauto_claim_number_two, 'Claim Phone #2:'
+      = f.text_field :homeauto_claim_number_two
+    .field
+      = f.label :homeauto_billing_number_one, 'Billing Phone #1:'
+      = f.text_field :homeauto_billing_number_one
+    .field
+      = f.label :homeauto_billing_number_two, 'Billing Phone #2:'
+      = f.text_field :homeauto_billing_number_two
+  .showonpage
+    %p
+      Show this Company on the following pages:
+    .business
+      %h4
+        Business
+      .field
+        = f.label :bus_claim, 'Report Claim:'
+        = f.check_box :bus_claim
+    .homeauto
+      %h4
+        Home & Auto
+      .field
+        = f.label :homeauto_claim, 'Report Claim:'
+        = f.check_box :homeauto_claim
+      .field
+        = f.label :homeauto_billing, 'Billing Info:'
+        = f.check_box :homeauto_billing
+  .actions
+    = f.submit 'Save'
