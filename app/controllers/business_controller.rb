@@ -38,6 +38,7 @@ class BusinessController < ApplicationController
 	@floater = [["consultation" , "/business/consultation"], ["claim" , "/business/claim"], ["policy" , "/business/policy"], ["certificate" , "/business/certificate"],["autoid" , "/business/autoid"],["billing" , "/business/billing"]]
   	@current_action = "claim"
   	@about = AboutHeading.find_by_page(@current_action)
+  	@companies = Company.where("bus_claim = true").order('name ASC')
   end
 
   def policy

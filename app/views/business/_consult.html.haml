@@ -6,9 +6,9 @@
 		%p
 			Please use the form below to request a Consultation.  We wish to understand your individual and business goals.  Our process is designed to help identify risks and opportunities to co-develop solutions.  Once we receive your request, a POWERS&reg Agent will contact you shortly.
 		.next-prev-buttons
-			%button{:class => 'next'}
+			.next
 				Continue
-	.page-2{:class => 'hide'}
+	.page-2{:style => "display: none;"}
 		%h4
 			Personal Information
 		.field
@@ -34,7 +34,7 @@
 			= f.text_field :city
 		.field
 			= f.label :state, 'State:'			
-			%select{:name => "state"}
+			%select{:name => "consult[state]"}
 				%option{:value => 'AL'}Alabama
 				%option{:value => 'AK'}Alaska
 				%option{:value => 'AZ'}Arizona
@@ -93,6 +93,6 @@
 			= f.label :insurance_type, 'Type of Insurance:'
 			= f.text_area :insurance_type, :class => "mceEditor"
 		.next-prev-buttons
-			%button{:class => 'prev'}
+			.prev
 				Previous
 			= f.submit 'Submit Request'

@@ -1,0 +1,174 @@
+.top-nav {
+  height: 118px;
+  background: url(/images/top-nav-bg-repeat.png) #ecebeb repeat-x; }
+  .top-nav .three-button {
+    width: 100%;
+    height: 88px;
+    margin: auto;
+    padding-top: 30px;
+    background: url(/images/top-nav-bg.jpg) no-repeat center; }
+    .top-nav .three-button .three-button-center {
+      width: 907px;
+      position: relative;
+      margin: auto; }
+      .top-nav .three-button .three-button-center a {
+        display: block;
+        position: relative;
+        float: left;
+        padding-top: 20px; }
+        .top-nav .three-button .three-button-center a.business {
+          clear: left;
+          width: 289px;
+          height: 58px;
+          margin-left: auto;
+          background: url(/images/top-nav-business.png) no-repeat; }
+        .top-nav .three-button .three-button-center a.homeauto {
+          width: 289px;
+          height: 58px;
+          margin-left: 20px;
+          background: url(/images/top-nav-homeauto.png) no-repeat; }
+        .top-nav .three-button .three-button-center a.benefits {
+          clear: right;
+          width: 289px;
+          height: 58px;
+          margin-left: 20px;
+          margin-right: auto;
+          background: url(/images/top-nav-benefits.png) no-repeat; }
+        .top-nav .three-button .three-button-center a:hover {
+          background-position: 0px -78px; }
+        .top-nav .three-button .three-button-center a.current {
+          background-position: 0px -78px; }
+        .top-nav .three-button .three-button-center a span {
+          display: none; }
+
+.middle-wrapper {
+  background: #ecebeb;
+  position: relative;
+  width: 100%;
+  padding-bottom: 35px; }
+  .middle-wrapper .middle {
+    padding-top: 20px;
+    padding-bottom: 40px;
+    width: 907px;
+    margin: auto;
+    position: relative;
+    background-color: #ecebeb; }
+    .middle-wrapper .middle .page-content {
+      position: relative;
+      width: 907px;
+      padding-top: 10px;
+      padding-bottom: 10px; }
+      .middle-wrapper .middle .page-content h1 {
+        color: #438BC3;
+        font-size: 28px;
+        font-weight: 300;
+        margin-bottom: 0;
+        margin-top: 0;
+        padding-top: 3px;
+        text-shadow: 0 1px 0 #FFFFFF; }
+      .middle-wrapper .middle .page-content p {
+        color: #013662;
+        font-size: 15px;
+        font-weight: 300;
+        text-shadow: 0 1px 0 #FFFFFF; }
+
+.assoc {
+  width: 423px;
+  position: relative;
+  float: left;
+  margin-left: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px; }
+  .assoc.producers {
+    clear: left; }
+  .assoc.administrative {
+    clear: right; }
+  .assoc.commercial {
+    clear: left; }
+  .assoc.personal {
+    clear: right; }
+  .assoc.benefits {
+    clear: both; }
+  .assoc .admin {
+    display: none; }
+  .assoc .assoc-top {
+    height: 42px;
+    width: 423px;
+    position: relative;
+    background: url(/images/associates-bg-top.jpg) no-repeat; }
+    .assoc .assoc-top h2 {
+      color: #133361;
+      font-size: 20px;
+      font-weight: 300;
+      padding-left: 16px;
+      padding-top: 10px;
+      text-shadow: 0 1px 0 #FFFFFF; }
+  .assoc .assoc-middle {
+    padding-top: 11px;
+    width: 423px;
+    position: relative;
+    background: url(/images/associates-bg-middle.jpg) repeat-y; }
+    .assoc .assoc-middle h2 {
+      margin: 0px 0px 0px 0px; }
+  .assoc .associate {
+    width: 389px;
+    height: 78px;
+    position: relative;
+    margin-left: 15px;
+    padding-top: 2px;
+    padding-left: 2px;
+    background: url(/images/associate-bg.png) no-repeat; }
+    .assoc .associate:hover {
+      background-position: 0px -78px; }
+    .assoc .associate .avatar {
+      height: 64px;
+      width: 64px;
+      position: relative;
+      background: url(/images/missing.png) no-repeat;
+      float: left;
+      clear: left;
+      margin-right: 10px; }
+      .assoc .associate .avatar img {
+        display: block;
+        height: 64px;
+        width: 64px; }
+    .assoc .associate .info {
+      width: 240px;
+      height: 60px;
+      position: relative;
+      padding-top: 3px;
+      float: left; }
+      .assoc .associate .info .name p {
+        margin: 0;
+        padding: 0; }
+      .assoc .associate .info .cert p {
+        margin: 0;
+        padding: 0;
+        color: #636363;
+        font-size: 13px;
+        font-weight: 500; }
+      .assoc .associate .info .title p {
+        margin: 0;
+        padding: 0;
+        color: #5288c1;
+        font-size: 13px;
+        font-weight: 500; }
+    .assoc .associate .email {
+      display: block;
+      position: relative;
+      width: 75px;
+      height: 71px;
+      float: left;
+      clear: right; }
+      .assoc .associate .email a {
+        display: block;
+        width: 75px;
+        height: 71px; }
+  .assoc .assoc-bottom {
+    height: 14px;
+    width: 423px;
+    position: relative;
+    background: url(/images/associates-bg-bottom.jpg) no-repeat; }
+
+.clearall {
+  clear: both; }

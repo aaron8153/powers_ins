@@ -1,29 +1,125 @@
-%h1 Listing associates
-
-%table
-  %tr
-    %th Avatar
-    %th Name
-    %th Email
-    %th Certifications
-    %th Title
-    %th Division
-    %th
-    %th
-    %th
-
-  - @associates.each do |associate|
-    %tr
-      %td= image_tag associate.avatar.url
-      %td= associate.name
-      %td= associate.email
-      %td= associate.certifications
-      %td= associate.title
-      %td= associate.division
-      %td= link_to 'Show', associate
-      %td= link_to 'Edit', edit_associate_path(associate)
-      %td= link_to 'Destroy', associate, :confirm => 'Are you sure?', :method => :delete
-
-%br
-
-= link_to 'New Associate', new_associate_path
+%h1
+	Our Associates
+%p
+	We look forward to hearing from you!  Please click on an name below to contact an associate.  Due to the necessity of spam filtering, please ask for a read-receipt.
+.producers.assoc
+	.assoc-top
+		%h2
+			Producers
+	.assoc-middle		
+		- @producers.each do |associate|
+			.associate
+				.avatar
+					= image_tag associate.avatar.url if associate.avatar?
+				.info
+					.name
+						%p= associate.name
+					.title
+						%p= associate.title
+					.cert
+						%p= associate.certifications
+				.email
+					= mail_to associate.email, ""
+				.admin
+					.edit
+						= link_to 'Edit', edit_associate_path(associate)
+					.destroy
+						= link_to 'Destroy', associate, :confirm => 'Are you sure?', :method => :delete
+	.assoc-bottom
+.administrative.assoc
+	.assoc-top
+		%h2
+			Administrative
+	.assoc-middle		
+		- @administrators.each do |associate|
+			.associate
+				.avatar
+					= image_tag associate.avatar.url if associate.avatar?
+				.info
+					.name
+						%p= associate.name
+					.title
+						%p= associate.title
+					.cert
+						%p= associate.certifications
+				.email
+					= mail_to associate.email, ""
+				.admin
+					.edit
+						= link_to 'Edit', edit_associate_path(associate)
+					.destroy
+						= link_to 'Destroy', associate, :confirm => 'Are you sure?', :method => :delete
+	.assoc-bottom
+.commercial.assoc
+	.assoc-top
+		%h2
+			Commercial Lines
+	.assoc-middle
+		- @commercial.each do |associate|
+			.associate
+				.avatar
+					= image_tag associate.avatar.url if associate.avatar?
+				.info
+					.name
+						%p= associate.name
+					.title
+						%p= associate.title
+					.cert
+						%p= associate.certifications
+				.email
+					= mail_to associate.email, ""
+				.admin
+					.edit
+						= link_to 'Edit', edit_associate_path(associate)
+					.destroy
+						= link_to 'Destroy', associate, :confirm => 'Are you sure?', :method => :delete
+	.assoc-bottom
+.personal.assoc
+	.assoc-top
+		%h2
+			Personal Lines
+	.assoc-middle		
+		- @personal.each do |associate|
+			.associate
+				.avatar
+					= image_tag associate.avatar.url if associate.avatar?
+				.info
+					.name
+						%p= associate.name
+					.title
+						%p= associate.title
+					.cert
+						%p= associate.certifications
+				.email
+					= mail_to associate.email, ""
+				.admin
+					.edit
+						= link_to 'Edit', edit_associate_path(associate)
+					.destroy
+						= link_to 'Destroy', associate, :confirm => 'Are you sure?', :method => :delete
+	.assoc-bottom
+.benefits.assoc
+	.assoc-top
+		%h2
+			Benefits
+	.assoc-middle		
+		- @benefits.each do |associate|
+			.associate
+				.avatar
+					= image_tag associate.avatar.url if associate.avatar?
+				.info
+					.name
+						%p= associate.name
+					.title
+						%p= associate.title
+					.cert
+						%p= associate.certifications
+				.email
+					= mail_to associate.email, ""
+				.admin
+					.edit
+						= link_to 'Edit', edit_associate_path(associate)
+					.destroy
+						= link_to 'Destroy', associate, :confirm => 'Are you sure?', :method => :delete
+	.assoc-bottom
+.clearall

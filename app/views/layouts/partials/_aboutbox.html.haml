@@ -21,3 +21,6 @@
 		.about-box-bottom
 			.like
 				%fb:like{:href => request.url, :layout => "standard", :show_faces => "true", :width => "548"}
+		%script{:src=>"http://connect.facebook.net/en_US/all.js#appId=187326117947432&amp;xfbml=1"}
+		= javascript_include_tag 'fb-event'
+		= javascript_include_tag 'fb-comments'

@@ -14,6 +14,7 @@ class HomeautoController < ApplicationController
   	@floater = [["quote" , "http://www.powersinsuranceandbenefits.net/index.aspx?tp=1&sid=29018"], ["claim" , "/homeauto/claim"], ["autoid" , "/homeauto/autoid"], ["policy" , "/homeauto/policy"],["billing" , "/homeauto/billing"]]
   	@current_action = "claim"
   	@about = AboutHeading.find_by_page("homeauto-" + @current_action)
+  	@companies = Company.where("homeauto_claim = true").order('name ASC')
   end
 
   def autoid
@@ -66,6 +67,7 @@ class HomeautoController < ApplicationController
   	@floater = [["quote" , "http://www.powersinsuranceandbenefits.net/index.aspx?tp=1&sid=29018"], ["claim" , "/homeauto/claim"], ["autoid" , "/homeauto/autoid"], ["policy" , "/homeauto/policy"],["billing" , "/homeauto/billing"]]
   	@current_action = "billing"
   	@about = AboutHeading.find_by_page("homeauto-" + @current_action)
+  	@companies = Company.where("homeauto_billing = true").order('name ASC')
   end
 
 end

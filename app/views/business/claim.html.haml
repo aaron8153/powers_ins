@@ -1,2 +1,20 @@
-%h1 Business#claim
-%p Find me in app/views/business/claim.html.haml
+.companies
+	%h1
+		Restoration Companies -	
+	- @companies.each do |company|
+		.company-box
+			.company-bg
+				.company-logo
+					= image_tag company.logo.url(:medium)
+				.company-right
+					.company-name
+						= company.name
+					.company-info
+						.company-billing.business
+							.phone-one
+								314.725.1414
+						.company-claim.business
+							.phone-one
+								= company.claim_number_one
+							.phone-two
+								= company.claim_number_two

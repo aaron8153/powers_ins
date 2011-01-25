@@ -1,13 +1,13 @@
 = form_for @cert, :url => {:controller => :business, :action => :certificate}, :html => {:method => :post} do |f|
 	%h3
 		Request Certificate
-	.page-1{:class => 'show'}		
+	.page-1		
 		%p
 			Please use the form below to request a certificate.  After we receive your request a POWERS&reg Agent will contact you to confirm your request.  This service is available in order to facilitate requests.  Confirmation of this request is only valid upon receipt of a certificate from our office.
 		.next-prev-buttons
-			%button{:class => 'next'}
+			.next
 				Continue
-	.page-2{:class => 'hide'}
+	.page-2{:style => "display: none;"}
 		%h4
 			Personal Information
 		.field
@@ -89,11 +89,11 @@
 			= f.label :zip, 'Zip Code:'
 			= f.text_field :zip
 		.next-prev-buttons
-			%button{:class => 'prev'}
+			.prev
 				Previous
-			%button{:class => 'next'}
+			.next
 				Continue
-	.page-3{:class => 'hide'}
+	.page-3{:style => "display: none;"}
 		%h4
 			Policy and Business Information
 		.field
@@ -127,7 +127,7 @@
 			= f.text_field :bus_city
 		.field
 			= f.label :bus_state, 'State:'			
-			%select{:name => "bus_state"}
+			%select{:name => "certificate[bus_state]"}
 				%option{:value => 'AL'}Alabama
 				%option{:value => 'AK'}Alaska
 				%option{:value => 'AZ'}Arizona
@@ -183,11 +183,11 @@
 			= f.label :bus_zip, 'Zip Code:'
 			= f.text_field :bus_zip
 		.next-prev-buttons
-			%button{:class => 'prev'}
+			.prev
 				Previous
-			%button{:class => 'next'}
+			.next
 				Continue
-	.page-4{:class => 'hide'}
+	.page-4{:style => "display: none;"}
 		%h4
 			Miscellaneous Info?
 		%p
@@ -196,6 +196,6 @@
 			= f.label :misc, 'Miscellaneous Info:'
 			= f.text_area :misc, :class => "mceEditor"
 		.next-prev-buttons
-			%button{:class => 'prev'}
+			.prev
 				Previous
 			= f.submit 'Submit Request'

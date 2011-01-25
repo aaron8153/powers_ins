@@ -1,5 +1,7 @@
 Powers::Application.routes.draw do
 
+  get "affiliations/index"
+
   resources :associates
 
   resources :blogs do
@@ -51,6 +53,8 @@ Powers::Application.routes.draw do
   get "home/index"
 
 	root :to => 'home#index'
+	
+	match "/affiliations" => 'affiliations#index'
 	
 	match "/business" => 'business#index'
 		match "/business/consultation" => 'business#consultation'

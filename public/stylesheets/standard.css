@@ -69,8 +69,13 @@
   margin-top: -10px;
   margin-left: 24px; }
   .floater h4 {
-    margin-bottom: 18px;
-    text-align: center; }
+    color: #012031;
+    font-size: 23px;
+    font-weight: 300;
+    margin-bottom: 14px;
+    margin-top: 14px;
+    text-align: center;
+    text-shadow: 0 1px 0 #81D6E8; }
   .floater .homeauto a {
     display: block;
     position: relative;
@@ -177,11 +182,13 @@
     .about-box .comments .fb_iframe_widget {
       display: none; }
   .about-box h1 {
-    font-size: 18px;
+    font-size: 20px;
     padding-top: 3px;
     margin-top: 0px;
     margin-bottom: 0px;
-    color: #438bc3; }
+    color: #438bc3;
+    text-shadow: 0 1px 0 #FFFFFF;
+    font-weight: 300; }
   .about-box h2 {
     font-size: 16px;
     padding-bottom: 5px;
@@ -193,12 +200,14 @@
     margin-bottom: 0px;
     padding-top: 12px;
     color: #013662;
-    font-size: 14px; }
+    font-size: 12px;
+    text-shadow: 0 1px 0 #FFFFFF; }
     .about-box p > em:first-child {
       color: #a2a1a1;
-      font-size: 17px;
+      font-size: 19px;
       display: block;
-      padding-bottom: 10px; }
+      padding-bottom: 10px;
+      font-weight: 100; }
   .about-box .about-box-bottom {
     width: 598px;
     height: 53px;
@@ -219,54 +228,245 @@
         width: 548px;
         height: 75px; }
 
-.company-bg {
-  background: url(/images/company-partial-bg.jpg) no-repeat;
-  height: 109px;
-  width: 586px; }
-  .company-bg .company-logo {
-    height: 85px;
-    width: 187px;
+.companies h1 {
+  margin-bottom: 0px; }
+.companies a {
+  text-decoration: none; }
+.companies .admin-links {
+  height: 35px;
+  width: 556px;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 40px; }
+  .companies .admin-links .toggle-showing {
     float: left;
-    clear: left;
-    padding-top: 24px;
-    padding-left: 28px; }
-    .company-bg .company-logo img {
-      width: 159px;
-      height: 61px; }
-  .company-bg .company-right {
+    clear: both;
+    height: 20px;
+    width: 150px;
+    text-align: left; }
+  .companies .admin-links .new {
+    float: left;
+    clear: both;
+    text-align: left; }
+.companies .company-box {
+  height: 99px;
+  width: 586px;
+  position: relative;
+  margin-bottom: 15px; }
+  .companies .company-box .company-bg {
+    background: url(/images/company-partial-bg.jpg) no-repeat;
     height: 109px;
-    width: 371px;
-    float: left;
-    clear: right; }
-    .company-bg .company-right .company-name {
-      height: 25px;
+    width: 586px; }
+    .companies .company-box .company-bg .company-logo {
+      height: 85px;
+      width: 187px;
+      float: left;
+      clear: left;
+      padding-top: 24px;
+      padding-left: 28px; }
+      .companies .company-box .company-bg .company-logo img {
+        width: 159px;
+        height: 61px; }
+    .companies .company-box .company-bg .company-right {
+      height: 109px;
       width: 371px;
       float: left;
-      clear: both;
-      padding-top: 10px;
-      text-align: center; }
-
-.company-admin {
-  height: 115px;
-  width: 586px; }
-  .company-admin .company-info {
+      clear: right; }
+      .companies .company-box .company-bg .company-right .company-name {
+        height: 25px;
+        width: 371px;
+        float: left;
+        clear: both;
+        padding-top: 10px;
+        text-align: center; }
+      .companies .company-box .company-bg .company-right .company-billing {
+        height: 25px;
+        width: 296px;
+        float: left;
+        clear: both;
+        padding-top: 10px;
+        padding-left: 75px; }
+      .companies .company-box .company-bg .company-right .company-claim {
+        height: 25px;
+        width: 296px;
+        float: left;
+        clear: both;
+        padding-top: 10px;
+        padding-left: 75px; }
+.companies .company-admin {
+  width: 586px;
+  height: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  position: relative;
+  font-size: 12px; }
+  .companies .company-admin.show {
+    height: 250px; }
+  .companies .company-admin h2 {
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding-left: 5px;
+    padding-top: 5px;
+    display: inline;
     float: left;
-    clear: left;
-    height: 115px;
-    width: 500px; }
-    .company-admin .company-info .company-homeauto {
-      height: 75px;
-      width: 250px;
+    clear: left; }
+  .companies .company-admin .company-actions {
+    height: 20px;
+    padding-top: 5px;
+    float: right;
+    clear: right;
+    font-size: 12px;
+    font-family: "museo-1","museo-2",serif; }
+    .companies .company-admin .company-actions a {
+      color: blue; }
+    .companies .company-admin .company-actions .company-view {
+      float: left;
+      clear: left;
+      padding-top: 5px;
+      margin-right: 7px;
+      text-align: right;
+      color: blue; }
+      .companies .company-admin .company-actions .company-view:hover {
+        cursor: pointer; }
+    .companies .company-admin .company-actions .company-edit {
+      float: left;
+      padding-top: 5px;
+      margin-right: 7px;
+      text-align: right; }
+    .companies .company-admin .company-actions .company-delete {
+      float: left;
+      clear: right;
+      padding-top: 5px;
+      text-align: right; }
+  .companies .company-admin .company-info {
+    float: left;
+    clear: both;
+    height: 220px;
+    width: 586px;
+    font-size: 12px; }
+    .companies .company-admin .company-info .biz {
+      float: left;
+      clear: left;
+      height: 210px;
+      width: 282px;
+      padding-left: 10px;
+      padding-bottom: 5px;
+      border-left: 1px solid black;
+      border-bottom: 1px solid black;
+      border-top: 1px solid black; }
+    .companies .company-admin .company-info .ha {
+      float: left;
+      clear: right;
+      height: 210px;
+      width: 281px;
+      padding-left: 10px;
+      padding-bottom: 5px;
+      border: 1px solid black; }
+    .companies .company-admin .company-info h3 {
+      margin-left: 0px;
+      margin-top: 0px;
+      margin-bottom: 0px; }
+    .companies .company-admin .company-info h4 {
+      margin-left: 0px;
+      margin-top: 5px;
+      margin-bottom: 5px; }
+    .companies .company-admin .company-info .left {
+      width: 103px;
+      height: 70px;
       float: left;
       clear: left; }
-    .company-admin .company-info .company-business {
-      height: 75px;
-      width: 250px;
-      float: left; }
-  .company-admin .company-actions {
-    text-align: right;
-    height: 90px;
-    width: 86px;
-    padding-top: 10px;
-    float: left;
-    clear: right; }
+    .companies .company-admin .company-info .right {
+      width: 170px;
+      height: 70px;
+      float: right;
+      clear: right; }
+      .companies .company-admin .company-info .right .claim span {
+        margin-left: -10px;
+        margin-bottom: 2px; }
+      .companies .company-admin .company-info .right .billing span {
+        margin-left: -10px;
+        margin-bottom: 2px; }
+    .companies .company-admin .company-info .claim {
+      width: 100%;
+      height: 35px;
+      margin-left: 10px; }
+      .companies .company-admin .company-info .claim span {
+        width: 100%;
+        float: left;
+        clear: both;
+        margin-left: -5px; }
+    .companies .company-admin .company-info .billing {
+      width: 100%;
+      height: 35px;
+      margin-left: 10px; }
+      .companies .company-admin .company-info .billing span {
+        width: 100%;
+        float: left;
+        clear: both;
+        margin-left: -5px; }
+
+.formtop {
+  width: 598px;
+  height: 12px;
+  position: relative;
+  background: url(/images/about-box-top.png) no-repeat; }
+
+.form {
+  background-color: #FFF;
+  width: 550px;
+  min-height: 258px;
+  position: relative;
+  padding-top: 5px;
+  padding-left: 27px;
+  padding-right: 20px;
+  background: url(/images/about-box-content.png) repeat-y; }
+  .form .field {
+    background: url(/images/field-divider.jpg) bottom no-repeat;
+    position: relative;
+    margin-bottom: 6px;
+    width: 400px;
+    height: 33px; }
+    .form .field input {
+      background: #e2e1e1;
+      border: 0;
+      float: right;
+      padding: 6px;
+      color: #013662; }
+      .form .field input:hover {
+        background: #f5f5f5; }
+      .form .field input:focus {
+        background: #f5f5f5; }
+    .form .field label {
+      color: #545352;
+      font-family: helvetica;
+      font-size: 13px;
+      letter-spacing: 0.03em;
+      margin-right: 16px;
+      text-shadow: 0 1px 0 #FFFFFF; }
+  .form .next-prev-buttons {
+    width: 598px;
+    height: 53px;
+    position: relative;
+    background: url(/images/about-box-bottom.png) no-repeat;
+    background-color: #FFF;
+    margin-left: -27px;
+    margin-top: 55px; }
+
+.consult_form h3 {
+  color: #438BC3;
+  font-size: 20px;
+  font-weight: 300;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-top: 3px;
+  text-shadow: 0 1px 0 #FFFFFF; }
+.consult_form h4 {
+  color: #013662;
+  font-size: 16px;
+  font-weight: 600;
+  text-shadow: 0 1px 0 #FFFFFF; }
+.consult_form p {
+  color: #013662;
+  font-weight: 300;
+  font-size: 13px;
+  text-shadow: 0 1px 0 #FFFFFF; }

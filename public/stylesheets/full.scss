@@ -1,0 +1,230 @@
+$powers-dark-blue: #012031;
+$powers-blue: #013662;
+$powers-light-blue: #95e4fc;
+
+.top-nav {
+	height: 118px;
+	background: url(/images/top-nav-bg-repeat.png) #ecebeb repeat-x;
+	.three-button {
+		width: 100%;
+		height: 88px;
+		margin: auto;
+		padding-top: 30px;
+		background: url(/images/top-nav-bg.jpg) no-repeat center;
+		.three-button-center{
+			width: 907px;
+			position: relative;
+			margin: auto;
+			a {
+				display: block;
+				position: relative;
+				float: left;
+				padding-top: 20px;
+				&.business {
+					clear: left;
+					width: 289px;
+					height: 58px;
+					margin-left: auto;
+					background: url(/images/top-nav-business.png) no-repeat;
+				}
+				&.homeauto {
+					width: 289px;
+					height: 58px;
+					margin-left: 20px;
+					background: url(/images/top-nav-homeauto.png) no-repeat;
+				}
+				&.benefits {
+					clear: right;
+					width: 289px;
+					height: 58px;
+					margin-left: 20px;
+					margin-right: auto;
+					background: url(/images/top-nav-benefits.png) no-repeat;
+				}
+				&:hover {
+					background-position: 0px -78px;
+				}
+				&.current {
+					background-position: 0px -78px;
+					&:hover {
+					}
+				}
+				span {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+.middle-wrapper {
+	background: #ecebeb;
+	position: relative;
+	width: 100%;
+	padding-bottom: 35px;
+	.middle {
+		padding-top: 20px;
+		padding-bottom: 40px;
+		width: 907px;
+		
+		margin: auto;		
+		position: relative;
+		background-color: #ecebeb;
+		.page-content {
+			position: relative;
+			width: 907px;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			h1 {
+				color: #438BC3;
+  			    font-size: 28px;
+  			    font-weight: 300;
+  			    margin-bottom: 0;
+  			    margin-top: 0;
+  			    padding-top: 3px;
+  			    text-shadow: 0 1px 0 #FFFFFF;
+			}
+			p {
+				color: #013662;
+    			font-size: 15px;
+    			font-weight: 300;
+    			text-shadow: 0 1px 0 #FFFFFF;
+			}
+		}
+	}
+}
+
+.assoc {
+	width: 423px;
+	position: relative;
+	float: left;
+	margin-left: 20px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	&.producers {
+		clear: left;
+	}
+	&.administrative {
+		clear: right;
+	}
+	
+	&.commercial {
+		clear: left;
+	}
+	&.personal {
+		clear: right;
+	}
+	&.benefits {
+		clear: both;
+	}
+	.admin {
+		display: none;
+	}
+	.assoc-top {
+		height: 42px;
+		width: 423px;
+		position: relative;
+		background: url(/images/associates-bg-top.jpg) no-repeat;
+		h2 {
+  		     color: #133361;
+    		 font-size: 20px;
+   			 font-weight: 300;
+   			 padding-left: 16px;
+   			 padding-top: 10px;
+   			 text-shadow: 0 1px 0 #FFFFFF;
+		}
+	}
+	.assoc-middle {
+		padding-top: 11px;
+		width: 423px;
+		position: relative;
+		background: url(/images/associates-bg-middle.jpg) repeat-y;
+		h2 {
+			margin: 0px 0px 0px 0px;
+		}
+	}
+	.associate {
+		width: 389px;
+		height: 78px;
+		position: relative;
+		margin-left: 15px;
+		padding-top: 2px;
+		padding-left: 2px;
+		background: url(/images/associate-bg.png) no-repeat;
+		&:hover{
+			background-position: 0px -78px;
+		}
+		.avatar {
+			height: 64px;
+			width: 64px;
+			position: relative;
+			background: url(/images/missing.png) no-repeat;
+			float: left;
+			clear: left;
+			margin-right: 10px;
+			img {
+				display: block;
+				height: 64px;
+				width: 64px;
+			}
+		}
+		.info {
+			width: 240px;
+			height: 60px;
+			position: relative;
+			padding-top: 3px;
+			float: left;
+			.name {
+				p {
+					margin: 0;
+					padding: 0;
+					
+				}
+			}
+			.cert {
+				p {
+					margin: 0;
+					padding: 0;
+					color: #636363;
+					font-size: 13px;
+					font-weight: 500;
+				}
+			}
+			.title {
+				p {
+					margin: 0;
+					padding: 0;
+					color: #5288c1;
+					font-size: 13px;
+					font-weight: 500;
+				}
+			}
+		}
+		.email {
+			display: block;
+			position: relative;
+			width: 75px;
+			height: 71px;
+			float: left;
+			clear: right;
+			a {
+				display: block;
+				width: 75px;
+				height: 71px;
+			}
+		}
+		
+	}
+	.assoc-bottom {
+		height: 14px;
+		width: 423px;
+		position: relative;
+		background: url(/images/associates-bg-bottom.jpg) no-repeat;
+	}
+	
+}
+
+.clearall {
+	clear: both;
+}
+

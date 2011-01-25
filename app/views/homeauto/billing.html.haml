@@ -1,2 +1,22 @@
-%h1 Homeauto#billing
-%p Find me in app/views/homeauto/billing.html.haml
+.companies
+	%h1
+		Company Billing Information -		
+	- @companies.each do |company|
+		.company-box
+			.company-bg
+				.company-logo
+					= image_tag company.logo.url(:medium)
+				.company-right
+					.company-name
+						= company.name
+					.company-info
+						.company-billing.homeauto
+							.phone-one
+								= company.homeauto_billing_number_one
+							.phone-two
+								= company.homeauto_billing_number_two
+						.company-claim.homeauto
+							.phone-one
+								= company.homeauto_claim_number_one
+							.phone-two
+								= company.homeauto_claim_number_two

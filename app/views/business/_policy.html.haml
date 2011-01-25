@@ -7,9 +7,9 @@
 		%p
 			Please use the form below to request a change to your current policy.  After we receive your request a POWERS&reg Agent will contact you to discuss and confirm your changes.  This service is available in order to facilitate requests.  Changes are not bound until you receive written confirmation from a POWERS&reg professional.
 		.next-prev-buttons
-			%button{:class => 'next'}
+			.next
 				Continue
-	.page-2{:class => 'hide'}
+	.page-2{:style => "display: none;"}
 		%h4
 			Personal Information
 		.field
@@ -35,7 +35,7 @@
 			= f.text_field :city
 		.field
 			= f.label :state, 'State:'			
-			%select{:name => "state"}
+			%select{:name => "policy_chage[state]"}
 				%option{:value => 'AL'}Alabama
 				%option{:value => 'AK'}Alaska
 				%option{:value => 'AZ'}Arizona
@@ -91,11 +91,11 @@
 			= f.label :zip, 'Zip Code:'
 			= f.text_field :zip
 		.next-prev-buttons
-			%button{:class => 'prev'}
+			.prev
 				Previous
-			%button{:class => 'next'}
+			.next
 				Continue
-	.page-3{:class => 'hide'}
+	.page-3{:style => "display: none;"}
 		%h4
 			Policy Information
 		.field
@@ -108,11 +108,11 @@
 			= f.label :description, 'Description of Change:'
 			= f.text_area :description, :class => "mceEditor"
 		.next-prev-buttons
-			%button{:class => 'prev'}
+			.prev
 				Previous
-			%button{:class => 'next'}
+			.next
 				Continue
-	.page-4{:class => 'hide'}
+	.page-4{:style => "display: none;"}
 		%h4
 			Questions/Comments?
 		%p
@@ -121,7 +121,7 @@
 			= f.label :misc, 'Comments/Questions?'
 			= f.text_area :misc, :class => "mceEditor"
 		.next-prev-buttons
-			%button{:class => 'prev'}
+			.prev
 				Previous
 			= f.submit 'Submit Request'
 

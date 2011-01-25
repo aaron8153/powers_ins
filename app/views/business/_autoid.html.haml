@@ -2,13 +2,13 @@
 	= f.hidden_field :division, :value => "business"
 	%h3
 		Request Auto ID Cards
-	.page-1{:class => 'show'}
+	.page-1
 		%p
 			Please use the form below to request Auto ID Cards.  After we receive your request a POWERS&reg Agent will contact you to regarding your request.  This service is available to expedite requests. This request does not change coverages until you hear from a licensed POWERS&reg representative or confirmation is received in writing from us.
 		.next-prev-buttons
-			%button{:class => 'next'}
+			.next
 				Continue
-	.page-2{:class => 'hide'}
+	.page-2{:style => "display: none;"}
 		%h4
 			Personal Information
 		.field
@@ -34,7 +34,7 @@
 			= f.text_field :city
 		.field
 			= f.label :state, 'State:'			
-			%select{:name => "state"}
+			%select{:name => "auto_id[state]"}
 				%option{:value => 'AL'}Alabama
 				%option{:value => 'AK'}Alaska
 				%option{:value => 'AZ'}Arizona
@@ -90,11 +90,11 @@
 			= f.label :zip, 'Zip Code:'
 			= f.text_field :zip
 		.next-prev-buttons
-			%button{:class => 'prev'}
+			.prev
 				Previous
-			%button{:class => 'next'}
+			.next
 				Continue
-	.page-3{:class => 'hide'}
+	.page-3{:style => "display: none;"}
 		%h4
 			Policy Information
 		.field
@@ -113,11 +113,11 @@
 			= f.label :vin, 'Vehicle ID Number:'
 			= f.text_field :vin
 		.next-prev-buttons
-			%button{:class => 'prev'}
+			.prev
 				Previous
-			%button{:class => 'next'}
+			.next
 				Continue
-	.page-4{:class => 'hide'}
+	.page-4{:style => "display: none;"}
 		%h4
 			Questions/Comments?
 		%p
@@ -126,6 +126,6 @@
 			= f.label :misc, 'Comments/Questions?'
 			= f.text_area :misc, :class => "mceEditor"
 		.next-prev-buttons
-			%button{:class => 'prev'}
+			.prev
 				Previous
 			= f.submit 'Submit Request'

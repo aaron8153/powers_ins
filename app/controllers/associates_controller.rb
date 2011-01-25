@@ -2,12 +2,16 @@ class AssociatesController < ApplicationController
   # GET /associates
   # GET /associates.xml
   def index
-    @associates = Associate.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @associates }
-    end
+    @producers = Associate.find_all_by_division('Producers', :order => 'position ASC' )
+    @administrators = Associate.find_all_by_division('Administrative', :order => 'position ASC' )
+    @benefits = Associate.find_all_by_division('Benefits', :order => 'position ASC' )
+    @commercial = Associate.find_all_by_division('Commercial Lines', :order => 'position ASC' )
+    @personal = Associate.find_all_by_division('Personal Lines', :order => 'position ASC' )
+    
+    @current_page = "associates"
+    
+   render :layout => "full"
+    
   end
 
   # GET /associates/1

@@ -131,6 +131,8 @@ body {
                 background-position: 0px -82px; }
             .header .nav .nav-right .nav-bottom .nav-tabs a.tab:hover {
               background-position: 0px -72px; }
+            .header .nav .nav-right .nav-bottom .nav-tabs a.tab.current {
+              background-position: 0px -82px; }
             .header .nav .nav-right .nav-bottom .nav-tabs a.tab span {
               display: none; }
 
