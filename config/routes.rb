@@ -1,5 +1,7 @@
 Powers::Application.routes.draw do
 
+  get "aboutus/index"
+
   get "affiliations/index"
 
   resources :associates
@@ -53,6 +55,10 @@ Powers::Application.routes.draw do
   get "home/index"
 
 	root :to => 'home#index'
+	
+	match "/privacy" => 'home#privacy'
+	match "/terms" => 'home#terms'
+	match "/aboutus" => 'aboutus#index'
 	
 	match "/affiliations" => 'affiliations#index'
 	

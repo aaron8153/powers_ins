@@ -63,5 +63,14 @@
       .field
         = f.label :homeauto_billing, 'Billing Info:'
         = f.check_box :homeauto_billing
+    .benefits
+      %h4
+        Benefits
+      .field
+        = f.label :benefits, 'Individual Benefits:'
+        = f.check_box :benefits
+      .field
+        = f.label :benefits_group, 'Group Benefits:'
+        = f.check_box :benefits_group
   .actions
     = f.submit 'Save'

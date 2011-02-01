@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110124214650) do
+ActiveRecord::Schema.define(:version => 20110131211659) do
 
   create_table "about_headings", :force => true do |t|
     t.string   "heading"
@@ -117,6 +117,8 @@ ActiveRecord::Schema.define(:version => 20110124214650) do
     t.string   "homeauto_claim_number_two"
     t.string   "homeauto_billing_number_one"
     t.string   "homeauto_billing_number_two"
+    t.boolean  "benefits"
+    t.boolean  "benefits_group"
   end
 
   create_table "consults", :force => true do |t|

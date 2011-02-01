@@ -22,7 +22,7 @@ test:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: powers_test
+  database: powers_testing
   pool: 5
   username: root
   password: elise

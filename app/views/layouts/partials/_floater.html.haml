@@ -10,8 +10,8 @@
 				- cl += (@floater.last==[tab,url] ? " last" : "")
 				- if @current_page == "homeauto" && tab == "quote"
 					%a.tab{:class => "#{cl}", :id => "#{tab}", :alt => "Click here navigate to " + "#{tab.capitalize}", :href => "#{url}", :target => "_blank"}
-						%span{:class => "#{tab}"} #{tab.capitalize}
+						%span{:class => "#{tab}"} #{tab.split(" ").each{|word| word.capitalize!}.join(" ")}
 				- else
 					%a.tab{:class => "#{cl}", :id => "#{tab}", :alt => "Click here navigate to " + "#{tab.capitalize}", :href => "#{url}"}
-						%span{:class => "#{tab}"} #{tab.capitalize}
+						%span{:class => "#{tab}"} #{tab.split(" ").each{|word| word.capitalize!}.join(" ")}
 	= javascript_include_tag 'floatbox'

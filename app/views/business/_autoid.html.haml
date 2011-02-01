@@ -4,7 +4,7 @@
 		Request Auto ID Cards
 	.page-1
 		%p
-			Please use the form below to request Auto ID Cards.  After we receive your request a POWERS&reg Agent will contact you to regarding your request.  This service is available to expedite requests. This request does not change coverages until you hear from a licensed POWERS&reg representative or confirmation is received in writing from us.
+			Please use the form below, by clicking continue, to request Auto ID Cards.  After we receive your request a POWERS&reg Agent will contact you regarding your inquiry.  This service is available to expedite requests. This request does not change coverages until you hear from a licensed POWERS&reg representative or confirmation is received in writing from us.
 		.next-prev-buttons
 			.next
 				Continue
@@ -122,9 +122,9 @@
 			Questions/Comments?
 		%p
 			Please complete the form by pressing the 'Submit Request' button below.  If you would like to review your information press the 'Previous' button below.  A confirmation dialogue will appear when your request has been processed.  This service is available to expedite requests. This request does not change coverages until you hear from a licensed POWERS&reg representative or confirmation is received in writing from us.
-		.field
+		.field.mce
 			= f.label :misc, 'Comments/Questions?'
-			= f.text_area :misc, :class => "mceEditor"
+			= f.text_area :misc, :class => "mceEditor", :style => 'height: 200px; width: 450px; position: relative;'
 		.next-prev-buttons
 			.prev
 				Previous

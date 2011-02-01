@@ -3,7 +3,7 @@
 		Request Certificate
 	.page-1		
 		%p
-			Please use the form below to request a certificate.  After we receive your request a POWERS&reg Agent will contact you to confirm your request.  This service is available in order to facilitate requests.  Confirmation of this request is only valid upon receipt of a certificate from our office.
+			Please use the form below, by clicking continue, to request a certificate.  After we receive your request a POWERS&reg Agent will contact you to confirm your inquiry.  This service is available in order to facilitate requests.  Confirmation of this request is only valid upon receipt of a certificate from our office.
 		.next-prev-buttons
 			.next
 				Continue
@@ -33,7 +33,7 @@
 			= f.text_field :city
 		.field
 			= f.label :state, 'State:'			
-			%select{:name => "state"}
+			%select{:name => "certificate[state]"}
 				%option{:value => 'AL'}Alabama
 				%option{:value => 'AK'}Alaska
 				%option{:value => 'AZ'}Arizona
@@ -98,7 +98,7 @@
 			Policy and Business Information
 		.field
 			= f.label :insurance_type, 'Type of Insurance:'			
-			%select{:name => "insurance_type"}
+			%select{:name => "certificate[insurance_type]"}
 				%option{:value => 'General Liability'}General Liability
 				%option{:value => 'Auto Liability'}Auto Liability
 				%option{:value => 'Workers Compensation'}Workers Compensation
@@ -192,9 +192,9 @@
 			Miscellaneous Info?
 		%p
 			Please complete the form by pressing the 'Submit Request' button below.  If you would like to review your information press the 'Previous' button below.  A confirmation dialogue will appear when your request has been processed.  This service is available in order to facilitate requests. Confirmation of this request is only valid upon receipt of a certificate from our office.
-		.field
+		.field.mce
 			= f.label :misc, 'Miscellaneous Info:'
-			= f.text_area :misc, :class => "mceEditor"
+			= f.text_area :misc, :class => "mceEditor", :style => 'height: 200px; width: 450px; position: relative;'
 		.next-prev-buttons
 			.prev
 				Previous

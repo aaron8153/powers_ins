@@ -121,6 +121,9 @@ $powers-light-blue: #95e4fc;
 			&:hover {
 				background-position: 0px -41px;
 			}
+			&.current {
+				background-position: 0px -41px;
+			}
 			span {
 				display: none;
 			}
@@ -152,6 +155,9 @@ $powers-light-blue: #95e4fc;
 				background: url(/images/floatnav-biz-billinginfo.png) no-repeat;
 			}
 			&:hover {
+				background-position: 0px -41px;
+			}
+			&.current {
 				background-position: 0px -41px;
 			}
 			span {
@@ -366,7 +372,8 @@ $powers-light-blue: #95e4fc;
 					float: left;
 					clear: both;
 					padding-top: 10px;
-					text-align: center;
+					text-align: left;
+					margin-left: 20px;
 				}
 					
 				.company-billing {
@@ -555,21 +562,25 @@ $powers-light-blue: #95e4fc;
 	height: 12px;
 	position: relative;
 	background: url(/images/about-box-top.png) no-repeat;
+	margin-top: -20px;
 }
 .form{
 	background-color: #FFF;
 	width: 550px;
-	min-height: 258px;
 	position: relative;
 	padding-top: 5px;
 	padding-left: 27px;
 	padding-right: 20px;
 	background: url(/images/about-box-content.png) repeat-y;
+	h3 {
+		margin-bottom: 0px;
+	}
 	.field {
 		background: url(/images/field-divider.jpg)  bottom no-repeat;
 		position: relative;
 		margin-bottom: 6px;
-		width: 400px;
+		margin-left: 45px;
+		width: 450px;
 		height: 33px;
 		input{
 			background: #e2e1e1;
@@ -584,7 +595,52 @@ $powers-light-blue: #95e4fc;
 				background: #f5f5f5;	
 			}
 		}
-			
+		select{
+			background: #e2e1e1;
+			border: 0;
+			float: right;
+			padding: 6px;
+			color: #013662;
+			width: 228px;
+			&:hover {
+				background: #f5f5f5;
+				cursor: pointer;
+			}
+			&:focus {
+				background: #f5f5f5;	
+			}
+			&#policy_change_change_date_1i {
+				position: absolute;
+				left: 386px;
+				width: 65px;
+			}
+			&#policy_change_change_date_2i {
+				position: absolute;
+				left: 222px;
+				width: 91px;
+			}
+			&#policy_change_change_date_3i {
+				position: absolute;
+				left: 323px;
+				width: 55px;
+			}
+		}
+		&.mce {
+			position: relative;
+			width: 450px;
+			height: 200px;
+			textarea {
+				position: relative;
+				width: 450px;
+				height: 200px;
+			}
+			table.mceLayout {
+				position: relative;
+				width: 450px;
+				height: 200px;
+			}
+		}
+		
 		label{
 			color: #545352;
         	font-family: helvetica;
@@ -602,6 +658,36 @@ $powers-light-blue: #95e4fc;
 		background-color: #FFF;
 		margin-left: -27px;
 		margin-top: 55px;
+		text-align: center;
+		.prev {
+			display: block;
+			position: absolute;
+			height: 30px;
+			width: 70px;
+			top: 15px;
+			left: 415px;
+			&:hover{
+				cursor: pointer;
+			}
+			&:focus{
+			
+			}
+		}
+		.next {
+			display: block;
+			position: absolute;
+			height: 30px;
+			width: 70px;
+			top: 15px;
+			left: 490px;
+			&:hover{
+				cursor: pointer;
+			}
+			&:focus{
+				
+			}
+			
+		}
 	}
 	.hide {
 
@@ -609,6 +695,32 @@ $powers-light-blue: #95e4fc;
 		
 }
 .consult_form {
+	
+	h3 {
+		color: #438BC3;
+    	font-size: 20px;
+    	font-weight: 300;
+    	margin-bottom: 0;
+    	margin-top: 0;
+    	padding-top: 3px;
+    	text-shadow: 0 1px 0 #FFFFFF;
+	}
+	h4 {
+		color: #013662;
+    	font-size: 16px;
+    	font-weight: 600;
+    	text-shadow: 0 1px 0 #FFFFFF;		
+	}
+	p {
+		color: #013662;
+		font-weight: 300;
+		font-size: 13px;
+		text-shadow: 0 1px 0 #FFFFFF;	
+	}
+
+}
+
+.policy_form {
 	
 	h3 {
 		color: #438BC3;

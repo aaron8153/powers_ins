@@ -94,6 +94,8 @@
       background: url(/images/floatnav-ha-billing.png) no-repeat; }
     .floater .homeauto a:hover {
       background-position: 0px -41px; }
+    .floater .homeauto a.current {
+      background-position: 0px -41px; }
     .floater .homeauto a span {
       display: none; }
   .floater .business a {
@@ -115,6 +117,8 @@
     .floater .business a.billing {
       background: url(/images/floatnav-biz-billinginfo.png) no-repeat; }
     .floater .business a:hover {
+      background-position: 0px -41px; }
+    .floater .business a.current {
       background-position: 0px -41px; }
     .floater .business a span {
       display: none; }
@@ -278,7 +282,8 @@
         float: left;
         clear: both;
         padding-top: 10px;
-        text-align: center; }
+        text-align: left;
+        margin-left: 20px; }
       .companies .company-box .company-bg .company-right .company-billing {
         height: 25px;
         width: 296px;
@@ -409,22 +414,25 @@
   width: 598px;
   height: 12px;
   position: relative;
-  background: url(/images/about-box-top.png) no-repeat; }
+  background: url(/images/about-box-top.png) no-repeat;
+  margin-top: -20px; }
 
 .form {
   background-color: #FFF;
   width: 550px;
-  min-height: 258px;
   position: relative;
   padding-top: 5px;
   padding-left: 27px;
   padding-right: 20px;
   background: url(/images/about-box-content.png) repeat-y; }
+  .form h3 {
+    margin-bottom: 0px; }
   .form .field {
     background: url(/images/field-divider.jpg) bottom no-repeat;
     position: relative;
     margin-bottom: 6px;
-    width: 400px;
+    margin-left: 45px;
+    width: 450px;
     height: 33px; }
     .form .field input {
       background: #e2e1e1;
@@ -436,6 +444,42 @@
         background: #f5f5f5; }
       .form .field input:focus {
         background: #f5f5f5; }
+    .form .field select {
+      background: #e2e1e1;
+      border: 0;
+      float: right;
+      padding: 6px;
+      color: #013662;
+      width: 228px; }
+      .form .field select:hover {
+        background: #f5f5f5;
+        cursor: pointer; }
+      .form .field select:focus {
+        background: #f5f5f5; }
+      .form .field select#policy_change_change_date_1i {
+        position: absolute;
+        left: 386px;
+        width: 65px; }
+      .form .field select#policy_change_change_date_2i {
+        position: absolute;
+        left: 222px;
+        width: 91px; }
+      .form .field select#policy_change_change_date_3i {
+        position: absolute;
+        left: 323px;
+        width: 55px; }
+    .form .field.mce {
+      position: relative;
+      width: 450px;
+      height: 200px; }
+      .form .field.mce textarea {
+        position: relative;
+        width: 450px;
+        height: 200px; }
+      .form .field.mce table.mceLayout {
+        position: relative;
+        width: 450px;
+        height: 200px; }
     .form .field label {
       color: #545352;
       font-family: helvetica;
@@ -450,7 +494,26 @@
     background: url(/images/about-box-bottom.png) no-repeat;
     background-color: #FFF;
     margin-left: -27px;
-    margin-top: 55px; }
+    margin-top: 55px;
+    text-align: center; }
+    .form .next-prev-buttons .prev {
+      display: block;
+      position: absolute;
+      height: 30px;
+      width: 70px;
+      top: 15px;
+      left: 415px; }
+      .form .next-prev-buttons .prev:hover {
+        cursor: pointer; }
+    .form .next-prev-buttons .next {
+      display: block;
+      position: absolute;
+      height: 30px;
+      width: 70px;
+      top: 15px;
+      left: 490px; }
+      .form .next-prev-buttons .next:hover {
+        cursor: pointer; }
 
 .consult_form h3 {
   color: #438BC3;
@@ -466,6 +529,25 @@
   font-weight: 600;
   text-shadow: 0 1px 0 #FFFFFF; }
 .consult_form p {
+  color: #013662;
+  font-weight: 300;
+  font-size: 13px;
+  text-shadow: 0 1px 0 #FFFFFF; }
+
+.policy_form h3 {
+  color: #438BC3;
+  font-size: 20px;
+  font-weight: 300;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-top: 3px;
+  text-shadow: 0 1px 0 #FFFFFF; }
+.policy_form h4 {
+  color: #013662;
+  font-size: 16px;
+  font-weight: 600;
+  text-shadow: 0 1px 0 #FFFFFF; }
+.policy_form p {
   color: #013662;
   font-weight: 300;
   font-size: 13px;

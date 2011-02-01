@@ -5,7 +5,7 @@
 	.page-1
 		
 		%p
-			Please use the form below to request a change to your current policy.  After we receive your request a POWERS&reg Agent will contact you to discuss and confirm your changes.  This service is available in order to facilitate requests.  Changes are not bound until you receive written confirmation from a POWERS&reg professional.
+			Please use the form below, by clicking continue, to request a change to your current policy.  After we receive your request a POWERS&reg Agent will contact you to discuss and confirm your changes.  This service is available in order to facilitate requests.  Changes are not bound until you receive written confirmation from a POWERS&reg professional.
 		.next-prev-buttons
 			.next
 				Continue
@@ -104,9 +104,9 @@
 		.field
 			= f.label :change_date, 'Date of Change:'
 			= f.date_select :change_date
-		.field
+		.field.mce
 			= f.label :description, 'Description of Change:'
-			= f.text_area :description, :class => "mceEditor"
+			= f.text_area :description, :class => "mceEditor", :style => 'height: 200px; width: 450px; position: relative;'
 		.next-prev-buttons
 			.prev
 				Previous
@@ -117,9 +117,9 @@
 			Questions/Comments?
 		%p
 			Please complete the form by pressing the 'Submit Request' button below.  If you would like to review your information press the 'Previous' button below.  A confirmation dialogue will appear when your request has been processed.
-		.field
+		.field.mce
 			= f.label :misc, 'Comments/Questions?'
-			= f.text_area :misc, :class => "mceEditor"
+			= f.text_area :misc, :class => "mceEditor", :style => 'height: 200px; width: 450px; position: relative;'
 		.next-prev-buttons
 			.prev
 				Previous

@@ -4,7 +4,7 @@
 	.page-1{:class => 'show'}
 		
 		%p
-			Please use the form below to request a Consultation.  We wish to understand your individual and business goals.  Our process is designed to help identify risks and opportunities to co-develop solutions.  Once we receive your request, a POWERS&reg Agent will contact you shortly.
+			Please use the form below, by clicking continue, to request a Consultation.  We wish to understand your individual and business goals.  Our process is designed to help identify risks and opportunities to co-develop solutions.  Once we receive your request, a POWERS&reg Agent will contact you shortly.
 		.next-prev-buttons
 			.next
 				Continue
@@ -89,9 +89,9 @@
 		.field
 			= f.label :zip, 'Zip Code:'
 			= f.text_field :zip
-		.field
+		.field.mce
 			= f.label :insurance_type, 'Type of Insurance:'
-			= f.text_area :insurance_type, :class => "mceEditor"
+			= f.text_area :insurance_type, :class => "mceEditor", :style => 'height: 200px; width: 450px; position: relative;'
 		.next-prev-buttons
 			.prev
 				Previous
