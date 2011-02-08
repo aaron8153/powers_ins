@@ -21,6 +21,7 @@ $powers-light-blue: #95e4fc;
 		width: 312px;
 		height: 380px;
 		margin-left: 63px;
+		margin-top: 3px;
 		background: url(/images/home-image.png) no-repeat;
 	}
 	
@@ -30,25 +31,27 @@ $powers-light-blue: #95e4fc;
 		height: 380px;
 		padding-left: 10px;
 		padding-right: 20px;
+		margin-top: 3px;
 		background: url(/images/home-about.png) no-repeat;
 		
 		h1 {
 			color: $powers-dark-blue;
-			margin-top: 17px;
-			margin-bottom: 3px;
-			color: #012031;
-			font-size: 28px;
-			font-weight: 300;
-			text-shadow: 0 1px 0 #81D6E9;
+   			color: #012031;
+   			font-size: 22px;
+   			font-weight: 300;
+   			line-height: 23px;
+   			margin-bottom: 3px;
+   			margin-top: 16px;
+   			text-shadow: 0 1px 0 #81D6E9;
 		}
 		h2 {
-			color: #FFF;
-			font-size: 17px;
-			font-weight: 300;
-			line-height: 21px;
-			margin-bottom: 3px;
-			margin-top: 24px;
-			text-shadow: 0 1px 0 #064E88;
+   			 color: #FFFFFF;
+   			 font-size: 17px;
+   			 font-weight: 300;
+   			 letter-spacing: 0.04em;
+   			 line-height: 18px;
+   			 margin-bottom: 3px;
+   			 margin-top: 29px;
 			p {
 				margin-top: 0px;
 				margin-bottom: 3px;
@@ -56,20 +59,32 @@ $powers-light-blue: #95e4fc;
 		}
 		.description p{
 			color: #013662;
+			font-family: helvetica;
 			font-size: 12px;
 			font-weight: 500;
 			line-height: 18px;
 			margin-bottom: 3px;
 			text-shadow: 0 1px 0 #97d6f1;
 		}
+		.description li{
+			color: #013662;
+			font-family: helvetica;
+			font-size: 12px;
+			font-weight: 500;
+			line-height: 18px;
+			margin-bottom: 3px;
+			margin-left: -50px;
+			text-shadow: 0 1px 0 #97d6f1;
+		}
 		a.readmore{
 			background: url(/images/read-more.png) no-repeat;
+			position: absolute;
 			width: 115px;
 			height: 35px;
 			display: block;
-			margin-right: -10px;
-			margin-top: -5px;
 			float: right;
+			top: 275px;
+			left: 550px;
 			span {
 				display: none;
 			}
@@ -86,6 +101,7 @@ $powers-light-blue: #95e4fc;
 		width: 245px;
 		height: 380px;
 		margin-left: 5px;
+		margin-top: 3px;
 		padding-left: 20px;
 		padding-right: 20px;
 		background: url(/images/home-contact.png) no-repeat;
@@ -162,33 +178,31 @@ $powers-light-blue: #95e4fc;
 .bottom-nav {
 	margin: auto;
 	width: 1024px;
-	height: 55px;
+	height: 23px;
 	a {
 		float: left;
 		display: block;
 		margin-top: -80px;
 		&.business {
 			clear: left;
-			width: 288px;
-			height: 109px;
+			width: 279px;
+			height: 110px;
 			margin-left: 63px;
 			background: url(/images/bottom-nav-business.png) no-repeat;
 		}
 		&.homeauto {
-			width: 288px;
-			height: 109px;
-			margin-left: 20px;
+			width: 293px;
+			height: 110px;
 			background: url(/images/bottom-nav-homeauto.png) no-repeat;
 		}
 		&.benefits {
-			width: 288px;
-			height: 109px;
-			margin-left: 20px;
+			width: 330px;
+			height: 110px;
 			clear: right;
 			background: url(/images/bottom-nav-benefits.png) no-repeat;
 		}
 		&:hover {
-			background-position: 0px -109px;
+			background-position: 0px -110px;
 		}
 		span {
 			display: none;

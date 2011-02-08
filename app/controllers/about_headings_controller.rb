@@ -1,5 +1,7 @@
 class AboutHeadingsController < ApplicationController
-	uses_tiny_mce
+	uses_tiny_mce :options => {
+								:theme => 'advanced'
+							}
   # GET /about_headings
   # GET /about_headings.xml
    

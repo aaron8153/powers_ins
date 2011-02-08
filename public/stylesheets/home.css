@@ -14,6 +14,7 @@
   width: 312px;
   height: 380px;
   margin-left: 63px;
+  margin-top: 3px;
   background: url(/images/home-image.png) no-repeat; }
 .home-content .home-about {
   float: left;
@@ -21,41 +22,54 @@
   height: 380px;
   padding-left: 10px;
   padding-right: 20px;
+  margin-top: 3px;
   background: url(/images/home-about.png) no-repeat; }
   .home-content .home-about h1 {
     color: #012031;
-    margin-top: 17px;
-    margin-bottom: 3px;
     color: #012031;
-    font-size: 28px;
+    font-size: 22px;
     font-weight: 300;
+    line-height: 23px;
+    margin-bottom: 3px;
+    margin-top: 16px;
     text-shadow: 0 1px 0 #81D6E9; }
   .home-content .home-about h2 {
-    color: #FFF;
+    color: #FFFFFF;
     font-size: 17px;
     font-weight: 300;
-    line-height: 21px;
+    letter-spacing: 0.04em;
+    line-height: 18px;
     margin-bottom: 3px;
-    margin-top: 24px;
-    text-shadow: 0 1px 0 #064E88; }
+    margin-top: 29px; }
     .home-content .home-about h2 p {
       margin-top: 0px;
       margin-bottom: 3px; }
   .home-content .home-about .description p {
     color: #013662;
+    font-family: helvetica;
     font-size: 12px;
     font-weight: 500;
     line-height: 18px;
     margin-bottom: 3px;
     text-shadow: 0 1px 0 #97d6f1; }
+  .home-content .home-about .description li {
+    color: #013662;
+    font-family: helvetica;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    margin-bottom: 3px;
+    margin-left: -50px;
+    text-shadow: 0 1px 0 #97d6f1; }
   .home-content .home-about a.readmore {
     background: url(/images/read-more.png) no-repeat;
+    position: absolute;
     width: 115px;
     height: 35px;
     display: block;
-    margin-right: -10px;
-    margin-top: -5px;
-    float: right; }
+    float: right;
+    top: 275px;
+    left: 550px; }
     .home-content .home-about a.readmore span {
       display: none; }
     .home-content .home-about a.readmore:hover {
@@ -67,6 +81,7 @@
   width: 245px;
   height: 380px;
   margin-left: 5px;
+  margin-top: 3px;
   padding-left: 20px;
   padding-right: 20px;
   background: url(/images/home-contact.png) no-repeat; }
@@ -128,30 +143,28 @@
 .bottom-nav {
   margin: auto;
   width: 1024px;
-  height: 55px; }
+  height: 23px; }
   .bottom-nav a {
     float: left;
     display: block;
     margin-top: -80px; }
     .bottom-nav a.business {
       clear: left;
-      width: 288px;
-      height: 109px;
+      width: 279px;
+      height: 110px;
       margin-left: 63px;
       background: url(/images/bottom-nav-business.png) no-repeat; }
     .bottom-nav a.homeauto {
-      width: 288px;
-      height: 109px;
-      margin-left: 20px;
+      width: 293px;
+      height: 110px;
       background: url(/images/bottom-nav-homeauto.png) no-repeat; }
     .bottom-nav a.benefits {
-      width: 288px;
-      height: 109px;
-      margin-left: 20px;
+      width: 330px;
+      height: 110px;
       clear: right;
       background: url(/images/bottom-nav-benefits.png) no-repeat; }
     .bottom-nav a:hover {
-      background-position: 0px -109px; }
+      background-position: 0px -110px; }
     .bottom-nav a span {
       display: none; }
 

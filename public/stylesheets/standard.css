@@ -1,7 +1,9 @@
 .top-nav {
+  position: relative;
   height: 118px;
   background: url(/images/top-nav-bg-repeat.png) #ecebeb repeat-x; }
   .top-nav .three-button {
+    position: relative;
     width: 100%;
     height: 88px;
     margin: auto;
@@ -9,6 +11,8 @@
     background: url(/images/top-nav-bg.jpg) no-repeat center; }
     .top-nav .three-button .three-button-center {
       width: 907px;
+      padding-left: 58px;
+      padding-right: 58px;
       position: relative;
       margin: auto; }
       .top-nav .three-button .three-button-center a {
@@ -17,27 +21,28 @@
         float: left;
         padding-top: 20px; }
         .top-nav .three-button .three-button-center a.business {
+          position: relative;
           clear: left;
-          width: 289px;
-          height: 58px;
+          width: 279px;
+          height: 63px;
           margin-left: auto;
           background: url(/images/top-nav-business.png) no-repeat; }
         .top-nav .three-button .three-button-center a.homeauto {
-          width: 289px;
-          height: 58px;
-          margin-left: 20px;
+          position: relative;
+          width: 293px;
+          height: 63px;
           background: url(/images/top-nav-homeauto.png) no-repeat; }
         .top-nav .three-button .three-button-center a.benefits {
+          position: relative;
           clear: right;
-          width: 289px;
-          height: 58px;
-          margin-left: 20px;
+          width: 330px;
+          height: 63px;
           margin-right: auto;
           background: url(/images/top-nav-benefits.png) no-repeat; }
         .top-nav .three-button .three-button-center a:hover {
-          background-position: 0px -78px; }
+          background-position: 0px -83px; }
         .top-nav .three-button .three-button-center a.current {
-          background-position: 0px -78px; }
+          background-position: 0px -83px; }
         .top-nav .three-button .three-button-center a span {
           display: none; }
 
@@ -63,7 +68,7 @@
 
 .floater {
   width: 238px;
-  height: 323px;
+  height: 414px;
   position: absolute;
   background: url(/images/floater-bg.png) no-repeat;
   margin-top: -10px;
@@ -127,7 +132,7 @@
   position: relative;
   width: 598px;
   min-height: 323px;
-  margin-left: 308px;
+  margin-left: 290px;
   margin-top: -10px; }
   .about-box .about-box-top {
     width: 598px;
@@ -148,6 +153,14 @@
       padding-bottom: 10px; }
       .about-box .about-box-content .column.first {
         padding-right: 35px; }
+  .about-box p.instantquote {
+    width: 208px;
+    height: 32px;
+    background: url(/images/biz-instantquote.png) no-repeat;
+    margin-top: 20px; }
+    .about-box p.instantquote:hover {
+      background-position: 0px -43px;
+      cursor: pointer; }
   .about-box .about-box-separator {
     height: 2px;
     position: relative;
@@ -186,7 +199,7 @@
     .about-box .comments .fb_iframe_widget {
       display: none; }
   .about-box h1 {
-    font-size: 20px;
+    font-size: 19px;
     padding-top: 3px;
     margin-top: 0px;
     margin-bottom: 0px;
@@ -202,9 +215,11 @@
   .about-box p {
     margin-top: 0px;
     margin-bottom: 0px;
-    padding-top: 12px;
-    color: #013662;
-    font-size: 12px;
+    font-family: helvetica;
+    padding-top: 13px;
+    color: #6a6a6a;
+    font-size: 13px;
+    line-height: 16px;
     text-shadow: 0 1px 0 #FFFFFF; }
     .about-box p > em:first-child {
       color: #a2a1a1;
@@ -212,6 +227,10 @@
       display: block;
       padding-bottom: 10px;
       font-weight: 100; }
+    .about-box p ul li {
+      font-family: helvetica;
+      font-size: 13px;
+      font-style: italic; }
   .about-box .about-box-bottom {
     width: 598px;
     height: 53px;
@@ -231,6 +250,87 @@
         clear: both;
         width: 548px;
         height: 75px; }
+
+.page-content .index {
+  margin-top: -17px;
+  margin-left: -15px; }
+  .page-content .index .contact-box-top {
+    width: 600px;
+    height: 7px;
+    position: relative;
+    background: url(/images/contact-top.png) no-repeat; }
+  .page-content .index .contact-box-mid {
+    width: 600px;
+    height: 375px;
+    background: url(/images/contact-middle.png) repeat-y; }
+    .page-content .index .contact-box-mid .contact-box-mid-left {
+      width: 270px;
+      height: 100%;
+      float: left;
+      clear: left;
+      padding-left: 30px; }
+      .page-content .index .contact-box-mid .contact-box-mid-left h1 {
+        width: 100%;
+        float: left;
+        clear: both;
+        margin-bottom: 5px; }
+      .page-content .index .contact-box-mid .contact-box-mid-left .address {
+        width: 100%;
+        float: left;
+        clear: both; }
+        .page-content .index .contact-box-mid .contact-box-mid-left .address span {
+          position: relative;
+          float: left;
+          clear: both; }
+      .page-content .index .contact-box-mid .contact-box-mid-left .numbers {
+        position: relative;
+        width: 100%;
+        clear: both; }
+        .page-content .index .contact-box-mid .contact-box-mid-left .numbers h2 {
+          width: 50%;
+          float: left;
+          clear: left;
+          margin: 0; }
+        .page-content .index .contact-box-mid .contact-box-mid-left .numbers span {
+          width: 50%;
+          float: left;
+          clear: right; }
+      .page-content .index .contact-box-mid .contact-box-mid-left p {
+        position: relative;
+        width: 100%;
+        float: left;
+        clear: both;
+        margin: 0; }
+      .page-content .index .contact-box-mid .contact-box-mid-left .hours {
+        position: relative;
+        width: 100%;
+        float: left;
+        clear: both; }
+        .page-content .index .contact-box-mid .contact-box-mid-left .hours h3 {
+          width: 100%;
+          float: left;
+          clear: both;
+          margin: 0; }
+        .page-content .index .contact-box-mid .contact-box-mid-left .hours span {
+          width: 100%;
+          float: left;
+          clear: both;
+          margin: 0; }
+    .page-content .index .contact-box-mid .contact-box-mid-right {
+      width: 238px;
+      height: 100%;
+      float: left;
+      clear: right;
+      padding: 30px; }
+      .page-content .index .contact-box-mid .contact-box-mid-right #map_canvas {
+        width: 240px;
+        height: 315px;
+        border: 1px solid #d4d3d3; }
+  .page-content .index .contact-box-bottom {
+    position: relative;
+    width: 600px;
+    height: 10px;
+    background: url(/images/contact-bottom.png) no-repeat; }
 
 .companies h1 {
   margin-bottom: 0px; }

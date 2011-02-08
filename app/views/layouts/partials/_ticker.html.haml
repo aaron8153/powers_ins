@@ -11,12 +11,13 @@
 		%span.readmore=	". . . Read More +"
 - $tickers.each do |ticker|
 	- if(ticker.target == true)
-		%a.hide{:href => ticker.url, :alt => ticker.headline, :target => "_blank"}
+		%a{:href => ticker.url, :alt => ticker.headline, :target => "_blank", :style => "display: none;"}
 			%span.date= ticker.created_at.strftime("(%m/%d)")
 			%span.headline= ticker.headline
 			%span.readmore=	". . . Read More +"
 	- if(ticker.target == false)
-		%a.hide{:href => ticker.url, :alt => ticker.headline}
+		%a{:href => ticker.url, :alt => ticker.headline, :style => "display: none;"}
 			%span.date= ticker.created_at.strftime("(%m/%d)")
 			%span.headline= ticker.headline
 			%span.readmore=	". . . Read More +"
+= javascript_include_tag 'ticker'

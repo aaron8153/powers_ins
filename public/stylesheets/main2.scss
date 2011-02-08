@@ -2,20 +2,24 @@ $powers-dark-blue: #012031;
 $powers-blue: #013662;
 $powers-light-blue: #95e4fc;
 
+
+
 body {
   margin: 0px;
-	 background-color: #022336;
+  background-color: #022336;
 }
 
 .header {
   height: 122px;
   background: url(/images/header-repeat.jpg) repeat-x;
+  position: relative;
   .nav {
     width: 1024px;
     height: 122px;
     margin: auto;
     a.logo {
       display: block;
+      position: relative;
       width: 269px;
       height: 113px;
       float: left;
@@ -24,16 +28,19 @@ body {
       margin-left: 58px;
       background: url(/images/logo.png) no-repeat; }
     .nav-right {
+      position: relative;
       width: 639px;
       height: 124px;
       float: left;
       clear: right;
       .nav-top {
+      	position: relative;
         width: 639px;
         height: 32px;
         float: left;
         clear: both;
         a {
+          position: relative;
           &.live-chat {
             display: block;
             background: url(/images/live-chat.png) no-repeat;
@@ -60,11 +67,13 @@ body {
         .toll-free {
           height: 32px;
           width: 270px;
+          position: relative;
           margin-top: 4px;
           float: right;
           letter-spacing: 1px;
           clear: left;
           img.phone {
+          	position: relative;
             clear: none;
             float: left;
             font-size: 15px;
@@ -72,6 +81,7 @@ body {
             margin-top: 2px;
             margin-right: 4px; }
           h4 {
+          	position: relative;
             clear: none;
             float: left;
             font-size: 13px;
@@ -79,6 +89,7 @@ body {
             color: #52bfdb;
             margin-top: 3px; }
           span {
+          	position: relative;
             clear: none;
             float: left;
             font-size: 13px;
@@ -90,27 +101,33 @@ body {
       .nav-bottom {
         width: 639px;
         height: 92px;
+        position: relative;
         float: left;
         clear: both;
         .nav-tabs {
+          position: relative;
           width: 580px;
           height: 79px;
           float: right;
           clear: both;
           /*background: url(/images/header-nav-tabs-bg.png) no-repeat;*/
           a.tab {
+          	position: relative;
             display: block;
             height: 72px;
             margin-top: 3.5px;
             &.home {
+              position: relative;
               width: 90px;
               height: 82px;
               float: left;
               background: url(/images/nav-home.png) no-repeat;
               margin-left: 12px;
+              clear: left;
               &:hover {
                 background-position: 0px -82px; } }
             &.associates {
+              position: relative;
               width: 129px;
               height: 82px;
               float: left;
@@ -118,24 +135,28 @@ body {
               &:hover {
                 background-position: 0px -82px; } }
             &.affiliations {
+              position: relative;
               width: 142px;
               float: left;
               height: 82px;
               background: url(/images/nav-affiliations.png) no-repeat;
               &:hover {
                 background-position: 0px -82px; } }
-            &.aboutus {
-              width: 116px;
+            &.carriers {
+              position: relative;
+              width: 112px;
+              float: left;
+              height: 82px;
+              background: url(/images/nav-carriers.png) no-repeat;
+              &:hover {
+                background-position: 0px -82px; } }
+            &.about {
+              position: relative;
+              width: 93px;
               float: left;
               height: 82px;
               background: url(/images/nav-aboutus.png) no-repeat;
-              &:hover {
-                background-position: 0px -82px; } }
-            &.blog {
-              width: 91px;
-              float: left;
-              height: 82px;
-              background: url(/images/nav-blog.png) no-repeat;
+              clear: right;
               &:hover {
                 background-position: 0px -82px; } }
             &:hover {
@@ -174,9 +195,9 @@ body {
 		text-align: center;
 		width: 594px;
 		height: 36px;
-		display: block;
-		&.hide {
-			display: none;
+		display: none;
+		&.show {
+			display: block;
 		}
 		span.date {
 			color: #000;

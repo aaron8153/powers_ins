@@ -9,37 +9,61 @@
 		= javascript_include_tag 'jquery.min'
 		
 		%script
-			jQuery.noConflict();
+			var $j = jQuery.noConflict();
 		= javascript_include_tag 'pngfix'
 		= include_tiny_mce_if_needed
 		= csrf_meta_tag
 		%script{:type => "text/javascript", :src => "http://use.typekit.com/mzi2lag.js"}
 		%script{:type => "text/javascript"}
 			try{Typekit.load();}catch(e){}
+		- if params[:controller] == "contact" && params[:action] == "index"
+			%script{:type => "text/javascript", :src => "http://maps.google.com/maps/api/js?sensor=false"}
+			= javascript_include_tag 'contactmap'
 		= yield :local_javascript
 		
 		= yield :head
-		
-	%body
-		.main
-			.header
-				= render :partial => 'layouts/partials/header/main'
-			.top-nav
-				.three-button
-					= render :partial => 'layouts/partials/nav/three-button'
-			.middle-wrapper
-				.middle
-					= render :partial => 'layouts/partials/floater'
-					= render :partial => 'layouts/partials/aboutbox'
-					= javascript_include_tag 'columnizer/autocolumn'
-					= javascript_include_tag 'about-two-column'
-					.page-content
-						= yield
-					= javascript_include_tag 'form-effects'		
-			.bottom
-				.bottom-glow
-					.ticker
-						= render :partial => 'layouts/partials/ticker'
-					.footer
-						= render :partial => 'layouts/partials/footer/main'
-		= javascript_include_tag 'olark'
+		= javascript_include_tag 'docready'
+	- if params[:controller] == "contact" && params[:action] == "index"
+		%body{:onload => "initialize();"}
+			.main
+				.header
+					= render :partial => 'layouts/partials/header/main'
+				.top-nav
+					.three-button
+						= render :partial => 'layouts/partials/nav/three-button'
+				.middle-wrapper
+					.middle
+						= render :partial => 'layouts/partials/floater'
+						= render :partial => 'layouts/partials/aboutbox'
+						.page-content
+							= yield
+						= javascript_include_tag 'form-effects'		
+				.bottom
+					.bottom-glow
+						.ticker
+							= render :partial => 'layouts/partials/ticker'
+						.footer
+							= render :partial => 'layouts/partials/footer/main'
+			= javascript_include_tag 'olark'
+	- else
+		%body
+			.main
+				.header
+					= render :partial => 'layouts/partials/header/main'
+				.top-nav
+					.three-button
+						= render :partial => 'layouts/partials/nav/three-button'
+				.middle-wrapper
+					.middle
+						= render :partial => 'layouts/partials/floater'
+						= render :partial => 'layouts/partials/aboutbox'
+						.page-content
+							= yield
+						= javascript_include_tag 'form-effects'		
+				.bottom
+					.bottom-glow
+						.ticker
+							= render :partial => 'layouts/partials/ticker'
+						.footer
+							= render :partial => 'layouts/partials/footer/main'
+			= javascript_include_tag 'olark'

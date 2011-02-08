@@ -5,12 +5,10 @@ Powers::Application.routes.draw do
   get "affiliations/index"
 
   resources :associates
-
-  resources :blogs do
-  	resources :comments
-  end
   
   resources :companies
+  
+  resources :testimonials
   
   resources :policy_changes
 
@@ -60,6 +58,10 @@ Powers::Application.routes.draw do
 	match "/terms" => 'home#terms'
 	match "/aboutus" => 'aboutus#index'
 	
+	match"/contact"	=>	'contact#index'
+	match"/contact/email"	=>	'contact#email'
+	match"/contact/referal"	=>	'contact#referal'
+		
 	match "/affiliations" => 'affiliations#index'
 	
 	match "/business" => 'business#index'
@@ -75,11 +77,15 @@ Powers::Application.routes.draw do
 		match "/homeauto/autoid" => 'homeauto#autoid'
 		match "/homeauto/policy" => 'homeauto#policy'
 		match "/homeauto/billing" => 'homeauto#billing'
+		match "/homeauto/quote"	=>	'homeauto#quote'
 	
 	
 	match "/benefits" => 'benefits#index'
 		match "/benefits/individual" => 'benefits#individual'
 		match "/benefits/group" => 'benefits#group'
+		match "/benefits/solutions" => 'benefits#solutions'
+		match "/benefits/mywave" => 'benefits#mywave'
+		match "/benefits/login" => 'benefits#login'
   
   
   # The priority is based upon order of creation:

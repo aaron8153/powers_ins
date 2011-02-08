@@ -46,9 +46,3 @@ jQuery.fn.stickyfloat = function(options, lockBottom) {
 		}
 	});
 };
-
-jQuery(document).ready(function() {
-	jQuery('.floater').stickyfloat({
-		duration: 200
-	});
-});

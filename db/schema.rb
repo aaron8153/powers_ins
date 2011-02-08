@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110131211659) do
+ActiveRecord::Schema.define(:version => 20110208065349) do
 
   create_table "about_headings", :force => true do |t|
     t.string   "heading"
@@ -27,13 +27,13 @@ ActiveRecord::Schema.define(:version => 20110131211659) do
     t.string   "certifications"
     t.string   "title"
     t.string   "division"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "position"
     t.string   "avatar_file_name"
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "position"
   end
 
   create_table "auto_ids", :force => true do |t|
@@ -153,6 +153,19 @@ ActiveRecord::Schema.define(:version => 20110131211659) do
     t.string   "division"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "testimonials", :force => true do |t|
+    t.text     "quote"
+    t.string   "lineone"
+    t.string   "linetwo"
+    t.string   "linethree"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
   end
 
   create_table "tickers", :force => true do |t|

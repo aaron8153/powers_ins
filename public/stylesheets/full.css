@@ -18,31 +18,29 @@
         padding-top: 20px; }
         .top-nav .three-button .three-button-center a.business {
           clear: left;
-          width: 289px;
-          height: 58px;
+          width: 279px;
+          height: 63px;
           margin-left: auto;
           background: url(/images/top-nav-business.png) no-repeat; }
         .top-nav .three-button .three-button-center a.homeauto {
-          width: 289px;
-          height: 58px;
-          margin-left: 20px;
+          width: 293px;
+          height: 63px;
           background: url(/images/top-nav-homeauto.png) no-repeat; }
         .top-nav .three-button .three-button-center a.benefits {
           clear: right;
-          width: 289px;
-          height: 58px;
-          margin-left: 20px;
+          width: 330px;
+          height: 63px;
           margin-right: auto;
           background: url(/images/top-nav-benefits.png) no-repeat; }
         .top-nav .three-button .three-button-center a:hover {
-          background-position: 0px -78px; }
+          background-position: 0px -83px; }
         .top-nav .three-button .three-button-center a.current {
-          background-position: 0px -78px; }
+          background-position: 0px -83px; }
         .top-nav .three-button .three-button-center a span {
           display: none; }
 
 .middle-wrapper {
-  background: #ecebeb;
+  background: url(/images/bg-repeat.jpg) repeat;
   position: relative;
   width: 100%;
   padding-bottom: 35px; }
@@ -51,8 +49,7 @@
     padding-bottom: 40px;
     width: 907px;
     margin: auto;
-    position: relative;
-    background-color: #ecebeb; }
+    position: relative; }
     .middle-wrapper .middle .page-content {
       position: relative;
       width: 907px;
@@ -67,6 +64,7 @@
         padding-top: 3px;
         text-shadow: 0 1px 0 #FFFFFF; }
       .middle-wrapper .middle .page-content p {
+        font-family: helvetica;
         color: #013662;
         font-size: 15px;
         font-weight: 300;
@@ -79,6 +77,11 @@
   margin-left: 20px;
   padding-top: 5px;
   padding-bottom: 5px; }
+  .assoc .assoc-head-top {
+    height: 43px;
+    width: 901px;
+    position: relative;
+    background: url(/images/assoc-head-top.jpg) no-repeat; }
   .assoc.producers {
     clear: left; }
   .assoc.administrative {
@@ -90,7 +93,7 @@
   .assoc.benefits {
     clear: both; }
   .assoc .admin {
-    display: none; }
+    /*display: none;*/ }
   .assoc .assoc-top {
     height: 42px;
     width: 423px;
@@ -111,15 +114,15 @@
     .assoc .assoc-middle h2 {
       margin: 0px 0px 0px 0px; }
   .assoc .associate {
-    width: 389px;
-    height: 78px;
+    width: 391px;
+    height: 70px;
     position: relative;
     margin-left: 15px;
     padding-top: 2px;
     padding-left: 2px;
     background: url(/images/associate-bg.png) no-repeat; }
     .assoc .associate:hover {
-      background-position: 0px -78px; }
+      background-position: 0px -71px; }
     .assoc .associate .avatar {
       height: 64px;
       width: 64px;
@@ -138,21 +141,27 @@
       position: relative;
       padding-top: 3px;
       float: left; }
-      .assoc .associate .info .name p {
-        margin: 0;
-        padding: 0; }
+      .assoc .associate .info .name {
+        padding-top: 4px;
+        padding-bottom: 4px; }
+        .assoc .associate .info .name p {
+          margin: 0;
+          padding: 0;
+          text-shadow: 0 1px 0 #ffffff; }
       .assoc .associate .info .cert p {
         margin: 0;
         padding: 0;
         color: #636363;
         font-size: 13px;
         font-weight: 500; }
-      .assoc .associate .info .title p {
-        margin: 0;
-        padding: 0;
-        color: #5288c1;
-        font-size: 13px;
-        font-weight: 500; }
+      .assoc .associate .info .title {
+        padding-bottom: 3px; }
+        .assoc .associate .info .title p {
+          margin: 0;
+          padding: 0;
+          color: #5288c1;
+          font-size: 13px;
+          font-weight: 500; }
     .assoc .associate .email {
       display: block;
       position: relative;

@@ -11,18 +11,18 @@
 			&.instantquote {
 			    clear: left;
 			    width: 278px;
-			    height: 62px;
+			    height: 43px;
 			    background: url(/images/biz-instantquote.png) no-repeat;
 			}
 			&.livechat {
-			    width: 278px;
-			    height: 62px;
+			    width: 208px;
+			    height: 43px;
 			    margin-left: 42px;
 			    clear: right;
 			    background: url(/images/biz-livechat.png) no-repeat;
 			}
 			&:hover {
-				background-position: 0px -82px;
+				background-position: 0px -43px;
 			}
 			span {
 				display: none;

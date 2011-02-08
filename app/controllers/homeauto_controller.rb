@@ -3,7 +3,7 @@ class HomeautoController < ApplicationController
   def index
   	@floatheader = "Home & Auto"
   	@current_page = "homeauto"
-  	@floater = [["quote" , "http://www.powersinsuranceandbenefits.net/index.aspx?tp=1&sid=29018"], ["claim" , "/homeauto/claim"], ["autoid" , "/homeauto/autoid"], ["policy" , "/homeauto/policy"],["billing" , "/homeauto/billing"]]
+  	@floater = [["quote" , "/homeauto/quote"], ["claim" , "/homeauto/claim"], ["autoid" , "/homeauto/autoid"], ["policy" , "/homeauto/policy"],["billing" , "/homeauto/billing"]]
   	@current_action = "homeauto"
   	@about = AboutHeading.find_by_page(@current_action)
   end
@@ -11,7 +11,7 @@ class HomeautoController < ApplicationController
   def claim
   	@floatheader = "Home & Auto"
   	@current_page = "homeauto"
-  	@floater = [["quote" , "http://www.powersinsuranceandbenefits.net/index.aspx?tp=1&sid=29018"], ["claim" , "/homeauto/claim"], ["autoid" , "/homeauto/autoid"], ["policy" , "/homeauto/policy"],["billing" , "/homeauto/billing"]]
+  	@floater = [["quote" , "/homeauto/quote"], ["claim" , "/homeauto/claim"], ["autoid" , "/homeauto/autoid"], ["policy" , "/homeauto/policy"],["billing" , "/homeauto/billing"]]
   	@current_action = "claim"
   	@about = AboutHeading.find_by_page("homeauto-" + @current_action)
   	@companies = Company.where("homeauto_claim = true").order('name ASC')
@@ -20,7 +20,7 @@ class HomeautoController < ApplicationController
   def autoid
   	@floatheader = "Home & Auto"
   	@current_page = "homeauto"
-  	@floater = [["quote" , "http://www.powersinsuranceandbenefits.net/index.aspx?tp=1&sid=29018"], ["claim" , "/homeauto/claim"], ["autoid" , "/homeauto/autoid"], ["policy" , "/homeauto/policy"],["billing" , "/homeauto/billing"]]
+  	@floater = [["quote" , "/homeauto/quote"], ["claim" , "/homeauto/claim"], ["autoid" , "/homeauto/autoid"], ["policy" , "/homeauto/policy"],["billing" , "/homeauto/billing"]]
   	@current_action = "autoid"
   	@about = AboutHeading.find_by_page("homeauto-" + @current_action)
   	
@@ -42,7 +42,7 @@ class HomeautoController < ApplicationController
   def policy
   	@floatheader = "Home & Auto"
   	@current_page = "homeauto"
-  	@floater = [["quote" , "http://www.powersinsuranceandbenefits.net/index.aspx?tp=1&sid=29018"], ["claim" , "/homeauto/claim"], ["autoid" , "/homeauto/autoid"], ["policy" , "/homeauto/policy"],["billing" , "/homeauto/billing"]]
+  	@floater = [["quote" , "/homeauto/quote"], ["claim" , "/homeauto/claim"], ["autoid" , "/homeauto/autoid"], ["policy" , "/homeauto/policy"],["billing" , "/homeauto/billing"]]
   	@current_action = "policy"
   	@about = AboutHeading.find_by_page("homeauto-" + @current_action)
   	
@@ -64,10 +64,18 @@ class HomeautoController < ApplicationController
   def billing
   	@floatheader = "Home & Auto"
   	@current_page = "homeauto"
-  	@floater = [["quote" , "http://www.powersinsuranceandbenefits.net/index.aspx?tp=1&sid=29018"], ["claim" , "/homeauto/claim"], ["autoid" , "/homeauto/autoid"], ["policy" , "/homeauto/policy"],["billing" , "/homeauto/billing"]]
+  	@floater = [["quote" , "/homeauto/quote"], ["claim" , "/homeauto/claim"], ["autoid" , "/homeauto/autoid"], ["policy" , "/homeauto/policy"],["billing" , "/homeauto/billing"]]
   	@current_action = "billing"
   	@about = AboutHeading.find_by_page("homeauto-" + @current_action)
   	@companies = Company.where("homeauto_billing = true").order('name ASC')
+  end
+  
+  def quote
+  	@floatheader = "Home & Auto"
+  	@current_page = "homeauto"
+  	@floater = [["quote" , "/homeauto/quote"], ["claim" , "/homeauto/claim"], ["autoid" , "/homeauto/autoid"], ["policy" , "/homeauto/policy"],["billing" , "/homeauto/billing"]]
+  	@current_action = "quote"
+  	@about = AboutHeading.find_by_page(@current_action)
   end
 
 end
