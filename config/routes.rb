@@ -1,5 +1,19 @@
 Powers::Application.routes.draw do
 
+  get "testimonials/index"
+
+  get "testimonials/show"
+
+  get "testimonials/new"
+
+  get "testimonials/edit"
+
+  get "testimonials/create"
+
+  get "testimonials/update"
+
+  get "testimonials/destroy"
+
   get "aboutus/index"
 
   get "affiliations/index"

@@ -1,16 +1,47 @@
-.middle {
+.middle-wrapper {
+  background: url(/images/bg-repeat.jpg) repeat;
+  position: relative;
   width: 100%;
-  min-height: 411px;
-  float: left;
-  clear: both;
-  background-color: #ecebeb; }
+  padding-bottom: 35px; }
+  .middle-wrapper .middle {
+    padding-bottom: 40px;
+    width: 907px;
+    margin: auto;
+    position: relative; }
+    .middle-wrapper .middle .page-content {
+      position: relative;
+      width: 907px;
+      padding-top: 10px;
+      padding-bottom: 10px; }
+      .middle-wrapper .middle .page-content h1 {
+        color: #438BC3;
+        font-size: 23px;
+        font-weight: 300;
+        margin-bottom: 0;
+        margin-top: 0;
+        padding: 8px 0 0 35px;
+        text-shadow: 0 1px 0 #FFFFFF;
+        letter-spacing: .03em; }
+      .middle-wrapper .middle .page-content p {
+        font-family: helvetica;
+        color: #929191;
+        font-size: 15px;
+        line-height: 20px;
+        padding: 20px 50px 0 35px;
+        font-weight: 300;
+        text-shadow: 0 1px 0 #FFFFFF;
+        margin: 0; }
 
 .floater {
   width: 238px;
-  height: 323px;
-  position: fixed;
-  background: url(/images/floater-bg.png) no-repeat;
-  margin-left: 515px; }
+  height: 414px;
+  position: relative;
+  background: url(/images/floater-bg.png) no-repeat; }
+  .floater.testi {
+    width: 238px;
+    height: 415px;
+    position: relative;
+    background: url(/images/testimonial-bg.png) no-repeat; }
 
 .about-box {
   float: left;
@@ -38,32 +69,62 @@
     background-color: #FFF;
     background: url(/images/about-box-bottom.png) no-repeat; }
 
-.ticker {
-  float: left;
-  clear: both;
-  width: 594px;
-  height: 46px;
-  margin-left: 317px;
-  margin-top: 30px;
-  background: url(/images/ticker.png) no-repeat; }
-  .ticker a {
-    text-decoration: none;
-    text-align: center;
-    margin-top: 10px;
-    width: 594px;
-    height: 36px;
-    display: block; }
-    .ticker a.hide {
-      display: none; }
-    .ticker a span.date {
-      color: #000; }
-      .ticker a span.date:hover {
-        text-decoration: none; }
-    .ticker a span.headline {
-      color: #FFF; }
-      .ticker a span.headline:hover {
-        text-decoration: underline; }
-    .ticker a span.readmore {
-      color: #52bfdb; }
-      .ticker a span.readmore:hover {
-        text-decoration: none; }
+.testimonials .new {
+  margin-left: 35px;
+  padding-bottom: 50px; }
+.testimonials .floater {
+  width: 238px;
+  height: 414px;
+  position: relative;
+  background: url(/images/floater-bg.png) no-repeat;
+  float: left; }
+  .testimonials .floater.testi {
+    width: 238px;
+    height: 415px;
+    position: relative;
+    background: url(/images/testimonial-bg.png) no-repeat; }
+    .testimonials .floater.testi .testimonial {
+      width: 238px;
+      height: 415px;
+      position: relative; }
+      .testimonials .floater.testi .testimonial .quoteimg {
+        width: 28px;
+        height: 20px;
+        position: relative;
+        margin-top: 30px;
+        margin-left: 30px;
+        background: url(/images/testimonial-quote.png) no-repeat; }
+      .testimonials .floater.testi .testimonial .quote {
+        width: 195px;
+        height: 125px;
+        position: relative;
+        margin-left: 20px; }
+        .testimonials .floater.testi .testimonial .quote p {
+          padding: 10px 10px 0px 30px; }
+      .testimonials .floater.testi .testimonial .info {
+        width: 195px;
+        height: 55px;
+        position: relative;
+        margin-left: 20px;
+        overflow: hidden; }
+        .testimonials .floater.testi .testimonial .info span {
+          width: 195px;
+          text-align: right;
+          float: right;
+          clear: both;
+          padding-right: 10px; }
+      .testimonials .floater.testi .testimonial .image {
+        width: 228px;
+        height: 177px;
+        position: relative;
+        margin-left: 5px;
+        margin-top: 2px; }
+      .testimonials .floater.testi .testimonial .admin {
+        width: 228px;
+        height: 30px;
+        margin-top: 10px;
+        position: relative; }
+        .testimonials .floater.testi .testimonial .admin a {
+          float: right;
+          clear: both;
+          text-align: right; }

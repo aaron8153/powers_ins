@@ -1,0 +1,26 @@
+.testimonials
+	%h1
+		Listing Testimonials -	
+	.new
+		= link_to 'New Testimonial', new_testimonial_path
+	- @testimonials.each do |testimonial|
+		.floater.testi
+			.testimonial
+				.quoteimg
+				.quote
+					%span
+						!= testimonial.quote
+				.info
+					%span
+						= testimonial.lineone
+					%span
+						= testimonial.linetwo
+					%span
+						= testimonial.linethree
+				.image
+					= image_tag testimonial.avatar.url(:standard)
+				.admin
+					.edit
+						= link_to 'Edit', edit_testimonial_path(testimonial)
+					.destroy
+						= link_to 'Destroy', testimonial, :confirm => 'Are you sure?', :method => :delete

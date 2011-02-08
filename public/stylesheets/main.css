@@ -2,6 +2,17 @@ body {
   margin: 0px;
   background-color: #022336; }
 
+span.powers {
+  color: #133361;
+  font-weight: 500;
+  letter-spacing: .03em;
+  font-size: 16px; }
+
+span.sup-small {
+  vertical-align: super;
+  font-size: 10px;
+  margin-left: -3px; }
+
 .header {
   height: 122px;
   background: url(/images/header-repeat.jpg) repeat-x;
@@ -178,9 +189,7 @@ body {
     text-align: center;
     width: 594px;
     height: 36px;
-    display: none; }
-    .ticker a.show {
-      display: block; }
+    display: block; }
     .ticker a span.date {
       color: #000; }
       .ticker a span.date:hover {

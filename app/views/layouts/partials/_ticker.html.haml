@@ -1,11 +1,11 @@
 - first = $tickers.shift
 - if(first.target == true)
-	%a.show{:href => first.url, :alt => first.headline, :target => "_blank"}
+	%a{:href => first.url, :alt => first.headline, :target => "_blank"}
 		%span.date= first.created_at.strftime("(%m/%d)")
 		%span.headline= first.headline
 		%span.readmore=	". . . Read More +"
 - if(first.target == false)
-	%a.show{:href => first.url, :alt => first.headline}
+	%a{:href => first.url, :alt => first.headline}
 		%span.date= first.created_at.strftime("(%m/%d)")
 		%span.headline= first.headline
 		%span.readmore=	". . . Read More +"

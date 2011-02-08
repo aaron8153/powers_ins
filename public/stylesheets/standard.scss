@@ -172,6 +172,62 @@ $powers-light-blue: #95e4fc;
 			}
 		}
 	}
+	&.testi {
+		width: 238px;
+		height: 415px;
+		position: relative;
+		background: url(/images/testimonial-bg.png) no-repeat;
+		.testimonials {
+			width: 238px;
+			height: 415px;
+			position: relative;
+			.testimonial {
+			    width: 238px;
+			    height: 385px;
+			    position: relative;
+			    padding-top: 30px;
+			    .quoteimg {
+			    	width: 28px;
+			    	height: 20px;
+			    	position: relative;
+			    	margin-left: 30px;
+			    	background: url(/images/testimonial-quote.png) no-repeat;
+			    }
+			    .quote {
+			    	width: 195px;
+			    	height: 125px;
+			    	position: relative;
+			    	margin-left: 20px;
+			    	overflow: hidden;
+			    	p {
+			    		padding: 10px 10px 0px 30px;
+			    		margin: 0;
+			    	}
+			    }
+			    .info {
+			    	width: 195px;
+			    	height: 55px;
+			    	position: relative;
+			    	margin-left: 20px;
+			    	overflow: hidden;
+			    	span {
+			    		width: 195px;
+			    		text-align: right;
+			    		float: right;
+			    		clear: both;
+			    		padding-right: 10px;
+			    	}
+			    }
+			    .image {
+			    	width: 228px;
+			    	height: 177px;
+			    	position: relative;
+			    	margin-left: 5px;
+			    	margin-top: 2px;
+			    }
+			}
+		}
+	}		
 }
 
 .about-box {

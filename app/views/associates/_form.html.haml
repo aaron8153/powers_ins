@@ -1,4 +1,4 @@
-= form_for @associate do |f|
+= form_for @associate, :html => { :multipart => true } do |f|
 	-if @associate.errors.any?
 		#error_explanation
 			%h2= "#{pluralize(@associate.errors.count, "error")} prohibited this associate from being saved:"

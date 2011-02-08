@@ -1,9 +1,9 @@
 .assoc-head-top
-%h1
-	Our Associates
+	%h1
+		Our Associates
 .assoc-head-middle
-%p
-	We look forward to hearing from you!  Please click on an name below to contact an associate.  Due to the necessity of spam filtering, please ask for a read-receipt.
+	%p
+		We look forward to hearing from you!  Please click on an name below to contact an associate.  Due to the necessity of spam filtering, please ask for a read-receipt.
 .assoc-head-bottom
 .producers.assoc
 	.assoc-top
@@ -13,7 +13,7 @@
 		- @producers.each do |associate|
 			.associate
 				.avatar
-					= image_tag associate.avatar.url(:medium) if associate.avatar?
+					= image_tag associate.avatar.url(:medium)
 				.info
 					.name
 						%p= associate.name

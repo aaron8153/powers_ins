@@ -23,5 +23,7 @@
 		.main
 			.header
 				= render :partial => 'layouts/partials/header/main'
-			.middle
-				= yield
+			.middle-wrapper
+				.middle
+					.page-content
+						= yield

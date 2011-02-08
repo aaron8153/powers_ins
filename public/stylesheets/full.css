@@ -45,7 +45,6 @@
   width: 100%;
   padding-bottom: 35px; }
   .middle-wrapper .middle {
-    padding-top: 20px;
     padding-bottom: 40px;
     width: 907px;
     margin: auto;
@@ -57,18 +56,95 @@
       padding-bottom: 10px; }
       .middle-wrapper .middle .page-content h1 {
         color: #438BC3;
-        font-size: 28px;
+        font-size: 23px;
         font-weight: 300;
         margin-bottom: 0;
         margin-top: 0;
-        padding-top: 3px;
-        text-shadow: 0 1px 0 #FFFFFF; }
+        padding: 8px 0 0 35px;
+        text-shadow: 0 1px 0 #FFFFFF;
+        letter-spacing: .03em; }
       .middle-wrapper .middle .page-content p {
         font-family: helvetica;
-        color: #013662;
-        font-size: 15px;
+        color: #929191;
+        font-size: 14px;
+        line-height: 20px;
+        padding: 20px 50px 0 35px;
         font-weight: 300;
-        text-shadow: 0 1px 0 #FFFFFF; }
+        text-shadow: 0 1px 0 #FFFFFF;
+        margin: 0; }
+
+.assoc-head-top {
+  height: 42px;
+  width: 901px;
+  position: relative;
+  background: url(/images/assoc-head-top.jpg) no-repeat; }
+
+.assoc-head-middle {
+  position: relative;
+  width: 901px;
+  background: url(/images/assoc-head-middle.jpg) repeat-y; }
+  .assoc-head-middle .logos {
+    width: 700px;
+    margin: auto;
+    margin-top: 30px; }
+    .assoc-head-middle .logos .affil-top {
+      width: 700px;
+      height: 165px; }
+      .assoc-head-middle .logos .affil-top .trustedchoice {
+        background: url(/images/trustedchoice.jpg) no-repeat;
+        height: 159px;
+        width: 211px;
+        float: left;
+        display: block;
+        margin-left: 16px; }
+      .assoc-head-middle .logos .affil-top .workcomp {
+        background: url(/images/workcomp.jpg) no-repeat;
+        height: 159px;
+        width: 211px;
+        float: left;
+        display: block;
+        margin-left: 16px; }
+      .assoc-head-middle .logos .affil-top .viaa {
+        background: url(/images/viaa.jpg) no-repeat;
+        height: 159px;
+        width: 211px;
+        float: left;
+        display: block;
+        margin-left: 16px; }
+      .assoc-head-middle .logos .affil-top a:hover {
+        background-position: 0 -159px; }
+    .assoc-head-middle .logos .affil-bottom {
+      width: 700px;
+      height: 165px; }
+      .assoc-head-middle .logos .affil-bottom .missouri {
+        background: url(/images/missouri.jpg) no-repeat;
+        height: 159px;
+        width: 211px;
+        float: left;
+        display: block;
+        margin-left: 16px; }
+      .assoc-head-middle .logos .affil-bottom .iia {
+        background: url(/images/iia.jpg) no-repeat;
+        height: 159px;
+        width: 211px;
+        float: left;
+        display: block;
+        margin-left: 16px; }
+      .assoc-head-middle .logos .affil-bottom .siaa {
+        background: url(/images/siaa.jpg) no-repeat;
+        height: 159px;
+        width: 211px;
+        float: left;
+        display: block;
+        margin-left: 16px; }
+      .assoc-head-middle .logos .affil-bottom a:hover {
+        background-position: 0 -159px; }
+
+.assoc-head-bottom {
+  position: relative;
+  width: 901px;
+  height: 29px;
+  background: url(/images/assoc-head-bottom.jpg) no-repeat; }
 
 .assoc {
   width: 423px;
@@ -77,11 +153,6 @@
   margin-left: 20px;
   padding-top: 5px;
   padding-bottom: 5px; }
-  .assoc .assoc-head-top {
-    height: 43px;
-    width: 901px;
-    position: relative;
-    background: url(/images/assoc-head-top.jpg) no-repeat; }
   .assoc.producers {
     clear: left; }
   .assoc.administrative {
@@ -93,7 +164,7 @@
   .assoc.benefits {
     clear: both; }
   .assoc .admin {
-    /*display: none;*/ }
+    display: none; }
   .assoc .assoc-top {
     height: 42px;
     width: 423px;
@@ -142,20 +213,23 @@
       padding-top: 3px;
       float: left; }
       .assoc .associate .info .name {
-        padding-top: 4px;
-        padding-bottom: 4px; }
+        padding-top: 4px; }
         .assoc .associate .info .name p {
           margin: 0;
           padding: 0;
-          text-shadow: 0 1px 0 #ffffff; }
-      .assoc .associate .info .cert p {
-        margin: 0;
-        padding: 0;
-        color: #636363;
-        font-size: 13px;
-        font-weight: 500; }
+          text-shadow: 0 1px 0 #ffffff;
+          color: #133361; }
+      .assoc .associate .info .cert {
+        margin-top: -5px; }
+        .assoc .associate .info .cert p {
+          margin: 0;
+          padding: 0;
+          color: #636363;
+          font-size: 13px;
+          font-weight: 500; }
       .assoc .associate .info .title {
-        padding-bottom: 3px; }
+        padding-bottom: 3px;
+        margin-top: -3px; }
         .assoc .associate .info .title p {
           margin: 0;
           padding: 0;

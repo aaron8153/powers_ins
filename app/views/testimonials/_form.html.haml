@@ -1,0 +1,25 @@
+= form_for @testimonial, :html => { :multipart => true } do |f|
+	-if @testimonial.errors.any?
+		#error_explanation
+			%h2= "#{pluralize(@testimonial.errors.count, "error")} prohibited this company from being saved:"
+			%ul
+				- @testimonial.errors.full_messages.each do |msg|
+					%li= msg
+
+	.field.mce
+		= f.label :quote, 'Quote:'
+		= f.text_area :quote, :class => "mceEditor", :style => 'height: 200px; width: 450px; position: relative;'
+	.field
+		= f.label :avatar, 'Testimonial Image:'
+		= f.file_field :avatar
+	.field
+		= f.label :lineone, 'Line One:'
+		= f.text_field :lineone
+	.field
+		= f.label :linetwo, 'Line Two:'
+		= f.text_field :linetwo
+	.field
+		= f.label :linethree, 'Line Three:'
+		= f.text_field :linethree
+	.actions
+		= f.submit 'Save'

@@ -16,14 +16,29 @@
 						%span{:class => "#{tab}"} #{tab.split(" ").each{|word| word.capitalize!}.join(" ")}
 	= javascript_include_tag 'floatbox'
 - elsif @floatheader == "About Us" && !@testimonials.nil?
-	.floater
+	.floater.testi
 		.testimonials
+			- first = @testimonials.shift
+			.testimonial{:class => "t-#{first.id}"}
+				.quoteimg
+				.quote
+					%span
+						!= first.quote
+				.info
+					%span
+						= first.lineone
+					%span
+						= first.linetwo
+					%span
+						= first.linethree
+				.image
+					= image_tag first.avatar.url(:standard)
 			- @testimonials.each do |testimonial|
-				.testimonial
+				.testimonial{:style => "display: none;", :class => "t-#{testimonial.id}"}
 					.quoteimg
 					.quote
 						%span
-							= testimonial.quote
+							!= testimonial.quote
 					.info
 						%span
 							= testimonial.lineone
@@ -32,5 +47,6 @@
 						%span
 							= testimonial.linethree
 					.image
-						= image_tag testimonial.avatar.url
+						= image_tag testimonial.avatar.url(:standard)
+	= javascript_include_tag 'testimonials'
 	= javascript_include_tag 'floatbox'
