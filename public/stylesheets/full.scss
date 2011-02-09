@@ -61,7 +61,6 @@ $powers-light-blue: #95e4fc;
 	width: 100%;
 	padding-bottom: 35px;
 	.middle {
-		padding-bottom: 40px;
 		width: 907px;
 		margin: auto;		
 		position: relative;
@@ -85,10 +84,11 @@ $powers-light-blue: #95e4fc;
 				color: #929191;
     			font-size: 14px;
     			line-height: 20px;
-    			padding: 20px 50px 0 35px;
+    			padding: 20px 40px 0 35px;
     			font-weight: 300;
     			text-shadow: 0 1px 0 #FFFFFF;
     			margin: 0;
+    			letter-spacing: .02em;
 			}
 		}
 	}
@@ -103,73 +103,99 @@ $powers-light-blue: #95e4fc;
 	position: relative;
 	width: 901px;
 	background: url(/images/assoc-head-middle.jpg) repeat-y;
-		.logos{
-			width: 700px;
-			margin: auto;
-			margin-top: 30px;
-			.affil-top {
-				width: 700px;
-				height: 165px;
-				.trustedchoice {
-					background: url(/images/trustedchoice.jpg) no-repeat;
-					height: 159px;
-					width: 211px;
-					float: left;
-					display: block;	
-					margin-left: 16px;
-				}
-				.workcomp {
-					background: url(/images/workcomp.jpg) no-repeat;
-					height: 159px;
-					width: 211px;
-					float: left;
-					display: block;
-					margin-left: 16px;					
-				}
-				.viaa {
-					background: url(/images/viaa.jpg) no-repeat;
-					height: 159px;
-					width: 211px;
-					float: left;
-					display: block;	
-					margin-left: 16px;				
-				}
-				a:hover {
-					background-position: 0 -159px;
-				}
-			}
-			.affil-bottom {
-				width: 700px;
-				height: 165px;
-				.missouri {
-					background: url(/images/missouri.jpg) no-repeat;
-					height: 159px;
-					width: 211px;
-					float: left;
-					display: block;
-					margin-left: 16px;						
-				}
-				.iia {
-					background: url(/images/iia.jpg) no-repeat;
-					height: 159px;
-					width: 211px;
-					float: left;
-					display: block;
-					margin-left: 16px;						
-				}
-				.siaa {
-					background: url(/images/siaa.jpg) no-repeat;
-					height: 159px;
-					width: 211px;
-					float: left;
-					display: block;
-					margin-left: 16px;						
-				}
-				a:hover {
-					background-position: 0 -159px;
-				}
-			}
+	&.carriers {
+		width: 851px;
+		//min-height: 475px;
+		padding: 25px;
+		.clear {
+			clear: both;
 		}
+	}
+	.company-image {
+		position: relative;
+		width: 185px;
+		height: 85px;
+		background-color: #ECEAEB;
+		border: 1px solid #D4D3D3;
+		padding-top: 15px;
+		padding-left: 15px;
+		display: block;
+		float: left;
+		margin-left: 5px;
+		margin-right: 5px;
+		margin-bottom: 25px;
+		img {
+			width: 159px;
+			height: 61px;
+		}
+	}
+	.logos{
+	    width: 700px;
+	    margin: auto;
+	    margin-top: 30px;
+	    .affil-top {
+	    	width: 700px;
+	    	height: 165px;
+	    	.trustedchoice {
+	    		background: url(/images/trustedchoice.jpg) no-repeat;
+	    		height: 159px;
+	    		width: 211px;
+	    		float: left;
+	    		display: block;	
+	    		margin-left: 16px;
+	    	}
+	    	.workcomp {
+	    		background: url(/images/workcomp.jpg) no-repeat;
+	    		height: 159px;
+	    		width: 211px;
+	    		float: left;
+	    		display: block;
+	    		margin-left: 16px;					
+	    	}
+	    	.viaa {
+	    		background: url(/images/viaa.jpg) no-repeat;
+	    		height: 159px;
+	    		width: 211px;
+	    		float: left;
+	    		display: block;	
+	    		margin-left: 16px;				
+	    	}
+	    	a:hover {
+	    		background-position: 0 -159px;
+	    	}
+	    }
+	    .affil-bottom {
+	    	width: 700px;
+	    	height: 165px;
+	    	.missouri {
+	    		background: url(/images/missouri.jpg) no-repeat;
+	    		height: 159px;
+	    		width: 211px;
+	    		float: left;
+	    		display: block;
+	    		margin-left: 16px;						
+	    	}
+	    	.iia {
+	    		background: url(/images/iia.jpg) no-repeat;
+	    		height: 159px;
+	    		width: 211px;
+	    		float: left;
+	    		display: block;
+	    		margin-left: 16px;						
+	    	}
+	    	.siaa {
+	    		background: url(/images/siaa.jpg) no-repeat;
+	    		height: 159px;
+	    		width: 211px;
+	    		float: left;
+	    		display: block;
+	    		margin-left: 16px;						
+	    	}
+	    	a:hover {
+	    		background-position: 0 -159px;
+	    	}
+	    }
+	}
 }
 .assoc-head-bottom {
 	position: relative;
@@ -315,4 +341,8 @@ $powers-light-blue: #95e4fc;
 .clearall {
 	clear: both;
 }
-
+span.logo{
+	font-family: helvetica;
+	font-weight: bold;
+	color: #777777;
+}

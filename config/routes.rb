@@ -1,22 +1,6 @@
 Powers::Application.routes.draw do
 
-  get "testimonials/index"
-
-  get "testimonials/show"
-
-  get "testimonials/new"
-
-  get "testimonials/edit"
-
-  get "testimonials/create"
-
-  get "testimonials/update"
-
-  get "testimonials/destroy"
-
-  get "aboutus/index"
-
-  get "affiliations/index"
+  
 
   resources :associates
   
@@ -27,14 +11,22 @@ Powers::Application.routes.draw do
   resources :policy_changes
 
   resources :auto_ids
+  
+  get "aboutus/index"
+
+  get "affiliations/index"
 
   get "benefits/index"
 
   get "benefits/individual"
 
   get "benefits/group"
+  
+  get "benefits/consultation"
 
   get "homeauto/index"
+  
+  get "homeauto/quote"
 
   get "homeauto/claim"
 
@@ -57,6 +49,10 @@ Powers::Application.routes.draw do
   get "businesss/autoid"
   
   get "business/billing"
+  
+  get "carriers/index"
+
+  get "affiliations/index"
 
   
 
@@ -71,6 +67,8 @@ Powers::Application.routes.draw do
 	match "/privacy" => 'home#privacy'
 	match "/terms" => 'home#terms'
 	match "/aboutus" => 'aboutus#index'
+	
+	match "/carriers" => 'carriers#index'
 	
 	match"/contact"	=>	'contact#index'
 	match"/contact/email"	=>	'contact#email'
@@ -95,6 +93,7 @@ Powers::Application.routes.draw do
 	
 	
 	match "/benefits" => 'benefits#index'
+		match "/benefits/consultation" => 'benefits#consultation'
 		match "/benefits/individual" => 'benefits#individual'
 		match "/benefits/group" => 'benefits#group'
 		match "/benefits/solutions" => 'benefits#solutions'

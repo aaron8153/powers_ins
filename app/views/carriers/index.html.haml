@@ -1,0 +1,31 @@
+.assoc-head-top
+	%h1
+		Carriers
+.assoc-head-middle
+	%p
+		Our companies deliver because we seek the right fit for each client relationship.  We deliver that right fit because we represent insurance carriers that focus on our Region and others that are National and International in scope.
+	%p
+		Because of our clients, we enjoy elite status with many of our carriers.  Our affiliation with SIAA, a $5 billion plus alliance, assures special attention from the carriers for your needs.
+	%p
+		Please click on the appropriate tab below to view a sampling of our Strategic Partner Companies.
+.assoc-head-bottom
+
+.assoc-head-top
+	%h1
+		Business Carriers
+.assoc-head-middle.carriers
+	- @companies_business.each do |company|
+		.company-image
+			= image_tag company.logo.url(:medium)
+	.clear
+.assoc-head-bottom
+
+.assoc-head-top
+	%h1
+		Individual Carriers
+.assoc-head-middle.carriers
+	- @companies_homeauto.each do |company|
+		.company-image
+			= image_tag company.logo.url(:medium)
+	.clear
+.assoc-head-bottom

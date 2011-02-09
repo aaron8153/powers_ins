@@ -1,2 +1,19 @@
-%h1 Contact#referal
-%p Find me in app/views/contact/referal.html.haml
+.formtop
+.referal_form.form
+	- if @success
+		%h3{:class => "Success"}
+			Success!  Thank you for your referal!  You will be redirected back to our Contact page shortly.
+		%p.countdown
+			If your page does not redirect in 
+			%span
+				15 
+			seconds please click 
+			%a{:href => "/contact"}
+				Here.
+			= javascript_include_tag 'delayredirect'
+		.next-prev-buttons
+	- else
+		- if request.post?
+			%h3{:class => "Fail"}
+				An error occured processing your request.  Please try again or contact us directly.
+		= render 'referal'

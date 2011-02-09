@@ -1,0 +1,38 @@
+= form_for @referal, :url => {:controller => :contact, :action => :referal}, :html => {:method => :post} do |f|
+	%h3
+		Refer a Friend
+	.page-1{:class => 'show'}
+		
+		%p
+			Please click CONTINUE below and complete the form to Refer a Friend.  Do you know a business or individual that might benefit from learing about 
+			%span.powers-small
+				POWERS
+				%span.sup-small
+					&reg 
+			?  This is an easy way to introduce us to a friend!
+		.next-prev-buttons
+			.next
+				%span
+					Continue
+	.page-2{:style => "display: none;"}
+		%h4
+			Contact Information
+		.field
+			= f.label :name, 'Your Name:'
+			= f.text_field :name
+		.field
+			= f.label :email, 'Your E-mail Address:'
+			= f.text_field :email
+		.field
+			= f.label :friend_name, 'Friend\'s Name:'
+			= f.text_field :friend_name
+		.field
+			= f.label :friend_email, 'Friend\'s E-mail Address:'
+			= f.text_field :friend_email
+		.field.mce
+			= f.label :comments, 'Comments:'
+			= f.text_area :comments, :class => "mceEditor", :style => 'height: 200px; width: 450px; position: relative;', :value => "I invite you to visit the POWERS website.  They may be the right-fit for you."
+		.next-prev-buttons
+			.prev
+				Previous
+			= f.submit 'Submit Request'

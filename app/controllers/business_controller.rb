@@ -2,19 +2,25 @@ class BusinessController < ApplicationController
 	uses_tiny_mce
 	
   def index
-  	@floatheader = "Business Clients"
+  	@floatheader = "Business"
 	@current_page = "business"
 	@floater = [["consultation" , "/business/consultation"], ["claim" , "/business/claim"], ["policy" , "/business/policy"], ["certificate" , "/business/certificate"],["autoid" , "/business/autoid"],["billing" , "/business/billing"]]
   	@current_action = "business"
   	@about = AboutHeading.find_by_page(@current_action)
+  	@keywords = "solutions,consultation,claim,policy,change,certificate,auto,id,cards,billing,companies"
+  	@meta_desc = ""
+  	@subtitle = " - Solutions for Business"
   end
   
   def consultation
-  	@floatheader = "Business Clients"
+  	@floatheader = "Business"
 	@current_page = "business"
 	@floater = [["consultation" , "/business/consultation"], ["claim" , "/business/claim"], ["policy" , "/business/policy"], ["certificate" , "/business/certificate"],["autoid" , "/business/autoid"],["billing" , "/business/billing"]]
   	@current_action = "consultation"
   	@about = AboutHeading.find_by_page(@current_action)
+  	@keywords = "solutions,consultation,claim,policy,change,certificate,auto,id,cards,billing,companies"
+  	@meta_desc = ""
+  	@subtitle = " - Business - Request Consultation"
   	
   	@success = false
   	if request.post?
@@ -23,6 +29,7 @@ class BusinessController < ApplicationController
     	if @consult.save
     		@success = true
     		UserMailer.confirmation_email(@consult).deliver
+    		PowersMailer.confirmation_email(@consult, request).deliver
     	else
     		@success = false
     	end
@@ -33,20 +40,26 @@ class BusinessController < ApplicationController
   end
 
   def claim
-  	@floatheader = "Business Clients"
+  	@floatheader = "Business"
 	@current_page = "business"
 	@floater = [["consultation" , "/business/consultation"], ["claim" , "/business/claim"], ["policy" , "/business/policy"], ["certificate" , "/business/certificate"],["autoid" , "/business/autoid"],["billing" , "/business/billing"]]
   	@current_action = "claim"
   	@about = AboutHeading.find_by_page(@current_action)
   	@companies = Company.where("bus_claim = true").order('name ASC')
+  	@keywords = "solutions,consultation,claim,policy,change,certificate,auto,id,cards,billing,companies,restoration"
+  	@meta_desc = ""
+  	@subtitle = " - Business - Report Claim"
   end
 
   def policy
-  	@floatheader = "Business Clients"
+  	@floatheader = "Business"
 	@current_page = "business"
 	@floater = [["consultation" , "/business/consultation"], ["claim" , "/business/claim"], ["policy" , "/business/policy"], ["certificate" , "/business/certificate"],["autoid" , "/business/autoid"],["billing" , "/business/billing"]]
   	@current_action = "policy"
   	@about = AboutHeading.find_by_page(@current_action)
+  	@keywords = "solutions,consultation,claim,policy,change,certificate,auto,id,cards,billing,companies"
+  	@meta_desc = ""
+  	@subtitle = " - Business - Request Policy Change"
   	
   	
 	@success = false
@@ -56,6 +69,7 @@ class BusinessController < ApplicationController
     	if @policy_change.save
     		@success = true
     		UserMailer.confirmation_email(@policy_change).deliver
+    		PowersMailer.confirmation_email(@policy_change, request).deliver
     	else
     		@success = false
     	end
@@ -65,11 +79,14 @@ class BusinessController < ApplicationController
   end
 
   def certificate
-  	@floatheader = "Business Clients"
+  	@floatheader = "Business"
 	@current_page = "business"
 	@floater = [["consultation" , "/business/consultation"], ["claim" , "/business/claim"], ["policy" , "/business/policy"], ["certificate" , "/business/certificate"],["autoid" , "/business/autoid"],["billing" , "/business/billing"]]
   	@current_action = "certificate"
   	@about = AboutHeading.find_by_page(@current_action)
+  	@keywords = "solutions,consultation,claim,policy,change,certificate,auto,id,cards,billing,companies"
+  	@meta_desc = ""
+  	@subtitle = " - Business - Request Certificate"
   	
   	@success = false
   	if request.post?
@@ -78,6 +95,7 @@ class BusinessController < ApplicationController
     	if @cert.save
     		@success = true
     		UserMailer.confirmation_email(@cert).deliver
+    		PowersMailer.confirmation_email(@cert, request).deliver
     	else
     		@success = false
     	end
@@ -87,11 +105,14 @@ class BusinessController < ApplicationController
   end
 
   def autoid
-  	@floatheader = "Business Clients"
+  	@floatheader = "Business"
 	@current_page = "business"
 	@floater = [["consultation" , "/business/consultation"], ["claim" , "/business/claim"], ["policy" , "/business/policy"], ["certificate" , "/business/certificate"],["autoid" , "/business/autoid"],["billing" , "/business/billing"]]
   	@current_action = "autoid"
   	@about = AboutHeading.find_by_page(@current_action)
+  	@keywords = "solutions,consultation,claim,policy,change,certificate,auto,id,cards,billing,companies"
+  	@meta_desc = ""
+  	@subtitle = " - Business - Request Auto ID Cards"
   	
   	@success = false
   	if request.post?
@@ -100,6 +121,7 @@ class BusinessController < ApplicationController
     	if @auto.save
     		@success = true
     		UserMailer.confirmation_email(@auto).deliver
+    		PowersMailer.confirmation_email(@auto, request).deliver
     	else
     		@success = false
     	end
@@ -109,11 +131,14 @@ class BusinessController < ApplicationController
   end
 
   def billing
-  	@floatheader = "Business Clients"
+  	@floatheader = "Business"
 	@current_page = "business"
 	@floater = [["consultation" , "/business/consultation"], ["claim" , "/business/claim"], ["policy" , "/business/policy"], ["certificate" , "/business/certificate"],["autoid" , "/business/autoid"],["billing" , "/business/billing"]]
   	@current_action = "billing"
   	@about = AboutHeading.find_by_page(@current_action)
+  	@keywords = "solutions,consultation,claim,policy,change,certificate,auto,id,cards,billing,companies"
+  	@meta_desc = ""
+  	@subtitle = " - Business - Billing Information"
   end
 
 end

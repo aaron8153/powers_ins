@@ -10,6 +10,8 @@
 			seconds please click 
 			%a{:href => "/business"}
 				Here.
+			= javascript_include_tag 'delayredirect'
+		.next-prev-buttons
 	- else
 		- if request.post?
 			%h3{:class => "Fail"}

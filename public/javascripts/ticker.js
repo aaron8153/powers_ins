@@ -9,7 +9,7 @@ jQuery.fn.tickerInfFade = function(current, next) {
 				}
 				jQuery('.ticker').tickerInfFade(c, n);
 			});
-		})
+		});
 	}, 6000);
 };
 

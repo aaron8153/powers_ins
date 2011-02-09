@@ -1,0 +1,19 @@
+.formtop
+.quote_form.form
+	- if @success
+		%h3{:class => "Success"}
+			Success!  Your request has been received and is being processed.  You will receive a confirmation email shortly.  A POWERS&reg Agent will be in touch with you shortly.  Changes are not bound until you receive written confirmation from a POWERS&reg professional.  You will be redirected back to our Home & Auto page shortly.
+		%p.countdown
+			If your page does not redirect in 
+			%span
+				15 
+			seconds please click 
+			%a{:href => "/homeauto"}
+				Here.
+			= javascript_include_tag 'delayredirect'
+		.next-prev-buttons
+	- else
+		- if request.post?
+			%h3{:class => "fail"}
+				An error occured processing your request.  Please try again or contact us directly.
+		= render 'quote'

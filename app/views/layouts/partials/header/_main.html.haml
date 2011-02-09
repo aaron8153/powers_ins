@@ -1,12 +1,12 @@
 .nav
-	%a.logo{:alt => "Click here to navigate to the POWERS home page", :href => "/"}
+	%a.logo{:href => "/"}
 	.nav-right
 		.nav-top
-			%a.live-chat{:href => "javascript:void(0);", :onclick => "habla_window.expand()", :alt => "Click to talk to one of our Agents!"}
+			%a.live-chat{:href => "javascript:void(0);", :onclick => "habla_window.expand()"}
 				
-			%a.contact{:href => "/contact", :alt => "Click here to navigate to our contact page"}
+			%a.contact{:href => "/contact"}
 			.toll-free
-				%img.phone{:src => "/images/phone.png", :alt => "Call Toll Free"}
+				%img.phone{:src => "/images/phone.png"}
 				%h4
 					CALL TOLL FREE:
 				%span
@@ -20,5 +20,5 @@
 					- cl += (@current_page==tab ? " current" : "")
 					- cl += ($tabs.first==[tab,url] ? " first" : "")
 					- cl += ($tabs.last==[tab,url] ? " last" : "")
-					%a.tab{:class => "#{cl}", :id => "#{tab}", :alt => "Click here navigate to " + "#{tab.capitalize}", :href => "#{url}"}
+					%a.tab{:class => "#{cl}", :id => "#{tab}", :href => "#{url}"}
 						%span{:class => "#{tab}"} #{tab.capitalize}

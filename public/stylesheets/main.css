@@ -1,3 +1,8 @@
+.headline {
+  font-size: 14px;
+  color: #044980;
+  font-weight: 500; }
+
 body {
   margin: 0px;
   background-color: #022336; }
@@ -8,10 +13,22 @@ span.powers {
   letter-spacing: .03em;
   font-size: 16px; }
 
-span.sup-small {
+span.powers-small {
+  color: #133361;
+  font-weight: 500;
+  letter-spacing: .03em;
+  font-size: 13px; }
+
+span.sup-medium {
   vertical-align: super;
   font-size: 10px;
   margin-left: -3px; }
+
+span.sup-small {
+  vertical-align: super;
+  font-size: 8px;
+  margin-left: -3px;
+  line-height: 11px; }
 
 .header {
   height: 122px;

@@ -1,0 +1,46 @@
+= form_for @emailus, :url => {:controller => :contact, :action => :email}, :html => {:method => :post} do |f|
+	%h3
+		Contact Us
+	.page-1{:class => 'show'}		
+		%p
+			Please click CONTINUE below and complete the form to Contact Us.  We wish to understand your individual and business goals.  Our process is designed to help identify risks and opportunities to co-develop solutions.  Please indicate the service(s) in which you are interested and a licensed 
+			%br
+			a 
+			%span.powers-small
+				POWERS
+				%span.sup-small
+					&reg 
+			Agent will contact you shortly.
+		.next-prev-buttons
+			.next
+				%span
+					Continue
+	.page-2{:style => "display: none;"}
+		%h4
+			Personal Information
+		.field
+			= f.label :name, 'Name:'
+			= f.text_field :name
+		.field
+			= f.label :email, 'E-mail Address:'
+			= f.text_field :email
+		.field
+			= f.label :phone_work, 'Work Phone:'
+			= f.text_field :phone_work
+		.field
+			= f.label :phone_home, 'Home Phone:'
+			= f.text_field :phone_home
+		.field
+			= f.label :insurance_type, 'Type of Insurance:'
+			%select{:name => "emailus[insurance_type]"}
+				%option{:value => 'Commercial Business'}Commercial Business
+				%option{:value => 'Group Benefits'}Group Benefits
+				%option{:value => 'Individual Home/Auto'}Individual Home/Auto				
+				%option{:value => 'Individual Benefits'}Individual Benefits
+		.field.mce
+			= f.label :comments, 'Comments:'
+			= f.text_area :comments, :class => "mceEditor", :style => 'height: 200px; width: 450px; position: relative;'
+		.next-prev-buttons
+			.prev
+				Previous
+			= f.submit 'Submit Request'

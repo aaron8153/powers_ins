@@ -16,14 +16,17 @@
 		.about-box-separator
 			%img{:src=>"/images/about-box-separator.png"}
 		.comments
-			#fb-root
-			%fb:comments{:xid=>"#{@current_page}-#{@current_action}", :numposts=>"5", :width=>"534", :publish_feed=>"true"}
+			- if params[:controller] != 'about_headings'
+				#fb-root
+				%script{:src=>"http://connect.facebook.net/en_US/all.js#appId=187326117947432&amp;xfbml=1"}
+				%fb:comments{:xid=>"#{@current_page}-#{@current_action}", :numposts=>"5", :width=>"534", :publish_feed=>"true"}
 		.about-box-bottom
-			.like
-				%fb:like{:href => request.url, :layout => "standard", :show_faces => "true", :width => "548"}
+			- if params[:controller] != 'about_headings'
+				.like
+					%iframe.likeish{:src => "http://www.facebook.com/plugins/like.php?href=#{request.url}&amp;layout=standard&amp;show_faces=true&amp;width=548&amp;action=like&amp;colorscheme=light&amp;height=35"}
 		
 		= javascript_include_tag 'columnizer/autocolumn'
 		= javascript_include_tag 'about-two-column'
-		%script{:src=>"http://connect.facebook.net/en_US/all.js#appId=187326117947432&amp;xfbml=1"}
-		= javascript_include_tag 'fb-event'
-		= javascript_include_tag 'fb-comments'
+		- if params[:controller] != 'about_headings'
+			= javascript_include_tag 'fb-event'
+			= javascript_include_tag 'fb-comments'

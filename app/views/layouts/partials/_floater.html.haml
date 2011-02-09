@@ -9,11 +9,18 @@
 				- cl += (@floater.first==[tab,url] ? " first" : "")
 				- cl += (@floater.last==[tab,url] ? " last" : "")
 				- if @current_page == "benefits" && tab == "login"
-					%a.tab{:class => "#{cl}", :id => "#{tab}", :alt => "Click here navigate to " + "#{tab.capitalize}", :href => "#{url}", :target => "_blank"}
+					%a.tab{:class => "#{cl}", :id => "#{tab}", :href => "#{url}", :target => "_blank"}
 						%span{:class => "#{tab}"} #{tab.split(" ").each{|word| word.capitalize!}.join(" ")}
 				- else
-					%a.tab{:class => "#{cl}", :id => "#{tab}", :alt => "Click here navigate to " + "#{tab.capitalize}", :href => "#{url}"}
+					%a.tab{:class => "#{cl}", :id => "#{tab}", :href => "#{url}"}
 						%span{:class => "#{tab}"} #{tab.split(" ").each{|word| word.capitalize!}.join(" ")}
+			- if @current_page == 'homeauto'
+				%a.tab{:class => "instantquote", :target => "_blank", :href => "http://Powersgroup.ConsumerRateQuotes.com/consumer/default.aspx"}
+					%span
+						Instant Quote
+			%a.tab{:class => "livechat", :onclick => "habla_window.expand()", :href => "javascript:void(0);"}
+				%span
+					Live! Chat
 	= javascript_include_tag 'floatbox'
 - elsif @floatheader == "About Us" && !@testimonials.nil?
 	.floater.testi

@@ -1,0 +1,126 @@
+= form_for @quote, :url => {:controller => :homeauto, :action => :quote}, :html => {:method => :post} do |f|
+	%h3
+		Request a Quote
+	.page-1{:class => 'show'}		
+		%p
+			Please click CONTINUE below and complete the form to help us gather preliminary information necessary to begin the process.  Or, feel free to click Instant Auto Quote, on the sidebar, for an immediate rate indication from several of our Auto carriers.  We look forward to working to meet or exceed your expectations.  Once we receive your request,
+			%br
+			a 
+			%span.powers-small
+				POWERS
+				%span.sup-small
+					&reg 
+			Agent will contact you shortly.
+		.next-prev-buttons
+			.next
+				%span
+					Continue
+	.page-2{:style => "display: none;"}
+		%h4
+			Personal Information
+		.field
+			= f.label :name, 'Name Insured:'
+			= f.text_field :name
+		.field
+			= f.label :email, 'E-mail Address:'
+			= f.text_field :email
+		.field
+			= f.label :dob, 'Date of Birth:'
+			= f.date_select :dob
+		.field
+			= f.label :phone_work, 'Work Phone:'
+			= f.text_field :phone_work
+		.field
+			= f.label :phone_home, 'Home Phone:'
+			= f.text_field :phone_home
+		.field
+			= f.label :street_address, 'Street Address:'
+			= f.text_field :street_address
+		.field
+			= f.label :street_address_cont, 'Address (cont.):'
+			= f.text_field :street_address_cont
+		.field
+			= f.label :city, 'City:'
+			= f.text_field :city
+		.field
+			= f.label :state, 'State:'			
+			%select{:name => "consult[state]"}
+				%option{:value => 'AL'}Alabama
+				%option{:value => 'AK'}Alaska
+				%option{:value => 'AZ'}Arizona
+				%option{:value => 'AR'}Arkansas
+				%option{:value => 'CA'}California
+				%option{:value => 'CO'}Colorado
+				%option{:value => 'CT'}Connecticut
+				%option{:value => 'DE'}Delaware
+				%option{:value => 'DC'}District of Columbia
+				%option{:value => 'FL'}Florida
+				%option{:value => 'GA'}Georgia
+				%option{:value => 'HI'}Hawaii
+				%option{:value => 'ID'}Idaho
+				%option{:value => 'IL'}Illinois
+				%option{:value => 'IN'}Indiana
+				%option{:value => 'IA'}Iowa
+				%option{:value => 'KS'}Kansas
+				%option{:value => 'KY'}Kentucky
+				%option{:value => 'LA'}Louisiana
+				%option{:value => 'ME'}Maine
+				%option{:value => 'MD'}Maryland
+				%option{:value => 'MA'}Massachusetts
+				%option{:value => 'MI'}Michigan
+				%option{:value => 'MN'}Minnesota
+				%option{:value => 'MS'}Mississippi
+				%option{:value => 'MO'}Missouri
+				%option{:value => 'MT'}Montana
+				%option{:value => 'NE'}Nebraska
+				%option{:value => 'NV'}Nevada
+				%option{:value => 'NH'}New Hampshire
+				%option{:value => 'NJ'}New Jersey
+				%option{:value => 'NM'}New Mexico
+				%option{:value => 'NY'}New York
+				%option{:value => 'NC'}North Carolina
+				%option{:value => 'ND'}North Dakota
+				%option{:value => 'OH'}Ohio
+				%option{:value => 'OK'}Oklahoma
+				%option{:value => 'OR'}Oregon
+				%option{:value => 'PA'}Pennsylvania
+				%option{:value => 'RI'}Rhode Island
+				%option{:value => 'SC'}South Carolina
+				%option{:value => 'SD'}South Dakota
+				%option{:value => 'TN'}Tennessee
+				%option{:value => 'TX'}Texas
+				%option{:value => 'UT'}Utah
+				%option{:value => 'VT'}Vermont
+				%option{:value => 'VA'}Virginia
+				%option{:value => 'WA'}Washington
+				%option{:value => 'WV'}West Virginia
+				%option{:value => 'WI'}Wisconsin
+				%option{:value => 'WY'}Wyoming
+		.field
+			= f.label :zip, 'Zip Code:'
+			= f.text_field :zip
+		.field.types
+			%span
+				Type(s) of Insurance:
+			= f.check_box :home
+			= f.label :home, 'Home'
+			= f.check_box :auto
+			= f.label :auto, 'Auto'
+			= f.check_box :condo
+			= f.label :condo, 'Condo'
+			= f.check_box :boat
+			= f.label :boat, 'Boat'
+			= f.check_box :motor
+			= f.label :motor, 'Motor Home'
+			= f.check_box :renters
+			= f.label :renters, 'Renters'
+			= f.check_box :motorcycle
+			= f.label :motorcycle, 'Motorcycle'
+			= f.check_box :other
+			= f.label :other, 'Other'
+			= f.text_field :othertxt
+			
+		.next-prev-buttons
+			.prev
+				Previous
+			= f.submit 'Submit Request'

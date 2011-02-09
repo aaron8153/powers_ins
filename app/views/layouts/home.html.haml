@@ -1,11 +1,18 @@
 !!!
-%html{ "xml:lang" => "en", :lang => "en", :xmlns => "http://www.w3.org/1999/xhtml" }
+%html{ "xml:lang" => "en", :lang => "en", :xmlns => "http://www.w3.org/1999/xhtml", "xmlns:fb" => "http://www.facebook.com/2008/fbml", "xmlns:og" => "http://ogp.me/ns#"}
 	%head
 		%link{:rel => "shortcut icon", :href => "/favicon.ico", :type => "image/x-icon"}
-		%title!= "POWERS&reg; Insurance and Benefits"	
+		%title!= "POWERS&reg; Insurance and Benefits#{@subtitle}"
+		%meta{ :charset => 'UTF-8'}
+		%meta{ :name => "keywords", :content =>"POWERS,powers,insurance,benefits,STL,Saint Louis,St. Louis,clayton,missouri,mo,business,home,auto,life,work,workers compensation,compensation,local,instant,quote,live,chat,commercial,personal,#{@keywords}"}
+		%meta{ :property => "og:title", :content => "POWERS&reg; Insurance and Benefits"}
+		%meta{ :property => "og:type", :content => "company"}
+		%meta{ :property => "og:url", :content => "#{request.url}"}
+		%meta{ :property => "og:image", :content => "http://powers.jbasol.com/images/logo.png"}
+		%meta{ :property => "og:site_name", :content => "POWERS&amp;reg Insurance and Benefits"}
+		%meta{ :property => "fb:admins", :content => "3100926"}
 		= stylesheet_link_tag 'main'
 		= stylesheet_link_tag 'home'
-		= javascript_include_tag :defaults
 		= javascript_include_tag 'jquery.min'
 		%script
 			var $j = jQuery.noConflict();
@@ -31,6 +38,7 @@
 						= render :partial => 'layouts/partials/nav/three-button'
 					.ticker
 						= render :partial => 'layouts/partials/ticker'
+					= javascript_include_tag 'ticker'
 					.footer
 						= render :partial => 'layouts/partials/footer/main'
 		= javascript_include_tag 'olark'

@@ -10,6 +10,9 @@ class AssociatesController < ApplicationController
     
     @current_page = "associates"
     
+    @keywords = "associates,producers,administrative,commercial,personal,info,contact,email"
+  	@meta_desc = ""
+  	@subtitle = " - Our Associates"
    render :layout => "full"
     
   end

@@ -1,23 +1,22 @@
 - first = $tickers.shift
 - if(first.target == true)
-	%a{:href => first.url, :alt => first.headline, :target => "_blank"}
+	%a{:href => first.url, :target => "_blank"}
 		%span.date= first.created_at.strftime("(%m/%d)")
 		%span.headline= first.headline
 		%span.readmore=	". . . Read More +"
 - if(first.target == false)
-	%a{:href => first.url, :alt => first.headline}
+	%a{:href => first.url}
 		%span.date= first.created_at.strftime("(%m/%d)")
 		%span.headline= first.headline
 		%span.readmore=	". . . Read More +"
 - $tickers.each do |ticker|
 	- if(ticker.target == true)
-		%a{:href => ticker.url, :alt => ticker.headline, :target => "_blank", :style => "display: none;"}
+		%a{:href => ticker.url, :target => "_blank", :style => "display: none;"}
 			%span.date= ticker.created_at.strftime("(%m/%d)")
 			%span.headline= ticker.headline
 			%span.readmore=	". . . Read More +"
 	- if(ticker.target == false)
-		%a{:href => ticker.url, :alt => ticker.headline, :style => "display: none;"}
+		%a{:href => ticker.url, :style => "display: none;"}
 			%span.date= ticker.created_at.strftime("(%m/%d)")
 			%span.headline= ticker.headline
 			%span.readmore=	". . . Read More +"
-= javascript_include_tag 'ticker'

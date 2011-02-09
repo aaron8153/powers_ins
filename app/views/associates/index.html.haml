@@ -13,7 +13,7 @@
 		- @producers.each do |associate|
 			.associate
 				.avatar
-					= image_tag associate.avatar.url(:medium)
+					= image_tag associate.avatar.url(:medium) if associate.avatar?
 				.info
 					.name
 						%p= associate.name

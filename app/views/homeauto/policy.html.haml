@@ -1,3 +1,4 @@
+.formtop
 .policy_form.form
 	- if @success
 		%h3{:class => "Success"}
@@ -9,9 +10,11 @@
 			seconds please click 
 			%a{:href => "/homeauto"}
 				Here.
+			= javascript_include_tag 'delayredirect'
+		.next-prev-buttons
 	- else
 		- if request.post?
-			%h3{:class => "Fail"}
+			%h3{:class => "fail"}
 				An error occured processing your request.  Please try again or contact us directly.
 		= render 'policy'
 

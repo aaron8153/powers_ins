@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110208065349) do
+ActiveRecord::Schema.define(:version => 20110208185255) do
 
   create_table "about_headings", :force => true do |t|
     t.string   "heading"
@@ -136,6 +136,17 @@ ActiveRecord::Schema.define(:version => 20110208065349) do
     t.datetime "updated_at"
   end
 
+  create_table "emailus", :force => true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "phone_work"
+    t.string   "phone_home"
+    t.string   "insurance_type"
+    t.text     "comments"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "policy_changes", :force => true do |t|
     t.string   "name"
     t.string   "email"
@@ -151,6 +162,40 @@ ActiveRecord::Schema.define(:version => 20110208065349) do
     t.text     "description"
     t.text     "misc"
     t.string   "division"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "quotes", :force => true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.date     "dob"
+    t.string   "phone_work"
+    t.string   "phone_home"
+    t.string   "street_address"
+    t.string   "street_address_cont"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zip"
+    t.boolean  "home"
+    t.boolean  "auto"
+    t.boolean  "condo"
+    t.boolean  "boat"
+    t.boolean  "motor"
+    t.boolean  "renters"
+    t.boolean  "motorcycle"
+    t.boolean  "other"
+    t.string   "othertxt"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "referals", :force => true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "friend_name"
+    t.string   "friend_email"
+    t.text     "comments"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

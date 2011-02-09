@@ -36,7 +36,18 @@ Powers::Application.configure do
 
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false
-
+	config.action_mailer.delivery_method = :sendmail
+	config.action_mailer.perform_deliveries = true
+	config.action_mailer.raise_delivery_errors = true
+	config.action_mailer.sendmail_settings = {
+		:address				=>	"mail.powersinsurance.com",
+		:port					=>	26,
+		:domain					=>	'www.powersinsurance.com',
+		:user_name				=>	'no-reply@powersinsurance.com',
+		:password				=>	'PowersNoReply1414',
+		:authentication			=>	'login',
+		:enable_starttls_auto	=>	 true
+	}
   # Enable threaded mode
   # config.threadsafe!
 
